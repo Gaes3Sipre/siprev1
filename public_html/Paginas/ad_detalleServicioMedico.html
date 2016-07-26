@@ -1,0 +1,488 @@
+	<section class="page-header alternative-header">
+		<ol class="breadcrumb">
+			<li>Administrador</li>
+			<li>Beneficios</li>
+		</ol>
+		<div class="page-header_title">
+			<h1>
+				Detalle Tipo de Benefio
+				<span class="page-header_subtitle"></span>
+			</h1>
+		</div>
+	</section>
+
+
+
+	<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Checkbox",
+	 "Select",
+	 "Dropdown",
+	 "Tooltip"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Modals"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Checkbox",
+	 "SpeedDial"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Speed Dial Plugin
+		 */
+		 $(".radio-up-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","up");
+		 });
+		 $(".radio-down-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","down");
+		 });
+		 $(".radio-left-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","left");
+		 });
+		 $(".radio-right-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","right");
+		 });
+		 $(".radio-open-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("open");
+		 });
+		 $(".radio-close-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("close");
+		 });
+		 $(".radio-fling-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("mode","fling");
+		 });
+		 $(".radio-scale-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("mode","scale");
+		 });
+
+		/**
+		 * Clipboard
+		 */		
+		 clipboard = new Clipboard('[data-copycode="true"]',{
+		 	target: function(trigger) {
+		 		return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+		 	}
+		 });
+
+		 clipboard.on('success', function(e) {
+		 	$.toasts("add",{
+		 		msg: "Copied!",
+		 	});	
+		 	e.clearSelection();
+		 });
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+		<div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+			<button type="button" class="btn btn-floating-action btn-info primary-bg"><i class="material-icons">menu</i></button>
+		</div>
+		<ul class="md-fab-actions" aria-hidden="true">
+			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="tooltip" data-placement="left" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></a></li>
+			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="demoModal2" data-placement="left" title="Guardar"><i class="material-icons">save</i></a>
+			</li>
+		</ul>
+	</div>
+</section>
+<br>
+<section class="page-content"> 
+	
+	<table id="table1" class="table table-striped">
+		<span>¿Activo? <input class="switch switch-info" type="checkbox"  checked /></span>
+		<BR>
+			<BR>
+				<tr> <LABEL for="success1">Datos Basicos Beneficio</LABEL>
+					<td><div class="form-group">
+						<br>
+						<input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="5001">
+						<label for="help1">Codigo Beneficio</label>
+					</div></td>
+					<td><div class="form-group">
+						<br>
+						<input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="MEICINA GENERAL">
+						<label for="help1">Nombre</label>
+					</div></td>
+					<td><div class="form-group">
+						<br>
+						<select id="select1" name="select1" class="form-control">
+							<option value="23">SELECCIONAR</option>
+							<option value="169">AUXILIO</option>
+							<option selected="selected" value="72">SERVICIO MEDICO</option>
+						</select>
+						<label for="select1">Tipo de Beneficio</label>
+					</div></td>
+				</tr>
+			</table>
+			<table id="table1" class="table table-striped">
+				<tr> 
+					<thead>
+						<tr>
+							<th>Tipo de Contrato</th>
+							<TH>Parametros Adicionales</TH>
+						</tr>
+					</thead>
+					<tbody>
+						<td>
+							<div class="form-group">
+								<input class="checkbox checkbox-info" type="checkbox" checked/> Indefinido<br>
+								<input class="checkbox checkbox-info" type="checkbox" /> Fijo<br>
+								<input class="checkbox checkbox-info" type="checkbox" /> Sena<br>
+								<input class="checkbox checkbox-info" type="checkbox" /> Pensionado<br>
+							</div>
+						</td>
+						<td>
+							<div class="form-group">
+								<input class="switch switch-info" type="checkbox"  checked > ¿Afectan las Prescripciones?<br>
+							</div>
+						</td>
+					</tbody>
+				</tr>
+			</table>
+			<table id="table1" class="table" data-row-select="true">
+				<thead>
+					<tr>
+						<th></th>
+						<th class="text-right">Favorecido</th>
+						<th class="text-right">% Empresa</th>
+						<th class="text-right">% Trabajador</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="text-right">
+						<td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
+						<td>EMPLEADO</td>
+						<td>100</td>
+						<td>0</td>
+					</tr>
+					<tr class="text-right">
+						<td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
+						<td>ESPOSO(A)</td>
+						<td>75</td>
+						<td>25</td>
+					</tr>
+					<tr class="text-right">
+						<td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
+						<td>PADRES</td>
+						<td>75</td>
+						<td>25</td>
+					</tr>
+					<tr class="text-right">
+						<td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
+						<td>HIJOS</td>
+						<td>75</td>
+						<td>25</td>
+					</tr>
+					<tr class="text-right">
+						<td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
+						<td>SUEGOS</td>
+						<td>75</td>
+						<td>25</td>
+					</tr>
+					<tr class="text-right">
+						<td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
+						<td>ABUELOS</td>
+						<td>50</td>
+						<td>50</td>
+					</tr>
+					<tr class="text-right">
+						<td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
+						<td>NIETOS</td>
+						<td>50</td>
+						<td>50</td>
+					</tr>
+					<tr class="text-right">
+						<td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
+						<td>HERMANOS</td>
+						<td>50</td>
+						<td>50</td>
+					</tr>
+				</tbody>
+			</table>
+		</section><!-- /#page-content -->

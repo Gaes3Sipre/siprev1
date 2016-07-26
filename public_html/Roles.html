@@ -1,0 +1,583 @@
+	<body>
+		<script type="text/javascript">
+		/**
+		 * PUT BELOW HERE
+		 * ALL PAGE LEVEL RELATED SCRIPTS
+		 */
+
+
+
+		/**
+		 * 1. pageLoadScripts
+		 *
+		 * Scripts array to load on pageload event
+		 *
+		 * Example:
+		 *	var pageLoadScripts = [
+		 *		"js/bemat-demo-script1.min.js",
+		 *		"js/bemat-demo-script2.min.js"
+		 *  ]
+		 *
+		 */
+		 var pageLoadScripts = [
+
+		 ]
+
+		 var pageLoadCSS = [
+
+		 ]
+
+
+		/**
+		 * 2. pageRequiredComponents
+		 *
+		 * Components that require this page. By default all components are loaded,
+		 * but with this array, you can force the reinitialization of any component.
+		 * 
+		 * Example:
+		 *	var pageRequiredComponents = [
+		 *		"Panel",
+		 *		"Checkbox",
+		 *		"Select",
+		 *		"Dropdown",
+		 *		"Tooltip",
+		 *		"Modals",
+		 *		"FloatingLabels",
+		 *		"Scrollbar",
+		 *		"MaterialRipple",
+		 *		"Snackbar",
+		 *		"Toast",
+		 *		"Subheader",
+		 *		"SimplePieCharts",
+		 *		"LinearProgress",
+		 *		"CircularProgress",
+		 *		"SpeedDial"
+		 *	]
+		 */	
+		 var pageRequiredComponents = [
+		 "Checkbox",
+		 "Select",
+		 "Dropdown",
+		 "Tooltip"
+		 ]
+
+
+		/**
+		 * 3. pageRequiredFeatures
+		 */
+		 var pageRequiredFeatures = [
+		 "prettyPrint"
+		 ]
+
+
+
+		/**
+		 * 4. doneScriptsLoad() 
+		 *
+		 * This function gets called when the "pageLoadScripts" 
+		 * and "pageRequiredComponents" arrays above are fully loaded
+		 */
+
+		// Set page variables globally
+		var clipboard;
+		
+		var doneScriptsLoad = function(){
+			clipboard = new Clipboard('[data-copycode="true"]',{
+				target: function(trigger) {
+					return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+				}
+			});
+			
+			clipboard.on('success', function(e) {
+				$.toasts("add",{
+					msg: "Copied!",
+				});	
+				e.clearSelection();
+			});
+		} // END: doneScriptsLoad();
+		
+
+		/**
+		 * 4. pageDestroy()
+		 *
+		 * Destroy all generated instances
+		 */
+		 var pageDestroy = function(){
+		 	clipboard.destroy(); clipboard = void 0;
+		 }
+		</script>
+		<script type="text/javascript">
+		/**
+		 * PUT BELOW HERE
+		 * ALL PAGE LEVEL RELATED SCRIPTS
+		 */
+
+
+
+		/**
+		 * 1. pageLoadScripts
+		 *
+		 * Scripts array to load on pageload event
+		 *
+		 * Example:
+		 *	var pageLoadScripts = [
+		 *		"js/bemat-demo-script1.min.js",
+		 *		"js/bemat-demo-script2.min.js"
+		 *  ]
+		 *
+		 */
+		 var pageLoadScripts = [
+
+		 ]
+
+		 var pageLoadCSS = [
+
+		 ]
+
+
+		/**
+		 * 2. pageRequiredComponents
+		 *
+		 * Components that require this page. By default all components are loaded,
+		 * but with this array, you can force the reinitialization of any component.
+		 * 
+		 * Example:
+		 *	var pageRequiredComponents = [
+		 *		"Panel",
+		 *		"Checkbox",
+		 *		"Select",
+		 *		"Dropdown",
+		 *		"Tooltip",
+		 *		"Modals",
+		 *		"FloatingLabels",
+		 *		"Scrollbar",
+		 *		"MaterialRipple",
+		 *		"Snackbar",
+		 *		"Toast",
+		 *		"Subheader",
+		 *		"SimplePieCharts",
+		 *		"LinearProgress",
+		 *		"CircularProgress",
+		 *		"SpeedDial"
+		 *	]
+		 */	
+		 var pageRequiredComponents = [
+		 "Modals"
+		 ]
+
+
+		/**
+		 * 3. pageRequiredFeatures
+		 */
+		 var pageRequiredFeatures = [
+		 "prettyPrint"
+		 ]
+
+
+
+		/**
+		 * 4. doneScriptsLoad() 
+		 *
+		 * This function gets called when the "pageLoadScripts" 
+		 * and "pageRequiredComponents" arrays above are fully loaded
+		 */
+
+		// Set page variables globally
+		var clipboard;
+		
+		var doneScriptsLoad = function(){
+			clipboard = new Clipboard('[data-copycode="true"]',{
+				target: function(trigger) {
+					return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+				}
+			});
+			
+			clipboard.on('success', function(e) {
+				$.toasts("add",{
+					msg: "Copied!",
+				});	
+				e.clearSelection();
+			});
+		} // END: doneScriptsLoad();
+		
+
+		/**
+		 * 4. pageDestroy()
+		 *
+		 * Destroy all generated instances
+		 */
+		 var pageDestroy = function(){
+		 	clipboard.destroy(); clipboard = void 0;
+		 }
+		</script>
+		<section class="page-header alternative-header">
+			<ol class="breadcrumb">
+				<li>Gestion de Usuarios</li>
+				<li>Usuario Nuevo</li>
+				
+			</ol>
+			<div class="page-header_title">
+				<h1>
+					Crear Usuario
+					<span class="page-header_subtitle"></span>
+				</h1>
+			</div>
+		</section>
+
+		<section><!--Boton opciones-->
+			<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Modals"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Checkbox",
+	 "SpeedDial"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Speed Dial Plugin
+		 */
+		 $(".radio-up-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","up");
+		 });
+		 $(".radio-down-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","down");
+		 });
+		 $(".radio-left-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","left");
+		 });
+		 $(".radio-right-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","right");
+		 });
+		 $(".radio-open-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("open");
+		 });
+		 $(".radio-close-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("close");
+		 });
+		 $(".radio-fling-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("mode","fling");
+		 });
+		 $(".radio-scale-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("mode","scale");
+		 });
+
+		/**
+		 * Clipboard
+		 */		
+		 clipboard = new Clipboard('[data-copycode="true"]',{
+		 	target: function(trigger) {
+		 		return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+		 	}
+		 });
+
+		 clipboard.on('success', function(e) {
+		 	$.toasts("add",{
+		 		msg: "Copied!",
+		 	});	
+		 	e.clearSelection();
+		 });
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+		<div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+			<button type="button" class="btn btn-floating-action btn-info primary-bg"><i class="material-icons">menu</i></button>
+		</div>
+		<ul class="md-fab-actions" aria-hidden="true">
+			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="tooltip" data-placement="left" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></a></li>
+			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="demoModal2" data-placement="left" title="Guardar"><i class="material-icons">save</i></a>
+			</li>
+			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="demoModal2" data-placement="left" title="Volver" href="index.html?#Paginas/em_datosBenefiiario.html"><i class="material-icons">replay</i></a>
+			</li>
+		</ul>
+	</div>
+</section>
+<br>
+<section>
+	<DIV>Por Favor Adjuntar archivos requeridos</DIV>
+	<div class="col-sm-2 text-center">
+		<div id="demoModal2" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Datos guardados exitosamente</h4>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Aceptar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<section class="page-content"> 
+		<table id="table1" class="table table-striped">
+			<td>
+				<label for="select1">Consultar Identificación</label>
+				<br>
+				 <div class="form-group">
+		                <input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="1022403751">
+			
+					</div>
+			
+				<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">consultar</button>
+					</div>
+			</td>
+			<td>
+			    	<div class="form-group">
+						<label for="help1">Primer Nombre<font color="red">*</font></label>
+			<br>
+		                <input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="JUAN">
+					</div>
+			<br>
+			        <div class="form-group">
+						<label for="help1">Segundo Nombre<font color="red">*</font></label>
+			 <br>
+		                <input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ANDRES">
+					</div>		
+
+			 <br>		    
+				    <div class="form-group">
+						<label for="help1">Primer Apellido<font color="red">*</font></label>
+			 <br>
+		                <input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="PEREZ">
+					</div>
+			
+					<div class="form-group">
+						<label for="help1">Segundo Apellido<font color="red">*</font></label>
+			<br>	
+		                <input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="OCHOA">
+					</div>
+            <br>
+					<div class="form-group">
+						<label for="help1">Correo Electronico<font color="red">*</font></label>
+			<br>			
+		                <input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="JUANSITO@micorreonofalso.mi.co">
+					</div>
+            </td>
+		</table>
+	        	<table id="table1" class="table table-striped">
+			<td>    <div class="form-group">
+			<br>
+				        <select id="select1" name="select1" class="form-control">
+		     			<option value="23" selected="selected">SELECCIONAR</option>
+			     		<option value="23">Proveedor</option>
+				    	<option value="72">Administrador</option>
+					    <option value="87">Empleado</option>	
+					    <option value="87">Usuario Funcional</option>>
+						
+			          	</select>
+				    <label for="select1">Tipo Rol</label>
+		   <br>
+				         <div class="form-group"><br>
+					    <input value="" type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" data-original-title="a1xWrqdIR">
+					<label for="help1">GENERAR CONTRASEÑA<br></label>
+				    </div>	
+				<br>
+			
+			</td>
+    		<td>
+    				<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Crear</button>
+					</div>
+				
+	            	
+	        </td>
+	        <tr>
+	        <td>
+	        		<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Enviar</button>
+					</div>
+				
+	        </td>
+	        </tr>
+	</section><!-- /#page-content -->
+
+

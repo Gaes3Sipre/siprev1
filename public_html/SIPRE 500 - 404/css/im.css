@@ -1,0 +1,8 @@
+body{
+	background-image: url(../Imagenes/yellow-background.jpg);
+	
+	/*centrar, fijar y tamaño 100% en imagen de fondo*/
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 100%;
+	width: 1000px;

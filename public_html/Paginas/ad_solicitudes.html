@@ -1,0 +1,278 @@
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Checkbox",
+	 "Select",
+	 "Dropdown",
+	 "Tooltip"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Modals"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<section class="page-header alternative-header">
+		<ol class="breadcrumb">
+			<li>Administrador</li>
+			<li>Beneficios</li>
+		</ol>
+		<div class="page-header_title">
+			<h1>
+				Solicitudes
+				<span class="page-header_subtitle"></span>
+			</h1>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading panel-heading-xs">
+						</div><!-- /.panel-heading -->
+						<div class="panel-body">
+							<div class="panel-table-inner-offset">
+								<table class="table" data-row-select="false" id="table1">
+									<thead>
+										<tr>
+											<th>Identificacion Empleado</th>
+											<td>Codigo Solicitud</td>
+											<td>Tipo</td>
+											<td>Estado</td>
+											<td>Detalle</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="active">
+											<th scope="row">1032005856</th>
+											<td>8001</td>
+											<td>AUXILIO EDUCATIVO HIJOS</td>
+											<td>APROBADO</td>
+											<td><a href="index_administrador.html#Paginas/ad_detalleSolicitud1.html">
+												<i class="material-icons">forward</i></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">1032005856</th>
+											<td>8002</td>
+											<td>AUXILIO FUNERARIO</td>
+											<td>RADICADO</td>
+											<td><a href="index_administrador.html#Paginas/ad_detalleSolicitud2.html">
+												<i class="material-icons">forward</i></a>
+											</td>
+										</tr>
+										<tr class="success">
+											<th scope="row">1032005856</th>
+											<td>8003</td>
+											<td>AUXILIO EDUCATIVO EMPLEADO</td>
+											<td>CANCELADO</td>
+											<td><a href="index_administrador.html#Paginas/ad_detalleSolicitud3.html">
+												<i class="material-icons">forward</i></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>

@@ -1,0 +1,571 @@
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Checkbox",
+	 "Select",
+	 "Dropdown",
+	 "Tooltip"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Modals"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<section class="page-header alternative-header">
+		<ol class="breadcrumb">
+			<li>Administrador</li>
+			<li>Biodata</li>
+		</ol>
+		<div class="page-header_title">
+			<h1>
+				Datos Basicos Empleado
+				<span class="page-header_subtitle"></span>
+			</h1>
+		</div>
+	</section>
+
+	<section class="page-content">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="panel-table-inner-offset">
+							<table id="tableDataTables1" class="table">
+								<thead>
+									<tr>
+										<th class="text-right">Identificacion</th>
+										<th class="text-right">Nombres</th>
+										<th class="text-right">Apellidos</th>
+										<th class="text-right">Indicador de Actividad</th>
+										<th class="text-right">tipo de Contrato</th>
+										<th class="text-right">Detalle</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="text-right">
+										<td>1032005856</td>
+										<td>SANTIAGO ANDRES</td>
+										<td>BERNAL BERNAL</td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html">
+											<i class="material-icons">contacts</i></a>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td>2927394</td>
+										<td>RITA LAURINA             </td>
+										<td>MENDIVELSO                              </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>3162669</td>
+										<td>HENRY                    </td>
+										<td>AYALA AYALA                             </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>5172799</td>
+										<td>ENDIS BLADIMIR           </td>
+										<td>GONZALEZ DUARTE                         </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>7713170</td>
+										<td>YEISON URIAS             </td>
+										<td>VILLARREAL PEREZ                        </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>9525543</td>
+										<td>LAUREANO                 </td>
+										<td>NUÐEZ CALA                              </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>11187470</td>
+										<td>ARMANDO                  </td>
+										<td>RIVERA VARGAS                           </td>
+										<td>INACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>11511150</td>
+										<td>JULIAN FERNANDO          </td>
+										<td>TOBON CAJAS                             </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>13246034</td>
+										<td>CRISTO HUMBERTO          </td>
+										<td>GOMEZ NAVARRO                           </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>13275270</td>
+										<td>FRANKIN EDUARDO          </td>
+										<td>GAMBOA APONTE                           </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>13570962</td>
+										<td>NESTOR LEONEL            </td>
+										<td>BALLESTEROS LEAL                        </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>13570962</td>
+										<td>NESTOR LEONEL            </td>
+										<td>BALLESTEROS LEAL                        </td>
+										<td>INACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>13749758</td>
+										<td>HERNAN DARIO             </td>
+										<td>PORRAS PIMIENTA                         </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>13850071</td>
+										<td>ALIRIO                   </td>
+										<td>RIVERO MEJIA                            </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>13887667</td>
+										<td>ALVARO DE JESUS          </td>
+										<td>MORALES ARTEAGA                         </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>13888309</td>
+										<td>ROBERTO EXPEDITO         </td>
+										<td>VALENCIA GOMEZ                          </td>
+										<td>ACTIVO</td>
+										<td>INDEFINIDO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>16257476</td>
+										<td>RAMIRO                   </td>
+										<td>DURAN CAICEDO                           </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>19195436</td>
+										<td>LUIS ANTONIO             </td>
+										<td>CORTES UMAÐA                            </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>20421268</td>
+										<td>STELLA                   </td>
+										<td>CASALLAS ROJAS                          </td>
+										<td>INACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>21182195</td>
+										<td>LILIANA                  </td>
+										<td>AGUIRRE VALLEJO                         </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>22447043</td>
+										<td>LUBBY ISABEL             </td>
+										<td>AGUILAR TOVAR                           </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>22491851</td>
+										<td>NATALIA                  </td>
+										<td>GONZALEZ RUBIO SALAZAR                  </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>26431977</td>
+										<td>CLAUDIA PATRICIA         </td>
+										<td>MEDINA CORTES                           </td>
+										<td>INACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>27592225</td>
+										<td>NINA MADELEINE           </td>
+										<td>AGUDELO GOMEZ                           </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+									<tr class="text-right">
+										<td>28268671</td>
+										<td>YANETH                   </td>
+										<td>CASTELLANOS VARGAS                      </td>
+										<td>ACTIVO</td>
+										<td>FIJO</td>
+										<td><a href="index_administrador.html#Paginas/ad_detalleEmpleado.html"><i class="material-icons">contacts</i></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- /#page-content -->
+
+
+
+	<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint",
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * DataTables
+		 */
+		 $("#tableDataTables1").dataTable();
+		 $("select").selectpicker({
+		 	dropupAuto: false,
+		 	size: 5
+		 });
+
+
+		 clipboard = new Clipboard('[data-copycode="true"]',{
+		 	target: function(trigger) {
+		 		return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+		 	}
+		 });
+
+		 clipboard.on('success', function(e) {
+		 	$.toasts("add",{
+		 		msg: "Copied!",
+		 	});	
+		 	e.clearSelection();
+		 });
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>

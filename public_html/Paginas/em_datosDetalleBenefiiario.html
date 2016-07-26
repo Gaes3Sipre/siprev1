@@ -1,0 +1,779 @@
+	<body>
+		<script type="text/javascript">
+		/**
+		 * PUT BELOW HERE
+		 * ALL PAGE LEVEL RELATED SCRIPTS
+		 */
+
+
+
+		/**
+		 * 1. pageLoadScripts
+		 *
+		 * Scripts array to load on pageload event
+		 *
+		 * Example:
+		 *	var pageLoadScripts = [
+		 *		"js/bemat-demo-script1.min.js",
+		 *		"js/bemat-demo-script2.min.js"
+		 *  ]
+		 *
+		 */
+		 var pageLoadScripts = [
+
+		 ]
+
+		 var pageLoadCSS = [
+
+		 ]
+
+
+		/**
+		 * 2. pageRequiredComponents
+		 *
+		 * Components that require this page. By default all components are loaded,
+		 * but with this array, you can force the reinitialization of any component.
+		 * 
+		 * Example:
+		 *	var pageRequiredComponents = [
+		 *		"Panel",
+		 *		"Checkbox",
+		 *		"Select",
+		 *		"Dropdown",
+		 *		"Tooltip",
+		 *		"Modals",
+		 *		"FloatingLabels",
+		 *		"Scrollbar",
+		 *		"MaterialRipple",
+		 *		"Snackbar",
+		 *		"Toast",
+		 *		"Subheader",
+		 *		"SimplePieCharts",
+		 *		"LinearProgress",
+		 *		"CircularProgress",
+		 *		"SpeedDial"
+		 *	]
+		 */	
+		 var pageRequiredComponents = [
+		 "Checkbox",
+		 "Select",
+		 "Dropdown",
+		 "Tooltip"
+		 ]
+
+
+		/**
+		 * 3. pageRequiredFeatures
+		 */
+		 var pageRequiredFeatures = [
+		 "prettyPrint"
+		 ]
+
+
+
+		/**
+		 * 4. doneScriptsLoad() 
+		 *
+		 * This function gets called when the "pageLoadScripts" 
+		 * and "pageRequiredComponents" arrays above are fully loaded
+		 */
+
+		// Set page variables globally
+		var clipboard;
+		
+		var doneScriptsLoad = function(){
+			clipboard = new Clipboard('[data-copycode="true"]',{
+				target: function(trigger) {
+					return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+				}
+			});
+			
+			clipboard.on('success', function(e) {
+				$.toasts("add",{
+					msg: "Copied!",
+				});	
+				e.clearSelection();
+			});
+		} // END: doneScriptsLoad();
+		
+
+		/**
+		 * 4. pageDestroy()
+		 *
+		 * Destroy all generated instances
+		 */
+		 var pageDestroy = function(){
+		 	clipboard.destroy(); clipboard = void 0;
+		 }
+		</script>
+		<script type="text/javascript">
+		/**
+		 * PUT BELOW HERE
+		 * ALL PAGE LEVEL RELATED SCRIPTS
+		 */
+
+
+
+		/**
+		 * 1. pageLoadScripts
+		 *
+		 * Scripts array to load on pageload event
+		 *
+		 * Example:
+		 *	var pageLoadScripts = [
+		 *		"js/bemat-demo-script1.min.js",
+		 *		"js/bemat-demo-script2.min.js"
+		 *  ]
+		 *
+		 */
+		 var pageLoadScripts = [
+
+		 ]
+
+		 var pageLoadCSS = [
+
+		 ]
+
+
+		/**
+		 * 2. pageRequiredComponents
+		 *
+		 * Components that require this page. By default all components are loaded,
+		 * but with this array, you can force the reinitialization of any component.
+		 * 
+		 * Example:
+		 *	var pageRequiredComponents = [
+		 *		"Panel",
+		 *		"Checkbox",
+		 *		"Select",
+		 *		"Dropdown",
+		 *		"Tooltip",
+		 *		"Modals",
+		 *		"FloatingLabels",
+		 *		"Scrollbar",
+		 *		"MaterialRipple",
+		 *		"Snackbar",
+		 *		"Toast",
+		 *		"Subheader",
+		 *		"SimplePieCharts",
+		 *		"LinearProgress",
+		 *		"CircularProgress",
+		 *		"SpeedDial"
+		 *	]
+		 */	
+		 var pageRequiredComponents = [
+		 "Modals"
+		 ]
+
+
+		/**
+		 * 3. pageRequiredFeatures
+		 */
+		 var pageRequiredFeatures = [
+		 "prettyPrint"
+		 ]
+
+
+
+		/**
+		 * 4. doneScriptsLoad() 
+		 *
+		 * This function gets called when the "pageLoadScripts" 
+		 * and "pageRequiredComponents" arrays above are fully loaded
+		 */
+
+		// Set page variables globally
+		var clipboard;
+		
+		var doneScriptsLoad = function(){
+			clipboard = new Clipboard('[data-copycode="true"]',{
+				target: function(trigger) {
+					return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+				}
+			});
+			
+			clipboard.on('success', function(e) {
+				$.toasts("add",{
+					msg: "Copied!",
+				});	
+				e.clearSelection();
+			});
+		} // END: doneScriptsLoad();
+		
+
+		/**
+		 * 4. pageDestroy()
+		 *
+		 * Destroy all generated instances
+		 */
+		 var pageDestroy = function(){
+		 	clipboard.destroy(); clipboard = void 0;
+		 }
+		</script>
+		<section class="page-header alternative-header">
+			<ol class="breadcrumb">
+				<li>Empleado</li>
+				<li>BioData</li>
+				<li>Mis Beneficiarios</li>
+			</ol>
+			<div class="page-header_title">
+				<h1>
+					Detatalle Beneficiarios
+					<span class="page-header_subtitle"></span>
+				</h1>
+			</div>
+		</section>
+    <section><!--Boton opciones-->
+	<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Modals"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	 var pageLoadScripts = [
+
+	 ]
+
+	 var pageLoadCSS = [
+
+	 ]
+
+
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	 var pageRequiredComponents = [
+	 "Checkbox",
+	 "SpeedDial"
+	 ]
+
+
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	 var pageRequiredFeatures = [
+	 "prettyPrint"
+	 ]
+
+
+
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Speed Dial Plugin
+		 */
+		 $(".radio-up-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","up");
+		 });
+		 $(".radio-down-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","down");
+		 });
+		 $(".radio-left-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","left");
+		 });
+		 $(".radio-right-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("direction","right");
+		 });
+		 $(".radio-open-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("open");
+		 });
+		 $(".radio-close-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("close");
+		 });
+		 $(".radio-fling-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("mode","fling");
+		 });
+		 $(".radio-scale-fabspeeddial").on('ifChecked', function(event){
+		 	$("#demo-speed-dial").speedDial("mode","scale");
+		 });
+
+		/**
+		 * Clipboard
+		 */		
+		 clipboard = new Clipboard('[data-copycode="true"]',{
+		 	target: function(trigger) {
+		 		return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+		 	}
+		 });
+
+		 clipboard.on('success', function(e) {
+		 	$.toasts("add",{
+		 		msg: "Copied!",
+		 	});	
+		 	e.clearSelection();
+		 });
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	 var pageDestroy = function(){
+	 	clipboard.destroy(); clipboard = void 0;
+	 }
+	</script>
+	<div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+		<div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+			<button type="button" class="btn btn-floating-action btn-info primary-bg"><i class="material-icons">menu</i></button>
+		</div>
+		<ul class="md-fab-actions" aria-hidden="true">
+			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="tooltip" data-placement="left" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></a></li>
+			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="demoModal2" data-placement="left" title="Guardar"><i class="material-icons">save</i></a>
+			</li>
+			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="demoModal2" data-placement="left" title="Volver" href="index.html?#Paginas/em_datosBenefiiario.html"><i class="material-icons">replay</i></a>
+			</li>
+		</ul>
+	</div>
+</section>
+<br>
+    	<section>
+			<div class="col-sm-2 text-center">
+				<div id="demoModal2" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title">Datos actualizados exitosamente</h4>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Aceptar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<section class="page-content"> 
+				<table id="table1" class="table table-striped">
+					<tr> <LABEL for="success1">Datos Basicos</LABEL>
+						<td><div class="form-group">
+						<br>
+							<input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="JUAN">
+							<label for="help1">Primer Nombre</label>
+						</div></td>
+						<td><div class="form-group">
+						<br>
+							<input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ANDRES">
+							<label for="help1">Segundo Nombre</label>
+						</div></td>
+
+						<td><div class="form-group">
+						<br>
+							<input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="BERNAL">
+							<label for="help1">Primer Apellido</label>
+						</div></td>
+						<td>
+							<div class="form-group">
+							<br>
+								<input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ORTIZ">
+								<label for="help1">Segundo Apellido</label>
+							</div>
+						</td>
+					</tr>
+					</table>
+
+
+					<!--LUGAR Y FECHA DE NACIMIENTO-->
+					<table id="table1" class="table table-striped">
+						<tr> <LABEL for="success1">Datos de Nacimiento</LABEL>
+							<td><div class="form-group">
+							<br>
+								<select id="select1" name="select1" class="form-control">
+									<option value="23">ALEMANIA</option>
+									<option value="72">AUSTRIA</option>
+									<option value="87">BELGICA</option>
+									<option value="149">CANADA</option>
+									<option selected="selected" value="169">COLOMBIA</option>
+									<option value="245">ESPAñA</option>
+									<option value="249">ESTADO UNIDOS</option>
+									<option value="275">FRANCIA</option>
+									<option value="628">INGLATERRA</option>
+									<option value="767">SUIZA</option>
+									<option value="16">VENEZUELA</option>
+								</select>
+								<label for="select1">País</label>
+							</div></td>
+							<td><div class="form-group">
+							<br>
+								<select id="select1" name="select1" class="form-control">
+									<option value="91">AMAZONAS</option>
+									<option value="5">ANTIOQUIA</option>
+									<option value="81">ARAUCA</option>
+									<option value="8">ATLANTICO</option>
+									<option value="13">BOLIVAR</option>
+									<option value="15">BOYACA</option>
+									<option value="17">CALDAS</option>
+									<option value="18">CAQUETA</option>
+									<option value="85">CASANARE</option>
+									<option value="19">CAUCA</option>
+									<option value="20">CESAR</option>
+									<option value="27">CHOCO</option>
+									<option value="30">CORDOBA</option>
+									<option value="25">CUNDINAMARCA</option>
+									<option selected="selected" value="11">DISTRITO CAPITAL</option>
+									<option value="44">GUAJIRA</option>
+									<option value="41">HUILA</option>
+									<option value="47">MAGDALENA</option>
+									<option value="50">META</option>
+									<option value="52">NARIÑO</option>
+									<option value="54">NORTE DE SANTANDER</option>
+									<option value="86">PUTUMAYO</option>
+									<option value="63">QUINDIO </option>
+									<option value="66">RISARALDA</option>
+									<option value="88">SAN ANDRES</option>
+									<option value="68">SANTANDER</option>
+									<option value="70">SUCRE</option>
+									<option value="73">TOLIMA</option>
+									<option value="76">VALLE DEL CAUCA</option>
+								</select>
+								<label for="select1">Departamento</label>
+							</div></td>
+
+							<td><div class="form-group">
+							<br>
+								<select id="select1" name="select3" class="form-control">
+									<option value="Seleccione..">Seleccione..</option>
+									<option selected="selected" value="1">BOGOTA D.C.</option>
+									<option value="92">BOSA  </option>
+									<option value="20">ENGATIVA</option>
+									<option value="30">FONTIBON</option>
+									<option value="40">SUBA</option>
+									<option value="50">USAQUEN</option>
+									<option value="60">USME</option>
+								</select>
+								<label for="select3">Municipio</label>
+							</div></td>
+							<td style="vertical-align: top; text-align: left;">
+							<br>
+								<div class="form-group">
+								<br>
+									<input value="02/01/2000" type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" data-original-title="DD/MM/AAAA">
+									<label for="help1">Fecha Expedición Documento<br></label>
+								</div>
+							</td>
+							<td><div class="form-group">
+							<br>
+								<select id="select1" name="select1" class="form-control">
+									<option selected="selected" value="169">COLOMBIA</option>
+									<option value="23">EXTRANJERO</option>
+									<option value="23">DOBLE NACIONALIDAD</option>
+								</select>
+								<label for="select1">Nacionalidad</label>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<table id="table1" class="table table-striped"><!--daos expedicion documento-->
+					<tr> <LABEL for="success1">Lugar Expedicion Documento</LABEL>
+						<td><div class="form-group">
+						<br>
+							<select id="select1" name="select1" class="form-control">
+								<option value="23">ALEMANIA</option>
+								<option value="72">AUSTRIA</option>
+								<option value="87">BELGICA</option>
+								<option value="149">CANADA</option>
+								<option selected="selected" value="169">COLOMBIA</option>
+								<option value="245">ESPAñA</option>
+								<option value="249">ESTADO UNIDOS</option>
+								<option value="275">FRANCIA</option>
+								<option value="628">INGLATERRA</option>
+								<option value="767">SUIZA</option>
+								<option value="16">VENEZUELA</option>
+							</select>
+							<label for="select1">País</label>
+						</div></td>
+						<td><div class="form-group">
+						<br>
+							<select id="select1" name="select1" class="form-control">
+								<option value="91">AMAZONAS</option>
+								<option value="5">ANTIOQUIA</option>
+								<option value="81">ARAUCA</option>
+								<option value="8">ATLANTICO</option>
+								<option value="13">BOLIVAR</option>
+								<option value="15">BOYACA</option>
+								<option value="17">CALDAS</option>
+								<option value="18">CAQUETA</option>
+								<option value="85">CASANARE</option>
+								<option value="19">CAUCA</option>
+								<option value="20">CESAR</option>
+								<option value="27">CHOCO</option>
+								<option value="30">CORDOBA</option>
+								<option value="25">CUNDINAMARCA</option>
+								<option selected="selected" value="11">DISTRITO CAPITAL</option>
+								<option value="44">GUAJIRA</option>
+								<option value="41">HUILA</option>
+								<option value="47">MAGDALENA</option>
+								<option value="50">META</option>
+								<option value="52">NARIÑO</option>
+								<option value="54">NORTE DE SANTANDER</option>
+								<option value="86">PUTUMAYO</option>
+								<option value="63">QUINDIO </option>
+								<option value="66">RISARALDA</option>
+								<option value="88">SAN ANDRES</option>
+								<option value="68">SANTANDER</option>
+								<option value="70">SUCRE</option>
+								<option value="73">TOLIMA</option>
+								<option value="76">VALLE DEL CAUCA</option>
+							</select>
+							<label for="select1">Departamento</label>
+						</div></td>
+
+						<td><div class="form-group">
+						<br>
+							<select id="select1" name="select3" class="form-control">
+								<option value="Seleccione..">Seleccione..</option>
+								<option selected="selected" value="1">BOGOTA D.C.</option>
+								<option value="92">BOSA  </option>
+								<option value="20">ENGATIVA</option>
+								<option value="30">FONTIBON</option>
+								<option value="40">SUBA</option>
+								<option value="50">USAQUEN</option>
+								<option value="60">USME</option>
+							</select>
+							<label for="select3">Municipio</label>
+						</div></td>
+						<td style="vertical-align: top; text-align: left;">
+							<div class="form-group">
+							<br>
+								<input value="02/01/2000" type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" data-original-title="DD/MM/AAAA">
+								<label for="help1">Fecha y lugar de naciomiento<br></label>
+							</div>
+						</td>
+					</td>
+				</tr></td>
+			</tr>
+		</table>
+
+	</table><!--Datos Recidensia-->
+	<table id="table1" class="table table-striped">
+		<tr> <LABEL for="success1">Datos de Recidensia</LABEL>
+			<td><div class="form-group">
+			<br>
+				<select id="select1" name="select1" class="form-control">
+					<option value="23">ALEMANIA</option>
+					<option value="72">AUSTRIA</option>
+					<option value="87">BELGICA</option>
+					<option value="149">CANADA</option>
+					<option selected="selected" value="169">COLOMBIA</option>
+					<option value="245">ESPAñA</option>
+					<option value="249">ESTADO UNIDOS</option>
+					<option value="275">FRANCIA</option>
+					<option value="628">INGLATERRA</option>
+					<option value="767">SUIZA</option>
+					<option value="16">VENEZUELA</option>
+				</select>
+				<label for="select1">País</label>
+			</div></td>
+			<td><div class="form-group">
+			<br>
+				<select id="select1" name="select1" class="form-control">
+					<option value="91">AMAZONAS</option>
+					<option value="5">ANTIOQUIA</option>
+					<option value="81">ARAUCA</option>
+					<option value="8">ATLANTICO</option>
+					<option value="13">BOLIVAR</option>
+					<option value="15">BOYACA</option>
+					<option value="17">CALDAS</option>
+					<option value="18">CAQUETA</option>
+					<option value="85">CASANARE</option>
+					<option value="19">CAUCA</option>
+					<option value="20">CESAR</option>
+					<option value="27">CHOCO</option>
+					<option value="30">CORDOBA</option>
+					<option value="25">CUNDINAMARCA</option>
+					<option selected="selected" value="11">DISTRITO CAPITAL</option>
+					<option value="44">GUAJIRA</option>
+					<option value="41">HUILA</option>
+					<option value="47">MAGDALENA</option>
+					<option value="50">META</option>
+					<option value="52">NARIÑO</option>
+					<option value="54">NORTE DE SANTANDER</option>
+					<option value="86">PUTUMAYO</option>
+					<option value="63">QUINDIO </option>
+					<option value="66">RISARALDA</option>
+					<option value="88">SAN ANDRES</option>
+					<option value="68">SANTANDER</option>
+					<option value="70">SUCRE</option>
+					<option value="73">TOLIMA</option>
+					<option value="76">VALLE DEL CAUCA</option>
+				</select>
+				<label for="select1">Departamento</label>
+			</div></td>
+
+			<td><div class="form-group">
+			<br>
+				<select id="select1" name="select3" class="form-control">
+					<option value="Seleccione..">Seleccione..</option>
+					<option selected="selected" value="1">BOGOTA D.C.</option>
+					<option value="92">BOSA  </option>
+					<option value="20">ENGATIVA</option>
+					<option value="30">FONTIBON</option>
+					<option value="40">SUBA</option>
+					<option value="50">USAQUEN</option>
+					<option value="60">USME</option>
+				</select>
+				<label for="select3">Municipio</label>
+			</div></td>
+			<td style="vertical-align: top; text-align: left;">
+				<div class="form-group">
+				<br>
+					<input value="CR20 50 88 " type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover">
+					<label for="help1">Direccion</label>
+				</div>
+			</td>
+		</td>
+	</tr></td>
+</table>
+
+</section><!-- /#page-content -->
