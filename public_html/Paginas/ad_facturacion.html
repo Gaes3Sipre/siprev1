@@ -1,199 +1,197 @@
 <section class="page-header alternative-header">
-	<ol class="breadcrumb">
-		<li>Facturación</li>
-		<li>Simulador de Facturación</li>
-	</ol>
-	<div class="page-header_title">
-		<h1>
-			Facturas por cargar
-			<span class="page-header_subtitle"></span>
-		</h1>
-	</div>
+    <ol class="breadcrumb">
+        <li>Facturación</li>
+        <li>Simulador de Facturación</li>
+    </ol>
+    <div class="page-header_title">
+        <h1>
+            Facturas por cargar
+            <span class="page-header_subtitle"></span>
+        </h1>
+    </div>
 </section>
 
 <section class="page-content">
-	<div class="col-lg-12">
-		<h3>Simulador de Facturación</h3>
-	</div>
-	<div class="col-lg-12">
-		<div class="panel panel-default">
-			<div class="panel-heading panel-heading-xs">
-				<header>
-					Seleccione factura:
-				</header>
-			</div><!-- /.panel-heading -->
-			<div class="panel-body">
-				<div class="panel-table-inner-offset">
-					<table id="table1" class="table" data-row-select="false" align-text="center">
-						<thead>
-							<div class="panel-heading-tools">
-								<div class="btn-group">						
-										<li><input class="switch switch-warning" type="checkbox"/><a>Seleccionar Todo</a></li>
-								</div>
-							</div>
-						</div>
-						<tr>
-							<td >Seleccionar</td>
-							<td >Codigo Factura</td>
-							<td >Codigo Servicio</td>
-							<td >Nit Proveedor</td>
-							<!--<td >Codigo Tratamiento</td>-->
-							<td >Valor Empleado</td>
-							<td >Valor Empresa</td>
-							
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-						
-							
-							<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
-							<td scope="row">05856</td>
-							<td>1</td>
-							<td>3046023</td>
-							<!--<td scope="row">9324</td>-->
-							<td>$ 7000</td>
-							<td>$ 70000</td>
-							
-						</tr>
-						<tr>
-							<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
-							<td scope="row">13246</td>
-							<td >2</td>
-							<td>4157112</td>
-							<!--<td scope="row">9123</td>-->
-							<td>$ 6220</td>
-							<td>$ 73410</td>
-							
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-	<table align="center">
-		<td>
-			<p><button type="button" class="btn btn-raised btn-info">Liquidar</button></p>
+    <div class="col-lg-12">
+        <h3>Simulador de Facturación</h3>
+    </div>
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading panel-heading-xs">
+                <header>
+                    Seleccione factura:
+                </header>
+            </div><!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="panel-table-inner-offset">
+                    <table id="table1" class="table" data-row-select="false" align-text="center">
+                        <thead>
+                        <div class="panel-heading-tools">
+                            <div class="btn-group">						
+                                <li><input class="switch switch-warning" type="checkbox"/><a>Seleccionar Todo</a></li>
+                            </div>
+                        </div>
+                </div>
+                <tr>
+                    <td >Seleccionar</td>
+                    <td >Codigo Factura</td>
+                    <td >Codigo Servicio</td>
+                    <td >Nit Proveedor</td>
+                    <!--<td >Codigo Tratamiento</td>-->
+                    <td >Valor Empleado</td>
+                    <td >Valor Empresa</td>
 
-		</td>
-		<td>
-			<p><button type="button" class="btn btn-raised btn-danger">Cancelar</button></p>
-		</td>	
-	</table>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+                        <td scope="row">05856</td>
+                        <td>1</td>
+                        <td>3046023</td>
+                        <!--<td scope="row">9324</td>-->
+                        <td>$ 7000</td>
+                        <td>$ 70000</td>
+
+                    </tr>
+                    <tr>
+                        <td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+                        <td scope="row">13246</td>
+                        <td >2</td>
+                        <td>4157112</td>
+                        <!--<td scope="row">9123</td>-->
+                        <td>$ 6220</td>
+                        <td>$ 73410</td>
+
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <table align="center">
+        <td>
+            <p><button type="button" class="btn btn-raised btn-info">Liquidar</button></p>
+
+        </td>
+        <td>
+            <p><button type="button" class="btn btn-raised btn-danger">Cancelar</button></p>
+        </td>	
+    </table>
 </div>
 </section><!-- /#page-content -->
 
 
 
 <script type="text/javascript">
-	$(".btn-circular-progress-demo-5").on("click",function(){
-		$(".circular-preloader-demo-indeterminate2").circularProgress("Liquidar");
-	});
-	
+    $(".btn-circular-progress-demo-5").on("click", function () {
+        $(".circular-preloader-demo-indeterminate2").circularProgress("Liquidar");
+    });
+
 </script>
 
 
 <script type="text/javascript">
-	/**
-	 * PUT BELOW HERE
-	 * ALL PAGE LEVEL RELATED SCRIPTS
-	 */
+    /**
+     * PUT BELOW HERE
+     * ALL PAGE LEVEL RELATED SCRIPTS
+     */
 
 
 
-	/**
-	 * 1. pageLoadScripts
-	 *
-	 * Scripts array to load on pageload event
-	 *
-	 * Example:
-	 *	var pageLoadScripts = [
-	 *		"js/bemat-demo-script1.min.js",
-	 *		"js/bemat-demo-script2.min.js"
-	 *  ]
-	 *
-	 */
-	 var pageLoadScripts = [
+    /**
+     * 1. pageLoadScripts
+     *
+     * Scripts array to load on pageload event
+     *
+     * Example:
+     *	var pageLoadScripts = [
+     *		"js/bemat-demo-script1.min.js",
+     *		"js/bemat-demo-script2.min.js"
+     *  ]
+     *
+     */
+    var pageLoadScripts = [
+    ]
 
-	 ]
-
-	 var pageLoadCSS = [
-
-	 ]
+    var pageLoadCSS = [
+    ]
 
 
-	/**
-	 * 2. pageRequiredComponents
-	 *
-	 * Components that require this page. By default all components are loaded,
-	 * but with this array, you can force the reinitialization of any component.
-	 * 
-	 * Example:
-	 *	var pageRequiredComponents = [
-	 *		"Panel",
-	 *		"Checkbox",
-	 *		"Select",
-	 *		"Dropdown",
-	 *		"Tooltip",
-	 *		"Modals",
-	 *		"FloatingLabels",
-	 *		"Scrollbar",
-	 *		"MaterialRipple",
-	 *		"Snackbar",
-	 *		"Toast",
-	 *		"Subheader",
-	 *		"SimplePieCharts",
-	 *		"LinearProgress",
-	 *		"CircularProgress",
-	 *		"SpeedDial"
-	 *	]
-	 */	
-	 var pageRequiredComponents = [
-	 "Checkbox"
-	 ]
+    /**
+     * 2. pageRequiredComponents
+     *
+     * Components that require this page. By default all components are loaded,
+     * but with this array, you can force the reinitialization of any component.
+     * 
+     * Example:
+     *	var pageRequiredComponents = [
+     *		"Panel",
+     *		"Checkbox",
+     *		"Select",
+     *		"Dropdown",
+     *		"Tooltip",
+     *		"Modals",
+     *		"FloatingLabels",
+     *		"Scrollbar",
+     *		"MaterialRipple",
+     *		"Snackbar",
+     *		"Toast",
+     *		"Subheader",
+     *		"SimplePieCharts",
+     *		"LinearProgress",
+     *		"CircularProgress",
+     *		"SpeedDial"
+     *	]
+     */
+    var pageRequiredComponents = [
+        "Checkbox"
+    ]
 
 
-	/**
-	 * 3. pageRequiredFeatures
-	 */
-	 var pageRequiredFeatures = [
-	 "prettyPrint"
-	 ]
+    /**
+     * 3. pageRequiredFeatures
+     */
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ]
 
 
 
-	/**
-	 * 4. doneScriptsLoad() 
-	 *
-	 * This function gets called when the "pageLoadScripts" 
-	 * and "pageRequiredComponents" arrays above are fully loaded
-	 */
+    /**
+     * 4. doneScriptsLoad() 
+     *
+     * This function gets called when the "pageLoadScripts" 
+     * and "pageRequiredComponents" arrays above are fully loaded
+     */
 
-	// Set page variables globally
-	var clipboard;
-	
-	var doneScriptsLoad = function(){
-		clipboard = new Clipboard('[data-copycode="true"]',{
-			target: function(trigger) {
-				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
-			}
-		});
-		
-		clipboard.on('success', function(e) {
-			$.toasts("add",{
-				msg: "Copied!",
-			});	
-			e.clearSelection();
-		});
-	} // END: doneScriptsLoad();
-	
+    // Set page variables globally
+    var clipboard;
 
-	/**
-	 * 4. pageDestroy()
-	 *
-	 * Destroy all generated instances
-	 */
-	 var pageDestroy = function(){
-	 	clipboard.destroy(); clipboard = void 0;
-	 }
-	</script>
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    } // END: doneScriptsLoad();
+
+
+    /**
+     * 4. pageDestroy()
+     *
+     * Destroy all generated instances
+     */
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    }
+</script>
