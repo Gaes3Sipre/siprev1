@@ -38,14 +38,14 @@ $.ajaxNavMaterialTransition = false;
  * Default Language
  */
 $.appMultiLanguage		= true;
-$.appDefaultLanguage 	= "en";
+$.appDefaultLanguage 	= "es";
 
 
 /**
  * Sidebar Menu
  */
 $.sidebarWidth	 			= 300;
-$.sidebarMenuAutoCollapse 	= false;
+$.sidebarMenuAutoCollapse 	= true;
 
 
 /**
@@ -57,8 +57,8 @@ $.defaultHomePage = false;
 /**
  * Idle Timer
  */
-$.idle			= false;
-$.idleTimeout	= 3000;
+$.idle			= true;
+$.idleTimeout	= 60000;
 
 
 /**
