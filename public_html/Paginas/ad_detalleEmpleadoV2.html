@@ -1,0 +1,166 @@
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ]
+    var pageLoadCSS = [
+    ]
+    var pageRequiredComponents = [
+        "Checkbox",
+        "Select",
+        "Dropdown",
+        "Tooltip"
+    ]
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ]
+    var clipboard;
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    } // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<section class="page-header alternative-header">
+    <ol class="breadcrumb">
+        <li>Administrador</li>
+        <li>BioData</li>
+    </ol>
+    <div class="page-header_title">
+        <h1>
+            Datos Basicos Empleado
+            <span class="page-header_subtitle"></span>
+        </h1>
+    </div>
+</section>
+<section><!--Boton opciones-->
+    <script type="text/javascript">
+        var pageLoadScripts = [
+        ]
+        var pageLoadCSS = [
+        ]
+        var pageRequiredComponents = [
+            "Checkbox",
+            "SpeedDial"
+        ]
+        var pageRequiredFeatures = [
+            "prettyPrint"
+        ]
+        var clipboard;
+
+        var doneScriptsLoad = function () {
+            $(".radio-up-fabspeeddial").on('ifChecked', function (event) {
+                $("#demo-speed-dial").speedDial("direction", "up");
+            });
+            $(".radio-down-fabspeeddial").on('ifChecked', function (event) {
+                $("#demo-speed-dial").speedDial("direction", "down");
+            });
+            $(".radio-left-fabspeeddial").on('ifChecked', function (event) {
+                $("#demo-speed-dial").speedDial("direction", "left");
+            });
+            $(".radio-right-fabspeeddial").on('ifChecked', function (event) {
+                $("#demo-speed-dial").speedDial("direction", "right");
+            });
+            $(".radio-open-fabspeeddial").on('ifChecked', function (event) {
+                $("#demo-speed-dial").speedDial("open");
+            });
+            $(".radio-close-fabspeeddial").on('ifChecked', function (event) {
+                $("#demo-speed-dial").speedDial("close");
+            });
+            $(".radio-fling-fabspeeddial").on('ifChecked', function (event) {
+                $("#demo-speed-dial").speedDial("mode", "fling");
+            });
+            $(".radio-scale-fabspeeddial").on('ifChecked', function (event) {
+                $("#demo-speed-dial").speedDial("mode", "scale");
+            });
+            clipboard = new Clipboard('[data-copycode="true"]', {
+                target: function (trigger) {
+                    return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+                }
+            });
+
+            clipboard.on('success', function (e) {
+                $.toasts("add", {
+                    msg: "Copied!",
+                });
+                e.clearSelection();
+            });
+        }
+        var pageDestroy = function () {
+            clipboard.destroy();
+            clipboard = void 0;
+        }
+    </script>
+    <div class="row" style="margin-left:10px;">
+        <form class="col-md-12">
+            <div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+                <div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+                    <button type="button" class="btn btn-floating-action btn-info"><i class="material-icons">menu</i></button>
+                </div>
+                <ul class="md-fab-actions" aria-hidden="true">
+                    <li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="tooltip" data-placement="left" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></a></li>
+                    <li><button type="submit" class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="demoModal2" data-placement="left" title="Guardar"><i class="material-icons">save</i></Button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-12">
+                <label>Datos Basicos</label>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-6 form-group">
+                    <br>
+                    <input type="text" class="form-control" id="pnombre" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="JUAN" required="true">
+                    <label for="pnombre">Primer Nombre</label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <br>
+                    <input type="text" class="form-control" id="snombre" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ANDRES" required="true">
+                    <label for="snombre">Segundo Nombre</label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <br>
+                    <input type="text" class="form-control" id="papellido" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="BERNAL" required="true">
+                    <label for="papellido">Primer Apellido</label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <br>
+                    <input type="text" class="form-control" id="sapellido" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ORTIZ" required="true">
+                    <label for="sapellido">Segundo Apellido</label>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <img alt="image" class="img-responsive img-circle" src="img/avatar/avatar_square_blue.png">
+            </div>
+            <!--LUGAR Y FECHA DE NACIMIENTO-->
+            <section>
+                <div class="col-md-12">
+                    <LABEL for="success1">Datos de Nacimiento</LABEL>
+                </div>
+                <div class="col-md-">
+                    <br>
+                    <select id="nacionalidad" name="nacionalidad" class="form-control">
+                        <option selected="selected" value="169">SELECCIONE</option>
+                        <option value="169">COLOMBIA</option>
+                        <option value="23">EXTRANJERO</option>
+                        <option value="23">DOBLE NACIONALIDAD</option>
+                    </select>
+                    <label for="select1">Nacionalidad</label>
+                </div>
+            </section>
+        </form>
+
+    </div>
+
+</section>
