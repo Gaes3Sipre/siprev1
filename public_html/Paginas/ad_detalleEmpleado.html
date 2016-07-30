@@ -19,7 +19,6 @@
                 return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
             }
         });
-
         clipboard.on('success', function (e) {
             $.toasts("add", {
                 msg: "Copied!",
@@ -30,8 +29,7 @@
     var pageDestroy = function () {
         clipboard.destroy();
         clipboard = void 0;
-    };
-</script>
+    };</script>
 <section class="page-header alternative-header">
     <ol class="breadcrumb">
         <li>Administrador</li>
@@ -58,7 +56,6 @@
             "prettyPrint"
         ]
         var clipboard;
-
         var doneScriptsLoad = function () {
             $(".radio-up-fabspeeddial").on('ifChecked', function (event) {
                 $("#demo-speed-dial").speedDial("direction", "up");
@@ -89,7 +86,6 @@
                     return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
                 }
             });
-
             clipboard.on('success', function (e) {
                 $.toasts("add", {
                     msg: "Copied!",
@@ -103,7 +99,7 @@
         }
     </script>
     <div class="row" style="margin-left:10px;">
-        <form class="col-md-12">
+        <form class="col-md-12 right-alert" name="datosEmpleados" id="datosEmpleados">
             <div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
                 <div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
                     <button type="button" class="btn btn-floating-action btn-info"><i class="material-icons">menu</i></button>
@@ -118,24 +114,24 @@
                 <label>Datos Basicos</label>
             </div>
             <div class="col-md-6">
-                <div class="col-md-6 form-group">
+                <div  id="dpnombre" class="col-md-6 form-group">
                     <br>
-                    <input type="text" class="form-control" id="pnombre" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="JUAN" required="true">
+                    <input type="text" class="form-control" id="pnombre" name="pnombre" value="JUAN" >
                     <label for="pnombre">Primer Nombre</label>
                 </div>
                 <div class="col-md-6 form-group">
                     <br>
-                    <input type="text" class="form-control" id="snombre" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ANDRES" required="true">
+                    <input type="text" class="form-control" id="snombre" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ANDRES">
                     <label for="snombre">Segundo Nombre</label>
                 </div>
                 <div class="col-md-6 form-group">
                     <br>
-                    <input type="text" class="form-control" id="papellido" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="BERNAL" required="true">
+                    <input type="text" class="form-control" id="papellido" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="BERNAL">
                     <label for="papellido">Primer Apellido</label>
                 </div>
                 <div class="col-md-6 form-group">
                     <br>
-                    <input type="text" class="form-control" id="sapellido" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ORTIZ" required="true">
+                    <input type="text" class="form-control" id="sapellido" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ORTIZ" >
                     <label for="sapellido">Segundo Apellido</label>
                 </div>
 
@@ -227,12 +223,12 @@
                     <label for="naciMuni">Municipio</label>
                 </div>
                 <script>
-                    document.getElementById("fecExp").value = "2007-02-09";
+                    document.getElementById("fecNaci").value = "1989-02-09";
                 </script>
                 <div class="form-group col-md-3">
                     <br>
-                    <input type="date" class="form-control" id="fecExp" required="true">
-                    <label for="fecExp">Fecha de Nacimiento<br></label>
+                    <input type="date" class="form-control" id="fecNaci" required="true">
+                    <label for="fecNaci">Fecha de Nacimiento<br></label>
                 </div>
             </section>
             <!--Datos Expedicion Naciomiento-->
@@ -339,6 +335,136 @@
         </form>
     </div>
 </section>
+
+<script>
+    $().ready(function () {
+        // validate the comment form when it is submitted
+        $("#datosEmpleados").validate({
+            errorClass: "my-error-class",
+            validClass: "my-valid-class",
+            rules: {
+                pnombre: {
+                    required: true,
+                    lettersonly: true
+                },
+                snombre: {
+                    required: true,
+                    lettersonly: true
+                },
+                papellido: {
+                    required: true,
+                    lettersonly: true
+                },
+                sapellido: {
+                    required: true,
+                    lettersonly: true
+                },
+                nacionalidad: {
+                    required: true
+                },
+                pNaci: {
+                    required: true
+                },
+                fecNaci: {
+                    required: true
+                },
+                nDepa: {
+                    required: true
+                },
+                naciMuni: {
+                    required: true
+                },
+                pReci: {
+                    required: true
+                },
+                rDepa: {
+                    required: true
+                },
+                rMuni: {
+                    required: true
+                },
+                direccion: {
+                    required: true
+                }
+            },
+            messages: {
+                pnombre: {
+//                    required: $('#pnombre').addClass('has-error'),
+//                    required: $('#dpnombre').addClass('has-error'),
+//                    lettersonly: $('#dpnombre').addClass('has-error')
+                    required: "Por favor introduzca su segundo nombre",
+                    lettersonly: "Por favor, introduzca solo letras"
+                },
+                snombre: {
+                    required: "Por favor introduzca su segundo nombre",
+                    lettersonly: "Por favor, introduzca solo letras"
+                },
+                papellido: {
+                    required: "Por favor introduzca su primer apellido",
+                    lettersonly: "Por favor, introduzca solo letras"
+                },
+                sapellido: {
+                    required: "Por favor introduzca su segundo apellido",
+                    lettersonly: "Por favor, introduzca solo letras"
+                },
+                nacionalidad: {
+                    required: "Por favor seleccione su nacionalidad"
+                },
+                pNaci: {
+                    required: "Por favor seleccione su pais de nacimiento"
+                            //required: "Por favor seleccione su pais de nacimiento"
+
+                },
+                fecNaci: {
+                    required: "Por favor ingrese su fecha de nacimiento"
+
+                },
+                nDepa: {
+                    required: "Por favor seleccione su departamento de nacimiento"
+
+                },
+                naciMuni: {
+                    required: "Por favor seleccione su municipio de nacimiento"
+
+                },
+                pReci: {
+                    required: "Por favor selecciones su pais de recidencia"
+                },
+                rDepa: {
+                    required: "Por favor selecciones su departamento de recidencia"
+                },
+                rMuni: {
+                    required: "Por favor selecciones su municipio de recidencia"
+                },
+                direccion: {
+                    required: "Por favor selecciones su direccion de recidencia"
+                }
+            },
+            errorElement: 'div',
+            errorPlacement: function (error, element) {
+                var placement = $(element).data('error');
+                if (placement) {
+                    $(placement).append(error);
+                } else {
+                    error.insertBefore(element);
+                }
+            }
+
+        });
+    });
+
+</script>
+
+<style type="text/css">
+    .my-error-class {
+        color:#FF0000; /* red */
+/*        size: 10px; */
+    }
+    .my-valid-class {
+        color:#2979ff; /* green #00bcd4; */
+    }
+</style>
+
 <section>
     <div id="actualizacion" class="modal fade" style="display: none;">
         <div class="modal-dialog" style="transform: scale(1) translate(-50%, -50%); opacity: 1; top: 50%; left: 50%;">
