@@ -12,7 +12,7 @@
 </section>
 
 <section class="page-content">
-    <div class="col-lg-12">
+    <div class="col-lg-12" >
         <h3>Simulador de Facturación</h3>
     </div>
     <div class="col-lg-12">
@@ -23,9 +23,9 @@
                 </header>
             </div><!-- /.panel-heading -->
             <div class="panel-body">
-                <div class="panel-table-inner-offset">
+                <div class="panel-table-inner-offset" id="dvData">
                     <table id="table1" class="table" data-row-select="false" align-text="center">
-                        <thead>
+                        <!--<thead>-->
                         <div class="panel-heading-tools">
                             <div class="btn-group">						
                                 <li><input class="switch switch-warning" type="checkbox"/><a>Seleccionar Todo</a></li>
@@ -33,13 +33,13 @@
                         </div>
                 </div>
                 <tr>
-                    <td >Seleccionar</td>
-                    <td >Codigo Factura</td>
-                    <td >Codigo Servicio</td>
-                    <td >Nit Proveedor</td>
+                    <th >Seleccionar</th>
+                    <th >Codigo Factura</th>    
+                    <th >Codigo Servicio</th>
+                    <th >Nit Proveedor</th>
                     <!--<td >Codigo Tratamiento</td>-->
-                    <td >Valor Empleado</td>
-                    <td >Valor Empresa</td>
+                    <th >Valor Empleado</th>
+                    <th >Valor Empresa</th>
 
                 </tr>
                 </thead>
@@ -72,7 +72,7 @@
     </div>
     <table align="center">
         <td>
-            <p><button type="button" class="btn btn-raised btn-info">Liquidar</button></p>
+            <p><button type="button" class="btn btn-raised btn-info" id="btnExport" value=" Export Table data into Excel ">Liquidar</button></p>
 
         </td>
         <td>
@@ -81,7 +81,14 @@
     </table>
 </div>
 </section><!-- /#page-content -->
+<script>
 
+
+    $("#btnExport").click(function(e) {
+        window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').html()));
+        e.preventDefault();
+    });
+    </script>
 
 
 <script type="text/javascript">

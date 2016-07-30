@@ -23,8 +23,8 @@
 				</header>
 			</div><!-- /.panel-heading -->
 			<div class="panel-body">
-				<div class="panel-table-inner-offset">
-					<table id="table1" class="table" data-row-select="false" align-text"center">
+				<div class="panel-table-inner-offset" id="dvData">
+					<table id="table1" class="table" data-row-select="false" align-text="center">
 						<thead>
 							<div class="panel-heading-tools">
 								<div class="btn-group">						
@@ -55,7 +55,7 @@
 	</div>
 	<table align="center">
 		<td>
-			<p><button type="button" class="btn btn-raised btn-info">Liquidar</button></p>
+			<p><button type="button" class="btn btn-raised btn-info"  id="btnExport" value=" Export Table data into Excel ">Liquidar</button></p>
 
 		</td>
 		<td>
@@ -65,7 +65,14 @@
 </div>
 </section><!-- /#page-content -->
 
+<script>
 
+
+    $("#btnExport").click(function(e) {
+        window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').html()));
+        e.preventDefault();
+    });
+    </script>
 
 <script type="text/javascript">
 	$(".btn-circular-progress-demo-5").on("click",function(){
