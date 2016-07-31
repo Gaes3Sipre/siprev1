@@ -48,10 +48,10 @@
                         <div class="jumbotron col-md-12">
                             <div name="dTipDocum" id="dTipDocum" class="col-md-6  form-group"><!-- Tipo de Documento-->
                                 <section id="setFtp" name="setFtp" ><!-- Nombres y Apellidos--><!--style="display:none;"-->
-                                    <form class="col-md-12 right-alert" name="datosEmpleados" id="datosEmpleados">
-                                        <div class="col-md-12 form-group"><!-- Url FTP -->
+                                    <form class="col-md-12 right-alert" name="datosFtp" id="datosFtp">  
                                             <br>
-                                            <input type="text" class="form-control validate[required]" id="pUrl" name="pUrl" value="">
+                                        <div class="col-md-12 form-group"><!-- Url FTP -->
+                                            <input type="text" class="form-control validate[required,custom[url]]" id="pUrl" name="pUrl" value="">
                                             <label for="pUrl">URL</label>
                                         </div>
                                         <div class="col-md-12 form-group"><!--  Usuario ftp-->
@@ -73,8 +73,6 @@
                                 </section>
 
                             </div>
-
-
                         </div>
                         <table align="center">
                             <td>
@@ -88,29 +86,27 @@
                                 <p><button type="button" class="btn btn-raised btn-primary">Probar conexion</button></p>
                             </td>	
                         </table>
-
-
                     </div>
                     <div role="tabpanel" class="tab-pane" id="tab1-2"> <!-- segunda pestaña carpeta compartida -->
                         <div class="jumbotron col-md-12">
                             <section id="setFtp" name="setFtp" ><!-- Nombres y Apellidos--><!--style="display:none;"-->
-                                <form class="col-md-12 right-alert" name="datosEmpleados" id="datosEmpleados">  
-                                <div class="col-md-12 form-group"><!-- Url FTP -->
-                                    <br>
-                                    <input type="text" class="form-control validate[required]" id="pUrl" name="pUrl" value="">
-                                    <label for="pUrl">URL</label>
-                                </div>
-                                <div class="col-md-12 form-group"><!--  Usuario ftp-->
-                                    <br>
-                                    <input type="text" class="form-control  validate[required]" id="sUsuario" name="sUsuario"  value="" >
-                                    <label for="snombre">USUARIO</label>
-                                </div>
-                                <div class="col-md-12 form-group"><!-- contraseña Usuario ftp -->
-                                    <br>
-                                    <input type="password" class="form-control  validate[required,]" id="scontrase"  value="">
-                                    <label for="scontrase">CONTRASEÑA</label>
-                                </div>
-                               </form>
+                                <form class="col-md-12 right-alert" name="datoCarter" id="datoCarter">  
+                                    <div class="col-md-12 form-group"><!-- Url FTP -->
+                                        <br>
+                                        <input type="text" class="form-control validate[required,custom[url]]" id="pUrl" name="pUrl" value="">
+                                        <label for="pUrl">URL</label>
+                                    </div>
+                                    <div class="col-md-12 form-group"><!--  Usuario ftp-->
+                                        <br>
+                                        <input type="text" class="form-control  validate[required]" id="sUsuario" name="sUsuario"  value="" >
+                                        <label for="snombre">USUARIO</label>
+                                    </div>
+                                    <div class="col-md-12 form-group"><!-- contraseña Usuario ftp -->
+                                        <br>
+                                        <input type="password" class="form-control  validate[required,]" id="scontrase"  value="">
+                                        <label for="scontrase">CONTRASEÑA</label>
+                                    </div>
+                                </form>
                             </section>
 
                         </div>
@@ -127,9 +123,6 @@
                             </td>	
                         </table>
                     </div>
-                    <!--                        <div role="tabpanel" class="tab-pane" id="tab1-3">
-                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-                                            </div>-->
                 </div><!-- /.panel-body -->
             </div></div>
     </div>
@@ -138,28 +131,7 @@
     </div>
 </div>
 
- <section><!--MOdal adjuntar Documentos-->
-        <div id="adjuntar" class="modal fade" style="display: none;">
-            <div class="modal-dialog" style="transform: scale(1) translate(-50%, -50%); opacity: 1; top: 50%; left: 50%;">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title"><font><font>Adjuntar Documento</font></font></h4>
-                    </div>
-                    <div class="modal-body">
-                        <p><font>Por favor selecione Documentos.</font></p>
-                        <div class="form-group">
-                            <button class="btn btn-raised btn-warning"><input type="file" class="btn btn-raised btn-warning" id="adjuntarDocumento"><label for="adjuntarDocumento">Documento de Identidad</label></button>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary btn-flat btn-ripple">Aceptar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section Name="sIdentidad"  method="post">
+
 
 
 </section><!-- /#page-content -->
@@ -167,7 +139,11 @@
 
 
 <script> //ValidacionFormulario
-    $("#DatosTercero").validationEngine();
+    $("#datosFtp").validationEngine();
+</script>
+
+<script> //ValidacionFormulario
+    $("#datoCarter").validationEngine();
 </script>
 <script>
 
