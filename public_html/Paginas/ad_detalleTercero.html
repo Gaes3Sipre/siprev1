@@ -1,0 +1,340 @@
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ]
+    var pageLoadCSS = [
+    ]
+    var pageRequiredComponents = [
+        "Checkbox",
+        "Select",
+        "Dropdown",
+        "Tooltip"
+    ]
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ]
+    var clipboard;
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    } // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+    $("#datosEmpleados").validationEngine();
+</script>
+<section class="page-header alternative-header"><!--Miga de Pan-->
+    <ol class="breadcrumb">
+        <li>Administrador</li>
+        <li>BioData</li>
+        <li>Detaller Tercero</li>
+    </ol>
+    <div class="page-header_title">
+        <h1>
+            Datos Basicos Terceros
+            <span class="page-header_subtitle"></span>
+        </h1>
+    </div>
+</section>
+<script type="text/javascript">//Script Boton 
+    var pageLoadScripts = [
+    ]
+    var pageLoadCSS = [
+    ]
+    var pageRequiredComponents = [
+        "Checkbox",
+        "SpeedDial"
+    ]
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ]
+    var clipboard;
+    var doneScriptsLoad = function () {
+        $(".radio-up-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "up");
+        });
+        $(".radio-down-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "down");
+        });
+        $(".radio-left-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "left");
+        });
+        $(".radio-right-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "right");
+        });
+        $(".radio-open-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("open");
+        });
+        $(".radio-close-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("close");
+        });
+        $(".radio-fling-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("mode", "fling");
+        });
+        $(".radio-scale-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("mode", "scale");
+        });
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    }
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    }
+</script>
+<script> //ValidacionFormulario
+    $("#DatosTercero").validationEngine();
+</script>
+<script type="text/javascript">
+    function tIdentidad() {
+        var opcion = document.querySelector('input[name = "#tIdentidad"]:checked').value;
+//        document.querySelector('input[name = "#tIdentidad"]:checked').value;
+        var i;
+        if (opcion === true) {
+            alert("asd");
+        }
+    }
+
+//
+//
+//        for (i = 0; i < document.fcolores.colorin.length; i++) {
+//            if (document.fcolores.colorin[i].checked)
+//                break;
+//        }
+////Si la opcion con id Conocido_1 (dentro del documento > formulario con name fcontacto >     y a la vez dentro del array de Conocido) esta activada
+//        if (document.getElementById("tIdentidad").checked === true;){
+////muestra (cambiando la propiedad display del estilo) el div con id 'desdeotro'
+//            document.getElementById('rSocial').style.display = 'block';
+////por el contrario, si no esta seleccionada
+//        } else {
+////oculta el div con id 'desdeotro'
+//            document.getElementById('snombre').style.display = 'none';
+//            document.getElementById('pnombre').style.display = 'none';
+//        }
+//    }
+//    function selec2() {
+//        //Si la opcion con id Conocido_1 (dentro del documento > formulario con name fcontacto >     y a la vez dentro del array de Conocido) esta activada
+//        if (document.DatosTercero.tIdentidad[7] === true) {
+////muestra (cambiando la propiedad display del estilo) el div con id 'desdeotro'
+//            document.getElementById('rSocial').style.display = 'none';
+////por el contrario, si no esta seleccionada
+//        } else {
+////oculta el div con id 'desdeotro'
+//            document.getElementById('snombre').style.display = 'block';
+//            document.getElementById('pnombre').style.display = 'block';
+//        }
+//    }
+
+</script>
+<form  id="DatosTercero" name="DatosTercero" action="<?=$_SERVER['PHP_SELF']?>" method="post">
+    <section><!--Boton-->
+        <div class="row" style="margin-left:10px;">
+            <form class="col-md-12 right-alert" name="datosEmpleados" id="datosEmpleados">
+                <div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+                    <div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+                        <button id="guardar" name="guardar" type="button" class="btn btn-floating-action btn-info"><i class="material-icons">menu</i></button>
+                    </div>
+                    <ul class="md-fab-actions" aria-hidden="true">
+                        <li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="tooltip" data-placement="left" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></a></li>
+                        <li><button type="submit" class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="demoModal2" data-placement="left" title="Guardar"><i class="material-icons">save</i></Button>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </section>
+    <section Name="sIdentidad"  method="post"><!-- datos Basicos-->
+        <div class="col-md-offset-4 col-md-8">
+            <label>Datos Basicos</label>
+        </div>
+        <div class="col-md-6">
+            <section id="sTipIdentidad" name="sTipIdentidad">
+                <div name="dTipDocum" id="dTipDocum" class="col-md-6  form-group"><!-- Tipo de Documento-->
+                    <label for="tIdentidad" >Tipo Tercero</label>
+                    <br>
+                    <fieldset id="tIdentidad" name="tIdentidad "class=" form-group" id="rTipDocum">
+                        <input onclick="tIdentidad()" id="tIdentidad" value="N" class="radio radio-primary" type="radio" name="tIdentidad" >
+                        <span>Empleado</span>
+                        <br>
+                        <input   value="R" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
+                        <span>Beneficiario</span>
+                        <br>
+                        <input  value="C" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad">
+                        <span>Proveedor</span>
+                    </fieldset>
+                </div>
+                <div name="dTipDocum" id="dTipDocum" class="col-md-6  form-group"><!-- Tipo de Documento-->
+                    <label for="tIdentidad" >Tipo Identificación</label>
+                    <br>
+                    <fieldset id="tIdentidad" name="tIdentidad "class=" form-group" id="rTipDocum">
+                        <input onclick="tIdentidad()" id="tIdentidad" value="N" class="radio radio-primary" type="radio" name="tIdentidad" >
+                        <span>NIT</span>
+                        <br>
+                        <input   value="R" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
+                        <span>RUT</span>
+                        <br>
+                        <input  value="C" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad">
+                        <span>Cedula de Ciudadania</span>
+                        <br>
+                        <input  value="E" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
+                        <span>Cedula de Extranjeria</span>
+                        <br>
+                        <input  value="T" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
+                        <span>Tajeta de Identidad</span>
+                        <br>
+                        <input value="G" id="tIdentidad_6" class="radio radio-primary" type="radio" name="tIdentidad" >
+                        <span>Registro Civil</span>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-6  form-group"><!-- Identificacion-->
+                    <br>
+                    <input readonly="readonly" type="text" class="form-control validate[required]" id="identificacion" name="identificacion" value="1030555555" >
+                    <label for="identificacion">Identificación</label>
+                </div>
+            </section>
+            <section id="sRazonSocial" name="sRazonSocial" ><!--style="display:none;"--><!-- Razon Social-->
+                <div  name="dRazSocial" id="dPNombre" class="col-md-6 form-group"><!-- Razon Social-->
+                    <br>
+                    <input type="text" class="form-control validate[required]" id="rSocial" name="rSocial" value="COMPENSAR">
+                    <label for="rSocial">Razón Social</label>
+                </div>
+            </section>
+            <section id="seNombres" name="seNombre" ><!-- Nombres y Apellidos--><!--style="display:none;"-->
+                <div class="col-md-6 form-group"><!-- Primer Nombre-->
+                    <br>
+                    <input type="text" class="form-control validate[required]" id="pnombre" name="pnombre" value="JUAN">
+                    <label for="pnombre">Primer Nombre</label>
+                </div>
+                <div class="col-md-6 form-group"><!-- Segundo Apellido-->
+                    <br>
+                    <input type="text" class="form-control  validate[required]" id="snombre" name="snombre"  value="ANDRES" >
+                    <label for="snombre">Segundo Nombre</label>
+                </div>
+                <div class="col-md-6 form-group"><!-- Primer Apellido-->
+                    <br>
+                    <input type="text" class="form-control  validate[required]" id="papellido"  value="BERNAL">
+                    <label for="papellido">Primer Apellido</label>
+                </div>
+                <div class="col-md-6 form-group"><!-- Segundo Apellido-->
+                    <br>
+                    <input type="text" class="form-control  validate[required]" id="sapellido"  value="ORTIZ" >
+                    <label for="sapellido">Segundo Apellido</label>
+                </div>
+            </section>
+        </div>
+        <section><!--foto-->
+            <div class="col-md-6">
+                <img alt="image" class="img-responsive img-circle" src="img/avatar/avatar_square_blue.png">
+            </div>
+        </section>
+    </section>
+    <section id="sDatResi"><!--Datos Residencia-->
+        <div class="col-md-offset-4 col-md-8">
+            <LABEL>Datos de Residencia</LABEL>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-2 form-group"><!--Pais Recidencia-->
+                <br>
+                <select id="pReci" name="pNaci" class="form-control  validate[required]" >
+                    <option selected="selected"></option>
+                    <option value="23">ALEMANIA</option>
+                    <option value="72">AUSTRIA</option>
+                    <option value="87">BELGICA</option>
+                    <option value="149">CANADA</option>
+                    <option selected="selected" value="169">COLOMBIA</option>
+                    <option value="245">ESPAÑA</option>
+                    <option value="249">ESTADO UNIDOS</option>
+                    <option value="275">FRANCIA</option>
+                    <option value="628">INGLATERRA</option>
+                    <option value="767">SUIZA</option>
+                    <option value="16">VENEZUELA</option>
+                </select>
+                <label for="pReci">País</label>
+            </div>
+            <div class="col-md-3 form-group"><!--Departamento Residencia-->
+                <br>
+                <select id="rDepa" name="rDepa" class="form-control  validate[required]" >
+                    <option></option>
+                    <option value="91">AMAZONAS</option>
+                    <option value="5">ANTIOQUIA</option>
+                    <option value="81">ARAUCA</option>
+                    <option value="8">ATLANTICO</option>
+                    <option value="13">BOLIVAR</option>
+                    <option value="15">BOYACA</option>
+                    <option value="17">CALDAS</option>
+                    <option value="18">CAQUETA</option>
+                    <option value="85">CASANARE</option>
+                    <option value="19">CAUCA</option>
+                    <option value="20">CESAR</option>
+                    <option value="27">CHOCO</option>
+                    <option value="30">CORDOBA</option>
+                    <option value="25">CUNDINAMARCA</option>
+                    <option selected="selected" value="11">DISTRITO CAPITAL</option>
+                    <option value="44">GUAJIRA</option>
+                    <option value="41">HUILA</option>
+                    <option value="47">MAGDALENA</option>
+                    <option value="50">META</option>
+                    <option value="52">NARIÑO</option>
+                    <option value="54">NORTE DE SANTANDER</option>
+                    <option value="86">PUTUMAYO</option>
+                    <option value="63">QUINDIO </option>
+                    <option value="66">RISARALDA</option>
+                    <option value="88">SAN ANDRES</option>
+                    <option value="68">SANTANDER</option>
+                    <option value="70">SUCRE</option>
+                    <option value="73">TOLIMA</option>
+                    <option value="76">VALLE DEL CAUCA</option>
+                </select>
+                <label for="rDepa">Departamento</label>
+            </div>
+            <div class="col-md-2 form-group"><!--Municipio Recidencia-->
+                <br>
+                <select id="rMuni" name="rMuni" class="form-control  validate[required]" >
+                    <option></option>
+                    <option selected="selected" value="1">BOGOTA D.C.</option>
+                </select>
+                <label for="rMuni">Municipio</label>
+            </div>
+            <div class="col-md-4 form-group"><!--Direccion Residencia-->
+                <br>
+                <input value="CR 20 50 88 " type="text" class="form-control  validate[required]" id="direccion" >
+                <label for="direccion">Direccion</label>
+            </div>
+        </div>
+    </section>
+</form>
+<section>
+    <div id="actualizacion" class="modal fade" style="display: none;">
+        <div class="modal-dialog" style="transform: scale(1) translate(-50%, -50%); opacity: 1; top: 50%; left: 50%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><font><font>Datos actualizados con exito</font></font></h4>
+                </div>
+                <div class="modal-body">
+                    <p><font><font>Su informacion fue actualizada con exito, Gracias.</font></font></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

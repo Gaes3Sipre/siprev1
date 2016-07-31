@@ -29,7 +29,9 @@
     var pageDestroy = function () {
         clipboard.destroy();
         clipboard = void 0;
-    };</script>
+    };
+    $("#datosEmpleados").validationEngine();
+</script>
 <section class="page-header alternative-header">
     <ol class="breadcrumb">
         <li>Administrador</li>
@@ -42,7 +44,8 @@
         </h1>
     </div>
 </section>
-<section><!--Boton opciones-->
+<section>
+    <!--Boton opciones-->
     <script type="text/javascript">
         var pageLoadScripts = [
         ]
@@ -114,39 +117,57 @@
                 <label>Datos Basicos</label>
             </div>
             <div class="col-md-6">
-                <div  id="dpnombre" class="col-md-6 form-group">
+
+                <div class="col-md-6  form-group">
                     <br>
-                    <input type="text" class="form-control" id="pnombre" name="pnombre" value="JUAN" >
+                    <select id="pNaci" name="tIdentidad" readonly="readonly" class="form-control  validate[required]" >
+                        <option></option>
+                        <option value="N">NIT</option>
+                        <option value="R">RUT</option>
+                        <option value="E">CEDULA DE EXTRANJERIA</option>
+                        <option selected="selected" value="C">CEDULA DE CIUDADANIA</option>
+                        <option value="T">TARJETA DE IDENTIDAD</option>
+                        <option value="RC">REGISTRO CIVIL</option>
+                    </select>
+                    <label for="tIdentidad" align="center" >Tipo Identificación</label>
+                </div>
+                <div class="col-md-6  form-group">
+                    <br>
+                    <input readonly="readonly" type="text" class="form-control validate[required]" id="identificacion" name="identificacion" value="1030555555" >
+                    <label for="identificacion" align="center" >Identificación</label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <br>
+                    <input type="text" class="form-control validate[required]" id="pnombre" name="pnombre" value="JUAN" >
                     <label for="pnombre">Primer Nombre</label>
                 </div>
                 <div class="col-md-6 form-group">
                     <br>
-                    <input type="text" class="form-control" id="snombre" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ANDRES">
+                    <input type="text" class="form-control  validate[required]" id="snombre" name="snombre"  value="ANDRES" >
                     <label for="snombre">Segundo Nombre</label>
                 </div>
                 <div class="col-md-6 form-group">
                     <br>
-                    <input type="text" class="form-control" id="papellido" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="BERNAL">
+                    <input type="text" class="form-control  validate[required]" id="papellido"  value="BERNAL">
                     <label for="papellido">Primer Apellido</label>
                 </div>
                 <div class="col-md-6 form-group">
                     <br>
-                    <input type="text" class="form-control" id="sapellido" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="ORTIZ" >
+                    <input type="text" class="form-control  validate[required]" id="sapellido"  value="ORTIZ" >
                     <label for="sapellido">Segundo Apellido</label>
                 </div>
-
             </div>
             <div class="col-md-6">
                 <img alt="image" class="img-responsive img-circle" src="img/avatar/avatar_square_blue.png">
             </div>
-            <!--LUGAR Y FECHA DE NACIMIENTO-->
+            <!--            LUGAR Y FECHA DE NACIMIENTO-->
             <section>
                 <div class="col-md-offset-4 col-md-8">
-                    <LABEL>Datos de Nacimiento</LABEL>
+                    <h4>Datos de Nacimiento</h4>
                 </div>
                 <div class="col-md-2 form-group">
                     <br>
-                    <select id="nacionalidad" name="nacionalidad" class="form-control" required="true">
+                    <select id="nacionalidad" name="nacionalidad" class="form-control  validate[required]" >
                         <option></option>
                         <option value="169" selected="selected">COLOMBIA</option>
                         <option value="23">EXTRANJERO</option>
@@ -156,7 +177,7 @@
                 </div>
                 <div class="col-md-2 form-group">
                     <br>
-                    <select id="pNaci" name="pNaci" class="form-control" required="true">
+                    <select id="pNaci" name="pNaci" class="form-control  validate[required]" >
                         <option selected="selected"></option>
                         <option value="23">ALEMANIA</option>
                         <option value="72">AUSTRIA</option>
@@ -174,7 +195,7 @@
                 </div>
                 <div class="col-md-3 form-group">
                     <br>
-                    <select id="nDepa" name="nDepa" class="form-control" required="true">
+                    <select id="nDepa" name="nDepa" class="form-control  validate[required]" >
                         <option></option>
                         <option value="91">AMAZONAS</option>
                         <option value="5">ANTIOQUIA</option>
@@ -210,7 +231,7 @@
                 </div>
                 <div class="col-md-2 form-group">
                     <br>
-                    <select id="naciMuni" name="naciMuni" class="form-control" required="true">
+                    <select id="naciMuni" name="naciMuni" class="form-control  validate[required]" >
                         <option></option>
                         <option selected="selected" value="1">BOGOTA D.C.</option>
                         <option value="92">BOSA  </option>
@@ -227,18 +248,18 @@
                 </script>
                 <div class="form-group col-md-3">
                     <br>
-                    <input type="date" class="form-control" id="fecNaci" required="true">
+                    <input type="date" class="form-control  validate[required,date]" id="fecNaci" >
                     <label for="fecNaci">Fecha de Nacimiento<br></label>
                 </div>
             </section>
-            <!--Datos Expedicion Naciomiento-->
+            <!--            Datos Expedicion Naciomiento-->
             <section>
                 <div class="col-md-offset-4 col-md-8">
                     <LABEL>Datos de Recidencia</LABEL>
                 </div>
                 <div class="col-md-2 form-group">
                     <br>
-                    <select id="pReci" name="pNaci" class="form-control" required="true">
+                    <select id="pReci" name="pNaci" class="form-control  validate[required]" >
                         <option selected="selected"></option>
                         <option value="23">ALEMANIA</option>
                         <option value="72">AUSTRIA</option>
@@ -256,7 +277,7 @@
                 </div>
                 <div class="col-md-3 form-group">
                     <br>
-                    <select id="rDepa" name="rDepa" class="form-control" required="true">
+                    <select id="rDepa" name="rDepa" class="form-control  validate[required]" >
                         <option></option>
                         <option value="91">AMAZONAS</option>
                         <option value="5">ANTIOQUIA</option>
@@ -292,7 +313,7 @@
                 </div>
                 <div class="col-md-2 form-group">
                     <br>
-                    <select id="rMuni" name="rMuni" class="form-control" required="true">
+                    <select id="rMuni" name="rMuni" class="form-control  validate[required]" >
                         <option></option>
                         <option selected="selected" value="1">BOGOTA D.C.</option>
                         <option value="92">BOSA  </option>
@@ -306,7 +327,7 @@
                 </div>
                 <div class="col-md-4 form-group">
                     <br>
-                    <input value="CR 20 50 88 " type="text" class="form-control" id="direccion" required="true">
+                    <input value="CR 20 50 88 " type="text" class="form-control  validate[required]" id="direccion" >
                     <label for="direccion">Direccion</label>
                 </div>
             </section>
@@ -336,134 +357,17 @@
     </div>
 </section>
 
-<script>
-    $().ready(function () {
-        // validate the comment form when it is submitted
-        $("#datosEmpleados").validate({
-            errorClass: "my-error-class",
-            validClass: "my-valid-class",
-            rules: {
-                pnombre: {
-                    required: true,
-                    lettersonly: true
-                },
-                snombre: {
-                    required: true,
-                    lettersonly: true
-                },
-                papellido: {
-                    required: true,
-                    lettersonly: true
-                },
-                sapellido: {
-                    required: true,
-                    lettersonly: true
-                },
-                nacionalidad: {
-                    required: true
-                },
-                pNaci: {
-                    required: true
-                },
-                fecNaci: {
-                    required: true
-                },
-                nDepa: {
-                    required: true
-                },
-                naciMuni: {
-                    required: true
-                },
-                pReci: {
-                    required: true
-                },
-                rDepa: {
-                    required: true
-                },
-                rMuni: {
-                    required: true
-                },
-                direccion: {
-                    required: true
-                }
-            },
-            messages: {
-                pnombre: {
-//                    required: $('#pnombre').addClass('has-error'),
-//                    required: $('#dpnombre').addClass('has-error'),
-//                    lettersonly: $('#dpnombre').addClass('has-error')
-                    required: "Por favor introduzca su segundo nombre",
-                    lettersonly: "Por favor, introduzca solo letras"
-                },
-                snombre: {
-                    required: "Por favor introduzca su segundo nombre",
-                    lettersonly: "Por favor, introduzca solo letras"
-                },
-                papellido: {
-                    required: "Por favor introduzca su primer apellido",
-                    lettersonly: "Por favor, introduzca solo letras"
-                },
-                sapellido: {
-                    required: "Por favor introduzca su segundo apellido",
-                    lettersonly: "Por favor, introduzca solo letras"
-                },
-                nacionalidad: {
-                    required: "Por favor seleccione su nacionalidad"
-                },
-                pNaci: {
-                    required: "Por favor seleccione su pais de nacimiento"
-                            //required: "Por favor seleccione su pais de nacimiento"
 
-                },
-                fecNaci: {
-                    required: "Por favor ingrese su fecha de nacimiento"
 
-                },
-                nDepa: {
-                    required: "Por favor seleccione su departamento de nacimiento"
-
-                },
-                naciMuni: {
-                    required: "Por favor seleccione su municipio de nacimiento"
-
-                },
-                pReci: {
-                    required: "Por favor selecciones su pais de recidencia"
-                },
-                rDepa: {
-                    required: "Por favor selecciones su departamento de recidencia"
-                },
-                rMuni: {
-                    required: "Por favor selecciones su municipio de recidencia"
-                },
-                direccion: {
-                    required: "Por favor selecciones su direccion de recidencia"
-                }
-            },
-            errorElement: 'div',
-            errorPlacement: function (error, element) {
-                var placement = $(element).data('error');
-                if (placement) {
-                    $(placement).append(error);
-                } else {
-                    error.insertBefore(element);
-                }
-            }
-
-        });
-    });
-
-</script>
-
-<style type="text/css">
+<!--<style type="text/css">
     .my-error-class {
         color:#FF0000; /* red */
-/*        size: 10px; */
+        /*        size: 10px; */
     }
     .my-valid-class {
         color:#2979ff; /* green #00bcd4; */
     }
-</style>
+</style>-->
 
 <section>
     <div id="actualizacion" class="modal fade" style="display: none;">
