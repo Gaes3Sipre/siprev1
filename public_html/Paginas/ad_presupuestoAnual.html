@@ -1,405 +1,409 @@
 
 
 <script type="text/javascript">
-	/**
-	 * PUT BELOW HERE
-	 * ALL PAGE LEVEL RELATED SCRIPTS
-	 */
+    /**
+     * PUT BELOW HERE
+     * ALL PAGE LEVEL RELATED SCRIPTS
+     */
 
 
 
-	/**
-	 * 1. pageLoadScripts
-	 *
-	 * Scripts array to load on pageload event
-	 *
-	 * Example:
-	 *	var pageLoadScripts = [
-	 *		"js/bemat-demo-script1.min.js",
-	 *		"js/bemat-demo-script2.min.js"
-	 *  ]
-	 *
-	 */
-	 var pageLoadScripts = [
+    /**
+     * 1. pageLoadScripts
+     *
+     * Scripts array to load on pageload event
+     *
+     * Example:
+     *	var pageLoadScripts = [
+     *		"js/bemat-demo-script1.min.js",
+     *		"js/bemat-demo-script2.min.js"
+     *  ]
+     *
+     */
+    var pageLoadScripts = [
+    ]
 
-	 ]
-
-	 var pageLoadCSS = [
-
-	 ]
+    var pageLoadCSS = [
+    ]
 
 
-	/**
-	 * 2. pageRequiredComponents
-	 *
-	 * Components that require this page. By default all components are loaded,
-	 * but with this array, you can force the reinitialization of any component.
-	 * 
-	 * Example:
-	 *	var pageRequiredComponents = [
-	 *		"Panel",
-	 *		"Checkbox",
-	 *		"Select",
-	 *		"Dropdown",
-	 *		"Tooltip",
-	 *		"Modals",
-	 *		"FloatingLabels",
-	 *		"Scrollbar",
-	 *		"MaterialRipple",
-	 *		"Snackbar",
-	 *		"Toast",
-	 *		"Subheader",
-	 *		"SimplePieCharts",
-	 *		"LinearProgress",
-	 *		"CircularProgress",
-	 *		"SpeedDial"
-	 *	]
-	 */	
-	 var pageRequiredComponents = [
-	 "Checkbox",
-	 "Select",
-	 "Dropdown",
-	 "Tooltip"
-	 ]
+    /**
+     * 2. pageRequiredComponents
+     *
+     * Components that require this page. By default all components are loaded,
+     * but with this array, you can force the reinitialization of any component.
+     * 
+     * Example:
+     *	var pageRequiredComponents = [
+     *		"Panel",
+     *		"Checkbox",
+     *		"Select",
+     *		"Dropdown",
+     *		"Tooltip",
+     *		"Modals",
+     *		"FloatingLabels",
+     *		"Scrollbar",
+     *		"MaterialRipple",
+     *		"Snackbar",
+     *		"Toast",
+     *		"Subheader",
+     *		"SimplePieCharts",
+     *		"LinearProgress",
+     *		"CircularProgress",
+     *		"SpeedDial"
+     *	]
+     */
+    var pageRequiredComponents = [
+        "Checkbox",
+        "Select",
+        "Dropdown",
+        "Tooltip"
+    ]
 
 
-	/**
-	 * 3. pageRequiredFeatures
-	 */
-	 var pageRequiredFeatures = [
-	 "prettyPrint"
-	 ]
+    /**
+     * 3. pageRequiredFeatures
+     */
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ]
 
 
 
-	/**
-	 * 4. doneScriptsLoad() 
-	 *
-	 * This function gets called when the "pageLoadScripts" 
-	 * and "pageRequiredComponents" arrays above are fully loaded
-	 */
+    /**
+     * 4. doneScriptsLoad() 
+     *
+     * This function gets called when the "pageLoadScripts" 
+     * and "pageRequiredComponents" arrays above are fully loaded
+     */
 
-	// Set page variables globally
-	var clipboard;
-	
-	var doneScriptsLoad = function(){
-		clipboard = new Clipboard('[data-copycode="true"]',{
-			target: function(trigger) {
-				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
-			}
-		});
-		
-		clipboard.on('success', function(e) {
-			$.toasts("add",{
-				msg: "Copied!",
-			});	
-			e.clearSelection();
-		});
-	} // END: doneScriptsLoad();
-	
+    // Set page variables globally
+    var clipboard;
 
-	/**
-	 * 4. pageDestroy()
-	 *
-	 * Destroy all generated instances
-	 */
-	 var pageDestroy = function(){
-	 	clipboard.destroy(); clipboard = void 0;
-	 }
-	</script>
-	<script type="text/javascript">
-	/**
-	 * PUT BELOW HERE
-	 * ALL PAGE LEVEL RELATED SCRIPTS
-	 */
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    } // END: doneScriptsLoad();
 
 
-
-	/**
-	 * 1. pageLoadScripts
-	 *
-	 * Scripts array to load on pageload event
-	 *
-	 * Example:
-	 *	var pageLoadScripts = [
-	 *		"js/bemat-demo-script1.min.js",
-	 *		"js/bemat-demo-script2.min.js"
-	 *  ]
-	 *
-	 */
-	 var pageLoadScripts = [
-
-	 ]
-
-	 var pageLoadCSS = [
-
-	 ]
-
-
-	/**
-	 * 2. pageRequiredComponents
-	 *
-	 * Components that require this page. By default all components are loaded,
-	 * but with this array, you can force the reinitialization of any component.
-	 * 
-	 * Example:
-	 *	var pageRequiredComponents = [
-	 *		"Panel",
-	 *		"Checkbox",
-	 *		"Select",
-	 *		"Dropdown",
-	 *		"Tooltip",
-	 *		"Modals",
-	 *		"FloatingLabels",
-	 *		"Scrollbar",
-	 *		"MaterialRipple",
-	 *		"Snackbar",
-	 *		"Toast",
-	 *		"Subheader",
-	 *		"SimplePieCharts",
-	 *		"LinearProgress",
-	 *		"CircularProgress",
-	 *		"SpeedDial"
-	 *	]
-	 */	
-	 var pageRequiredComponents = [
-	 "Modals"
-	 ]
-
-
-	/**
-	 * 3. pageRequiredFeatures
-	 */
-	 var pageRequiredFeatures = [
-	 "prettyPrint"
-	 ]
+    /**
+     * 4. pageDestroy()
+     *
+     * Destroy all generated instances
+     */
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    }
+</script>
+<script type="text/javascript">
+    /**
+     * PUT BELOW HERE
+     * ALL PAGE LEVEL RELATED SCRIPTS
+     */
 
 
 
-	/**
-	 * 4. doneScriptsLoad() 
-	 *
-	 * This function gets called when the "pageLoadScripts" 
-	 * and "pageRequiredComponents" arrays above are fully loaded
-	 */
+    /**
+     * 1. pageLoadScripts
+     *
+     * Scripts array to load on pageload event
+     *
+     * Example:
+     *	var pageLoadScripts = [
+     *		"js/bemat-demo-script1.min.js",
+     *		"js/bemat-demo-script2.min.js"
+     *  ]
+     *
+     */
+    var pageLoadScripts = [
+    ]
 
-	// Set page variables globally
-	var clipboard;
-	
-	var doneScriptsLoad = function(){
-		clipboard = new Clipboard('[data-copycode="true"]',{
-			target: function(trigger) {
-				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
-			}
-		});
-		
-		clipboard.on('success', function(e) {
-			$.toasts("add",{
-				msg: "Copied!",
-			});	
-			e.clearSelection();
-		});
-	} // END: doneScriptsLoad();
-	
+    var pageLoadCSS = [
+    ]
 
-	/**
-	 * 4. pageDestroy()
-	 *
-	 * Destroy all generated instances
-	 */
-	 var pageDestroy = function(){
-	 	clipboard.destroy(); clipboard = void 0;
-	 }
-	</script>
-	<section class="page-header alternative-header">
-		<ol class="breadcrumb">
-			<li>Administrador</li>
-			<li>Biodata</li>
-		</ol>
-		<div class="page-header_title">
-			<h1>
-				Datos Basicos Empleado
-				<span class="page-header_subtitle"></span>
-			</h1>
-		</div>
-	</section>
 
-	<section class="page-content">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="panel-table-inner-offset" id="dvData">
-							<table id="tableDataTables1" class="table">
-								<thead>
-									<tr>
-										<th class="text-right">Año</th>
-										<th class="text-right">Rubro</th>
-										<th class="text-right">Valor Presupuestado</th>
-										<th class="text-right">Valor ejecutado</th>
-										<th class="text-right">Saldo</th>
-										<th class="text-right">Inicio Vigencia</th>
-										<th class="text-right">Fin Vigencia</th>
-										<th class="text-right">Detalle</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="text-right">
-										<td>2016</td>
-										<td>BENEFICIOS EMPLEADOS</td>
-										<td>$1.270.000.000</td>
-										<td>$268.000.000</td>
-										<td>$1.002.000.000</td>
-										<td>01/01/2016</td>
-										<td>31/12/2016</td>
-										<td><a href="index_administrador.html#Paginas/ad_detallePresupuestoAnual.html">
-											<i class="material-icons">visibility</i></a>
-										</td>
-									</tr>
-									<tr class="text-right">
-										<td>2015</td>
-										<td>BENEFICIOS EMPLEADOS</td>
-										<td>$1.140.000.000</td>
-										<td>$1.268.000.000</td>
-										<td>01/01/2015</td>
-										<td>31/12/2015</td>
-										<td >$<font color="red">-128.000.000</font></td>
-										<td><a href="index_administrador.html#Paginas/ad_detallePresupuestoAnual.html">
-											<i class="material-icons">visibility</i></a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
- 
-					</div>
-				</div>
-			</div>
-                                             <input type="button" id="btnExport" value=" Export Table data into Excel " />
-		</div>
-	</section><!-- /#page-content -->
+    /**
+     * 2. pageRequiredComponents
+     *
+     * Components that require this page. By default all components are loaded,
+     * but with this array, you can force the reinitialization of any component.
+     * 
+     * Example:
+     *	var pageRequiredComponents = [
+     *		"Panel",
+     *		"Checkbox",
+     *		"Select",
+     *		"Dropdown",
+     *		"Tooltip",
+     *		"Modals",
+     *		"FloatingLabels",
+     *		"Scrollbar",
+     *		"MaterialRipple",
+     *		"Snackbar",
+     *		"Toast",
+     *		"Subheader",
+     *		"SimplePieCharts",
+     *		"LinearProgress",
+     *		"CircularProgress",
+     *		"SpeedDial"
+     *	]
+     */
+    var pageRequiredComponents = [
+        "Modals"
+    ]
+
+
+    /**
+     * 3. pageRequiredFeatures
+     */
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ]
+
+
+
+    /**
+     * 4. doneScriptsLoad() 
+     *
+     * This function gets called when the "pageLoadScripts" 
+     * and "pageRequiredComponents" arrays above are fully loaded
+     */
+
+    // Set page variables globally
+    var clipboard;
+
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    } // END: doneScriptsLoad();
+
+
+    /**
+     * 4. pageDestroy()
+     *
+     * Destroy all generated instances
+     */
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    }
+</script>
+<section class="page-header alternative-header">
+    <ol class="breadcrumb">
+        <li>Administrador</li>
+        <li>Biodata</li>
+    </ol>
+    <div class="page-header_title">
+        <h1>
+            Datos Basicos Empleado
+            <span class="page-header_subtitle"></span>
+        </h1>
+    </div>
+</section>
+
+<section class="page-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="panel-table-inner-offset" id="dvData">
+                        <table id="tableDataTables1" class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-right">Año</th>
+                                    <th class="text-right">Rubro</th>
+                                    <th class="text-right">Valor Presupuestado</th>
+                                    <th class="text-right">Valor ejecutado</th>
+                                    <th class="text-right">Saldo</th>
+                                    <th class="text-right">Inicio Vigencia</th>
+                                    <th class="text-right">Fin Vigencia</th>
+                                    <th class="text-right">Detalle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-right">
+                                    <td>2016</td>
+                                    <td>BENEFICIOS EMPLEADOS</td>
+                                    <td>$1.270.000.000</td>
+                                    <td>$268.000.000</td>
+                                    <td>$1.002.000.000</td>
+                                    <td>01/01/2016</td>
+                                    <td>31/12/2016</td>
+                                    <td><a href="index_administrador.html#Paginas/ad_detallePresupuestoAnual.html">
+                                            <i class="material-icons">visibility</i></a>
+                                    </td>
+                                </tr>
+                                <tr class="text-right">
+                                    <td>2015</td>
+                                    <td>BENEFICIOS EMPLEADOS</td>
+                                    <td>$1.140.000.000</td>
+                                    <td>$1.268.000.000</td>
+                                    <td>01/01/2015</td>
+                                    <td>31/12/2015</td>
+                                    <td >$<font color="red">-128.000.000</font></td>
+                                    <td><a href="index_administrador.html#Paginas/ad_detallePresupuestoAnual.html">
+                                            <i class="material-icons">visibility</i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <table align="center">
+            <td>
+                <p><button type="button" class="btn btn-raised btn-info" id="btnExport" value=" Export Table data into Excel ">generar excel</button></p>
+
+            </td>
+            <td>
+                <!--<p><button type="button" class="btn btn-raised btn-danger">Cancelar</button></p>-->
+            </td>	
+        </table>		
+    </div>
+</section><!-- /#page-content -->
 
 <script>
 
 
-    $("#btnExport").click(function(e) {
+    $("#btnExport").click(function (e) {
         window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').html()));
         e.preventDefault();
     });
-    </script>
- 
-
-	<script type="text/javascript">
-	/**
-	 * PUT BELOW HERE
-	 * ALL PAGE LEVEL RELATED SCRIPTS
-	 */
+</script>
 
 
-
-	/**
-	 * 1. pageLoadScripts
-	 *
-	 * Scripts array to load on pageload event
-	 *
-	 * Example:
-	 *	var pageLoadScripts = [
-	 *		"js/bemat-demo-script1.min.js",
-	 *		"js/bemat-demo-script2.min.js"
-	 *  ]
-	 *
-	 */
-	 var pageLoadScripts = [
-
-	 ]
-
-	 var pageLoadCSS = [
-
-	 ]
-
-
-	/**
-	 * 2. pageRequiredComponents
-	 *
-	 * Components that require this page. By default all components are loaded,
-	 * but with this array, you can force the reinitialization of any component.
-	 * 
-	 * Example:
-	 *	var pageRequiredComponents = [
-	 *		"Panel",
-	 *		"Checkbox",
-	 *		"Select",
-	 *		"Dropdown",
-	 *		"Tooltip",
-	 *		"Modals",
-	 *		"FloatingLabels",
-	 *		"Scrollbar",
-	 *		"MaterialRipple",
-	 *		"Snackbar",
-	 *		"Toast",
-	 *		"Subheader",
-	 *		"SimplePieCharts",
-	 *		"LinearProgress",
-	 *		"CircularProgress",
-	 *		"SpeedDial"
-	 *	]
-	 */	
-	 var pageRequiredComponents = [
-
-	 ]
-
-
-	/**
-	 * 3. pageRequiredFeatures
-	 */
-	 var pageRequiredFeatures = [
-	 "prettyPrint",
-	 ]
+<script type="text/javascript">
+    /**
+     * PUT BELOW HERE
+     * ALL PAGE LEVEL RELATED SCRIPTS
+     */
 
 
 
-	/**
-	 * 4. doneScriptsLoad() 
-	 *
-	 * This function gets called when the "pageLoadScripts" 
-	 * and "pageRequiredComponents" arrays above are fully loaded
-	 */
+    /**
+     * 1. pageLoadScripts
+     *
+     * Scripts array to load on pageload event
+     *
+     * Example:
+     *	var pageLoadScripts = [
+     *		"js/bemat-demo-script1.min.js",
+     *		"js/bemat-demo-script2.min.js"
+     *  ]
+     *
+     */
+    var pageLoadScripts = [
+    ]
 
-	// Set page variables globally
-	var clipboard;
-	
-	var doneScriptsLoad = function(){
-		/**
-		 * DataTables
-		 */
-		 $("#tableDataTables1").dataTable();
-		 $("select").selectpicker({
-		 	dropupAuto: false,
-		 	size: 5
-		 });
+    var pageLoadCSS = [
+    ]
 
 
-		 clipboard = new Clipboard('[data-copycode="true"]',{
-		 	target: function(trigger) {
-		 		return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
-		 	}
-		 });
+    /**
+     * 2. pageRequiredComponents
+     *
+     * Components that require this page. By default all components are loaded,
+     * but with this array, you can force the reinitialization of any component.
+     * 
+     * Example:
+     *	var pageRequiredComponents = [
+     *		"Panel",
+     *		"Checkbox",
+     *		"Select",
+     *		"Dropdown",
+     *		"Tooltip",
+     *		"Modals",
+     *		"FloatingLabels",
+     *		"Scrollbar",
+     *		"MaterialRipple",
+     *		"Snackbar",
+     *		"Toast",
+     *		"Subheader",
+     *		"SimplePieCharts",
+     *		"LinearProgress",
+     *		"CircularProgress",
+     *		"SpeedDial"
+     *	]
+     */
+    var pageRequiredComponents = [
+    ]
 
-		 clipboard.on('success', function(e) {
-		 	$.toasts("add",{
-		 		msg: "Copied!",
-		 	});	
-		 	e.clearSelection();
-		 });
-	} // END: doneScriptsLoad();
-	
 
-	/**
-	 * 4. pageDestroy()
-	 *
-	 * Destroy all generated instances
-	 */
-	 var pageDestroy = function(){
-	 	clipboard.destroy(); clipboard = void 0;
-	 }
-	</script>
+    /**
+     * 3. pageRequiredFeatures
+     */
+    var pageRequiredFeatures = [
+        "prettyPrint",
+    ]
+
+
+
+    /**
+     * 4. doneScriptsLoad() 
+     *
+     * This function gets called when the "pageLoadScripts" 
+     * and "pageRequiredComponents" arrays above are fully loaded
+     */
+
+    // Set page variables globally
+    var clipboard;
+
+    var doneScriptsLoad = function () {
+        /**
+         * DataTables
+         */
+        $("#tableDataTables1").dataTable();
+        $("select").selectpicker({
+            dropupAuto: false,
+            size: 5
+        });
+
+
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    } // END: doneScriptsLoad();
+
+
+    /**
+     * 4. pageDestroy()
+     *
+     * Destroy all generated instances
+     */
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    }
+</script>

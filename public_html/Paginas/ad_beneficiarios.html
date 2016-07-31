@@ -279,20 +279,29 @@
                     </div>
                 </div>
             </div>
-             <input type="button" id="btnExport" value=" Export Table data into Excel " />
- 
+            <!--<input type="button" id="btnExport" value=" Export Table data into Excel " />-->
+
         </div>
+        <table align="center">
+            <td>
+                <p><button type="button" class="btn btn-raised btn-info" id="btnExport" value=" Export Table data into Excel ">generar excel</button></p>
+
+            </td>
+            <td>
+                <!--<p><button type="button" class="btn btn-raised btn-danger">Cancelar</button></p>-->
+            </td>	
+        </table>
     </div>
 </section><!-- /#page-content -->
 
 <script>
 
 
-    $("#btnExport").click(function(e) {
+    $("#btnExport").click(function (e) {
         window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').html()));
         e.preventDefault();
     });
-    </script>
+</script>
 
 <script type="text/javascript">
     /**
