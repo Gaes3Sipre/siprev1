@@ -1,17 +1,17 @@
 <script type="text/javascript">
     var pageLoadScripts = [
-    ]
+    ];
     var pageLoadCSS = [
-    ]
+    ];
     var pageRequiredComponents = [
         "Checkbox",
         "Select",
         "Dropdown",
         "Tooltip"
-    ]
+    ];
     var pageRequiredFeatures = [
         "prettyPrint"
-    ]
+    ];
     var clipboard;
     var doneScriptsLoad = function () {
         clipboard = new Clipboard('[data-copycode="true"]', {
@@ -21,11 +21,11 @@
         });
         clipboard.on('success', function (e) {
             $.toasts("add", {
-                msg: "Copied!",
+                msg: "Copied!"
             });
             e.clearSelection();
         });
-    } // END: doneScriptsLoad();
+    }; // END: doneScriptsLoad();
     var pageDestroy = function () {
         clipboard.destroy();
         clipboard = void 0;
@@ -47,16 +47,16 @@
 </section>
 <script type="text/javascript">//Script Boton 
     var pageLoadScripts = [
-    ]
+    ];
     var pageLoadCSS = [
-    ]
+    ];
     var pageRequiredComponents = [
         "Checkbox",
         "SpeedDial"
-    ]
+    ];
     var pageRequiredFeatures = [
         "prettyPrint"
-    ]
+    ];
     var clipboard;
     var doneScriptsLoad = function () {
         $(".radio-up-fabspeeddial").on('ifChecked', function (event) {
@@ -90,15 +90,15 @@
         });
         clipboard.on('success', function (e) {
             $.toasts("add", {
-                msg: "Copied!",
+                msg: "Copied!"
             });
             e.clearSelection();
         });
-    }
+    };
     var pageDestroy = function () {
         clipboard.destroy();
         clipboard = void 0;
-    }
+    };
 </script>
 <script> //ValidacionFormulario
     $("#DatosTercero").validationEngine();
