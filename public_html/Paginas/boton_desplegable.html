@@ -268,3 +268,40 @@
 	</header>
 </section>
 <br>
+<!--botton de abjuntar con validacion conmodal-->
+    <section><!--Boton-->
+        <div class="row" style="margin-left:10px;">
+            <form class="col-md-12 right-alert" name="datosEmpleados" id="datosEmpleados">
+                <div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+                    <div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+                        <button type="button" class="btn btn-floating-action btn-info"><i class="material-icons">menu</i></button>
+                    </div>
+                    <ul class="md-fab-actions" aria-hidden="true">
+                        <li><button type="button" class="btn btn-default-bright btn-floating-action btn-sm alert" data-toggle= "modal" data-target="#adjuntar" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></button></li>
+                        <li><button id="guardar" name="guardar" type="submit" class="btn btn-default-bright btn-floating-action btn-sm" data-placement="left" title="Guardar"><i class="material-icons">save</i></Button>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </section>
+    <section><!--MOdal adjuntar Documentos-->
+        <div id="adjuntar" class="modal fade" style="display: none;">
+            <div class="modal-dialog" style="transform: scale(1) translate(-50%, -50%); opacity: 1; top: 50%; left: 50%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font><font>Adjuntar Documento</font></font></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p><font>Por favor selecione Documentos.</font></p>
+                        <div class="form-group">
+                            <button class="btn btn-raised btn-warning"><input type="file" class="btn btn-raised btn-warning" id="adjuntarDocumento"><label for="adjuntarDocumento">Documento de Identidad</label></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary btn-flat btn-ripple">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
