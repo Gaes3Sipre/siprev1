@@ -103,7 +103,7 @@
     $("#DatosTercero").validationEngine();
 </script>
 <script type="text/javascript">
-  
+
 </script>
 <form  id="DatosTercero" name="DatosTercero">
     <section><!--Boton-->
@@ -142,73 +142,73 @@
             </div>
         </div>
     </section>
-    <section Name="sIdentidad"  method="post"><!-- datos Basicos-->
-        <div class="col-md-offset-4 col-md-8">
-            <label>Datos Basicos</label>
-        </div>
-        <div class="col-md-4">
-            <section id="sTipIdentidad" name="sTipIdentidad">
-                <div name="dTipDocum" id="dTipDocum" class="col-md-6  form-group"><!-- Tipo de Documento-->
-                    <label for="tTercero" >Tipo Tercero</label>
-                    <br>
-                    <fieldset id="tTercero" name="tTercero "class=" form-group" id="rTipDocum">
-                        <input id="tIdentidad" value="E" class="radio radio-primary" type="radio" name="tTercero">
-                        <span>Empleado</span>
-                        <br>
-                        <input   value="B" id="tTercero" class="radio radio-primary" type="radio" name="tTercero" >
-                        <span>Beneficiario</span>
-                        <br>
-                        <input  value="P" id="tTercero" class="radio radio-primary" type="radio" name="tTercero">
-                        <span>Proveedor</span>
-                    </fieldset>
-                </div>
-            </section>
-            <section>
-                <div class="col-md-6 form-group" name="dTipDocum" id="dTipDocum"><!-- Tipo de Documento-->
-                    <label for="tIdentidad" >Tipo Identificación</label>
-                    <br>
-                    <fieldset id="tIdentidad" name="tIdentidad "class="  form-group" id="rTipDocum">
-                        <input  id="tIdentidad" value="N" class="radio radio-primary" type="radio" name="tIdentidad" >
-                        <span>NIT</span>
-                        <br>
-                        <input   value="R" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
-                        <span>RUT</span>
-                        <br>
-                        <input  value="C" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
-                        <span>Cedula de Ciudadania</span>
-                        <br>
-                        <input  value="E" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
-                        <span>Cedula de Extranjeria</span>
-                        <br>
-                        <input  value="T" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
-                        <span>Tajeta de Identidad</span>
-                        <br>
-                        <input value="G" id="tIdentidad_6" class="radio radio-primary" type="radio" name="tIdentidad" >
-                        <span>Registro Civil</span>
-                    </fieldset>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-4">
-            <div class="col-md-12  form-group"><!-- Identificacion-->
+    <section class="col-md-6"><!-- check Radio-->
+        <section  class="col-md-6" id="sTipIdentidad" name="sTipIdentidad">
+            <div name="dTipDocum" id="dTipDocum" class="form-group"><!-- Tipo de Documento-->
+                <label for="tTercero" >Tipo Tercero</label>
                 <br>
-                <input type="text" class="form-control validate[required]" id="identificacion" name="identificacion" >
-                <label for="identificacion">Identificación</label>
-            </div>
-            <section id="sRazonSocial" name="sRazonSocial" ><!--style="display:none;"--><!-- Razon Social-->
-                <div  name="dRazSocial" id="dPNombre" class="col-md-12 form-group"><!-- Razon Social-->
+                <fieldset id="tTercero" name="tTercero "class=" form-group" id="rTipDocum">
+                    <input id="tIdentidad" value="E" class="radio radio-primary" type="radio" name="tTercero">
+                    <span>Empleado</span>
                     <br>
-                    <input type="text" class="form-control validate[required]" id="rSocial" name="rSocial" >
-                    <label for="rSocial">Razón Social</label>
-                </div>
-            </section>
-        </div>
-        <section><!--foto-->
-            <div class="col-md-4">
-                <img alt="image" class="img-responsive img-circle" src="img/avatar/avatar.png">
+                    <input   value="B" id="tTercero" class="radio radio-primary" type="radio" name="tTercero" >
+                    <span>Beneficiario</span>
+                    <br>
+                    <input  value="P" id="tTercero" class="radio radio-primary" type="radio" name="tTercero">
+                    <span>Proveedor</span>
+                </fieldset>
+            </div>
+        </section>
+        <section class="col-md-6">
+            <div class="form-group" name="dTipDocum" id="dTipDocum"><!-- Tipo de Documento-->
+                <label for="tIdentidad" >Tipo Identificación</label>
+                <br>
+                <fieldset id="tIdentidad" name="tIdentidad "class="  form-group" id="rTipDocum">
+                    <input  id="tIdentidad" value="N" class="radio radio-primary" type="radio" name="tIdentidad" >
+                    <span>NIT</span>
+                    <br>
+                    <input   value="R" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
+                    <span>RUT</span>
+                    <br>
+                    <input  value="C" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
+                    <span>Cedula de Ciudadania</span>
+                    <br>
+                    <input  value="E" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
+                    <span>Cedula de Extranjeria</span>
+                    <br>
+                    <input  value="T" id="tIdentidad" class="radio radio-primary" type="radio" name="tIdentidad" >
+                    <span>Tajeta de Identidad</span>
+                    <br>
+                    <input value="G" id="tIdentidad_6" class="radio radio-primary" type="radio" name="tIdentidad" >
+                    <span>Registro Civil</span>
+                </fieldset>
             </div>
         </section>
     </section>
+    <section class="col-md-6"><!--foto-->
+        <div class="col-md-6">
+            <img alt="image" class="img-responsive img-circle" src="img/avatar/avatar.png">
+        </div>
+    </section>
+    <div class="col-md-offset-4 col-md-8">
+        <label>Datos Basicos</label>
+    </div>
+    <section class="col-md-12">
+        <div class="col-md-6  form-group"><!-- Identificacion-->
+            <br>
+            <input type="text" class="form-control validate[required]" id="identificacion" name="identificacion" >
+            <label for="identificacion">Identificación</label>
+        </div>
+        <section class="col-md-6" id="sRazonSocial" name="sRazonSocial" ><!--style="display:none;"--><!-- Razon Social-->
+            <div  name="dRazSocial" id="dPNombre" class="form-group"><!-- Razon Social-->
+                <br>
+                <input type="text" class="form-control validate[required]" id="rSocial" name="rSocial" >
+                <label for="rSocial">Razón Social</label>
+            </div>
+        </section>
+    </section>
+
+
     <div class="col-md-12"> 
         <section id="seNombres" name="seNombre" ><!-- Nombres y Apellidos--><!--style="display:none;"-->
             <div class="col-md-3 form-group"><!-- Primer Nombre-->
@@ -235,11 +235,17 @@
     </div>
     <section id="correo">
         <div class="col-md-12">
-            <div class=" col-md-offset-2 col-md-8 form-group">
+            <div class=" col-md-6 form-group">
                 <br>
                 <input type="email" class="form-control  validate[required,custom[email]]" id="email"  >
                 <label for="email">Correo</label>
             </div>
+            <div class=" col-md-6 form-group">
+                <br>
+                <input type="number" class="form-control  validate[required]" id="TelFijo"  >
+                <label for="TelFijo">Telefono Fijo</label>
+            </div>
+
         </div>
     </section>
 
