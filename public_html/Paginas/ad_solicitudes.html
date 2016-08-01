@@ -222,68 +222,65 @@
     </div>
 </section>
 <section>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading panel-heading-xs">
-                </div><!-- /.panel-heading -->
-                <div class="panel-body">
-                    <div class="panel-table-inner-offset" id="dvData">
-                        <table class="table" data-row-select="false" id="table1">
-                            <thead>
-                                <tr>
-                                    <th>Identificacion Empleado</th>
-                                    <td>Codigo Solicitud</td>
-                                    <td>Tipo</td>
-                                    <td>Estado</td>
-                                    <td>Detalle</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="active">
-                                    <th scope="row">1032005856</th>
-                                    <td>8001</td>
-                                    <td>AUXILIO EDUCATIVO HIJOS</td>
-                                    <td>APROBADO</td>
-                                    <td><a href="index_administrador.html#Paginas/ad_detalleSolicitud1.html">
-                                            <i class="material-icons">forward</i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1032005856</th>
-                                    <td>8002</td>
-                                    <td>AUXILIO FUNERARIO</td>
-                                    <td>RADICADO</td>
-                                    <td><a href="index_administrador.html#Paginas/ad_detalleSolicitud2.html">
-                                            <i class="material-icons">forward</i></a>
-                                    </td>
-                                </tr>
-                                <tr class="success">
-                                    <th scope="row">1032005856</th>
-                                    <td>8003</td>
-                                    <td>AUXILIO EDUCATIVO EMPLEADO</td>
-                                    <td>CANCELADO</td>
-                                    <td><a href="index_administrador.html#Paginas/ad_detalleSolicitud3.html">
-                                            <i class="material-icons">forward</i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="panel-table-inner-offset" id="dvData">
+                    <table id="tableDataTables1" class="table" data-row-select="true">
+                        <thead>
+                            <tr>
+                                <th>Identificacion Empleado</th>
+                                <td>Codigo Solicitud</td>
+                                <td>Tipo</td>
+                                <td>Estado</td>
+                                <td>Detalle</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="active">
+                                <th scope="row">1032005856</th>
+                                <td>8001</td>
+                                <td>AUXILIO EDUCATIVO HIJOS</td>
+                                <td>APROBADO</td>
+                                <td><a href="index_administrador.html#Paginas/ad_detalleSolicitud1.html">
+                                        <i class="material-icons">forward</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1032005856</th>
+                                <td>8002</td>
+                                <td>AUXILIO FUNERARIO</td>
+                                <td>RADICADO</td>
+                                <td><a href="index_administrador.html#Paginas/ad_detalleSolicitud2.html">
+                                        <i class="material-icons">forward</i></a>
+                                </td>
+                            </tr>
+                            <tr class="success">
+                                <th scope="row">1032005856</th>
+                                <td>8003</td>
+                                <td>AUXILIO EDUCATIVO EMPLEADO</td>
+                                <td>CANCELADO</td>
+                                <td><a href="index_administrador.html#Paginas/ad_detalleSolicitud3.html">
+                                        <i class="material-icons">forward</i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <!--<input type="button" id="btnExport" value=" Export Table data into Excel " />-->
-
             </div>
-            <table align="center">
-                <td>
-                    <p><button type="button" class="btn btn-raised btn-info" id="btnExport" value=" Export Table data into Excel ">generar excel</button></p>
+            <!--<input type="button" id="btnExport" value=" Export Table data into Excel " />-->
 
-                </td>
-                <td>
-                    <!--<p><button type="button" class="btn btn-raised btn-danger">Cancelar</button></p>-->
-                </td>	
-            </table>	
         </div>
+        <table align="center">
+            <td>
+                <p><button type="button" class="btn btn-raised btn-info" id="btnExport" value=" Export Table data into Excel ">generar excel</button></p>
+
+            </td>
+            <td>
+                <!--<p><button type="button" class="btn btn-raised btn-danger">Cancelar</button></p>-->
+            </td>	
+        </table>	
+    </div>
 </section>
 <script>
 

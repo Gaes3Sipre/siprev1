@@ -1,488 +1,244 @@
-	<section class="page-header alternative-header">
-		<ol class="breadcrumb">
-			<li>Administrador</li>
-			<li>Beneficios</li>
-		</ol>
-		<div class="page-header_title">
-			<h1>
-				Detalle Tipo de Beneficio
-				<span class="page-header_subtitle"></span>
-			</h1>
-		</div>
-	</section>
-
-
-
-	<script type="text/javascript">
-	/**
-	 * PUT BELOW HERE
-	 * ALL PAGE LEVEL RELATED SCRIPTS
-	 */
-
-
-
-	/**
-	 * 1. pageLoadScripts
-	 *
-	 * Scripts array to load on pageload event
-	 *
-	 * Example:
-	 *	var pageLoadScripts = [
-	 *		"js/bemat-demo-script1.min.js",
-	 *		"js/bemat-demo-script2.min.js"
-	 *  ]
-	 *
-	 */
-	 var pageLoadScripts = [
-
-	 ]
-
-	 var pageLoadCSS = [
-
-	 ]
-
-
-	/**
-	 * 2. pageRequiredComponents
-	 *
-	 * Components that require this page. By default all components are loaded,
-	 * but with this array, you can force the reinitialization of any component.
-	 * 
-	 * Example:
-	 *	var pageRequiredComponents = [
-	 *		"Panel",
-	 *		"Checkbox",
-	 *		"Select",
-	 *		"Dropdown",
-	 *		"Tooltip",
-	 *		"Modals",
-	 *		"FloatingLabels",
-	 *		"Scrollbar",
-	 *		"MaterialRipple",
-	 *		"Snackbar",
-	 *		"Toast",
-	 *		"Subheader",
-	 *		"SimplePieCharts",
-	 *		"LinearProgress",
-	 *		"CircularProgress",
-	 *		"SpeedDial"
-	 *	]
-	 */	
-	 var pageRequiredComponents = [
-	 "Checkbox",
-	 "Select",
-	 "Dropdown",
-	 "Tooltip"
-	 ]
-
-
-	/**
-	 * 3. pageRequiredFeatures
-	 */
-	 var pageRequiredFeatures = [
-	 "prettyPrint"
-	 ]
-
-
-
-	/**
-	 * 4. doneScriptsLoad() 
-	 *
-	 * This function gets called when the "pageLoadScripts" 
-	 * and "pageRequiredComponents" arrays above are fully loaded
-	 */
-
-	// Set page variables globally
-	var clipboard;
-	
-	var doneScriptsLoad = function(){
-		clipboard = new Clipboard('[data-copycode="true"]',{
-			target: function(trigger) {
-				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
-			}
-		});
-		
-		clipboard.on('success', function(e) {
-			$.toasts("add",{
-				msg: "Copied!",
-			});	
-			e.clearSelection();
-		});
-	} // END: doneScriptsLoad();
-	
-
-	/**
-	 * 4. pageDestroy()
-	 *
-	 * Destroy all generated instances
-	 */
-	 var pageDestroy = function(){
-	 	clipboard.destroy(); clipboard = void 0;
-	 }
-	</script>
-	<script type="text/javascript">
-	/**
-	 * PUT BELOW HERE
-	 * ALL PAGE LEVEL RELATED SCRIPTS
-	 */
-
-
-
-	/**
-	 * 1. pageLoadScripts
-	 *
-	 * Scripts array to load on pageload event
-	 *
-	 * Example:
-	 *	var pageLoadScripts = [
-	 *		"js/bemat-demo-script1.min.js",
-	 *		"js/bemat-demo-script2.min.js"
-	 *  ]
-	 *
-	 */
-	 var pageLoadScripts = [
-
-	 ]
-
-	 var pageLoadCSS = [
-
-	 ]
-
-
-	/**
-	 * 2. pageRequiredComponents
-	 *
-	 * Components that require this page. By default all components are loaded,
-	 * but with this array, you can force the reinitialization of any component.
-	 * 
-	 * Example:
-	 *	var pageRequiredComponents = [
-	 *		"Panel",
-	 *		"Checkbox",
-	 *		"Select",
-	 *		"Dropdown",
-	 *		"Tooltip",
-	 *		"Modals",
-	 *		"FloatingLabels",
-	 *		"Scrollbar",
-	 *		"MaterialRipple",
-	 *		"Snackbar",
-	 *		"Toast",
-	 *		"Subheader",
-	 *		"SimplePieCharts",
-	 *		"LinearProgress",
-	 *		"CircularProgress",
-	 *		"SpeedDial"
-	 *	]
-	 */	
-	 var pageRequiredComponents = [
-	 "Modals"
-	 ]
-
-
-	/**
-	 * 3. pageRequiredFeatures
-	 */
-	 var pageRequiredFeatures = [
-	 "prettyPrint"
-	 ]
-
-
-
-	/**
-	 * 4. doneScriptsLoad() 
-	 *
-	 * This function gets called when the "pageLoadScripts" 
-	 * and "pageRequiredComponents" arrays above are fully loaded
-	 */
-
-	// Set page variables globally
-	var clipboard;
-	
-	var doneScriptsLoad = function(){
-		clipboard = new Clipboard('[data-copycode="true"]',{
-			target: function(trigger) {
-				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
-			}
-		});
-		
-		clipboard.on('success', function(e) {
-			$.toasts("add",{
-				msg: "Copied!",
-			});	
-			e.clearSelection();
-		});
-	} // END: doneScriptsLoad();
-	
-
-	/**
-	 * 4. pageDestroy()
-	 *
-	 * Destroy all generated instances
-	 */
-	 var pageDestroy = function(){
-	 	clipboard.destroy(); clipboard = void 0;
-	 }
-	</script>
-	<script type="text/javascript">
-	/**
-	 * PUT BELOW HERE
-	 * ALL PAGE LEVEL RELATED SCRIPTS
-	 */
-
-
-
-	/**
-	 * 1. pageLoadScripts
-	 *
-	 * Scripts array to load on pageload event
-	 *
-	 * Example:
-	 *	var pageLoadScripts = [
-	 *		"js/bemat-demo-script1.min.js",
-	 *		"js/bemat-demo-script2.min.js"
-	 *  ]
-	 *
-	 */
-	 var pageLoadScripts = [
-
-	 ]
-
-	 var pageLoadCSS = [
-
-	 ]
-
-
-	/**
-	 * 2. pageRequiredComponents
-	 *
-	 * Components that require this page. By default all components are loaded,
-	 * but with this array, you can force the reinitialization of any component.
-	 * 
-	 * Example:
-	 *	var pageRequiredComponents = [
-	 *		"Panel",
-	 *		"Checkbox",
-	 *		"Select",
-	 *		"Dropdown",
-	 *		"Tooltip",
-	 *		"Modals",
-	 *		"FloatingLabels",
-	 *		"Scrollbar",
-	 *		"MaterialRipple",
-	 *		"Snackbar",
-	 *		"Toast",
-	 *		"Subheader",
-	 *		"SimplePieCharts",
-	 *		"LinearProgress",
-	 *		"CircularProgress",
-	 *		"SpeedDial"
-	 *	]
-	 */	
-	 var pageRequiredComponents = [
-	 "Checkbox",
-	 "SpeedDial"
-	 ]
-
-
-	/**
-	 * 3. pageRequiredFeatures
-	 */
-	 var pageRequiredFeatures = [
-	 "prettyPrint"
-	 ]
-
-
-
-	/**
-	 * 4. doneScriptsLoad() 
-	 *
-	 * This function gets called when the "pageLoadScripts" 
-	 * and "pageRequiredComponents" arrays above are fully loaded
-	 */
-
-	// Set page variables globally
-	var clipboard;
-	
-	var doneScriptsLoad = function(){
-		/**
-		 * Speed Dial Plugin
-		 */
-		 $(".radio-up-fabspeeddial").on('ifChecked', function(event){
-		 	$("#demo-speed-dial").speedDial("direction","up");
-		 });
-		 $(".radio-down-fabspeeddial").on('ifChecked', function(event){
-		 	$("#demo-speed-dial").speedDial("direction","down");
-		 });
-		 $(".radio-left-fabspeeddial").on('ifChecked', function(event){
-		 	$("#demo-speed-dial").speedDial("direction","left");
-		 });
-		 $(".radio-right-fabspeeddial").on('ifChecked', function(event){
-		 	$("#demo-speed-dial").speedDial("direction","right");
-		 });
-		 $(".radio-open-fabspeeddial").on('ifChecked', function(event){
-		 	$("#demo-speed-dial").speedDial("open");
-		 });
-		 $(".radio-close-fabspeeddial").on('ifChecked', function(event){
-		 	$("#demo-speed-dial").speedDial("close");
-		 });
-		 $(".radio-fling-fabspeeddial").on('ifChecked', function(event){
-		 	$("#demo-speed-dial").speedDial("mode","fling");
-		 });
-		 $(".radio-scale-fabspeeddial").on('ifChecked', function(event){
-		 	$("#demo-speed-dial").speedDial("mode","scale");
-		 });
-
-		/**
-		 * Clipboard
-		 */		
-		 clipboard = new Clipboard('[data-copycode="true"]',{
-		 	target: function(trigger) {
-		 		return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
-		 	}
-		 });
-
-		 clipboard.on('success', function(e) {
-		 	$.toasts("add",{
-		 		msg: "Copied!",
-		 	});	
-		 	e.clearSelection();
-		 });
-	} // END: doneScriptsLoad();
-	
-
-	/**
-	 * 4. pageDestroy()
-	 *
-	 * Destroy all generated instances
-	 */
-	 var pageDestroy = function(){
-	 	clipboard.destroy(); clipboard = void 0;
-	 }
-	</script>
-	<div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
-		<div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
-			<button type="button" class="btn btn-floating-action btn-info primary-bg"><i class="material-icons">menu</i></button>
-		</div>
-		<ul class="md-fab-actions" aria-hidden="true">
-			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="tooltip" data-placement="left" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></a></li>
-			<li><a class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="demoModal2" data-placement="left" title="Guardar"><i class="material-icons">save</i></a>
-			</li>
-		</ul>
-	</div>
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+        "Checkbox",
+        "Select",
+        "Dropdown",
+        "Tooltip"
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!"
+            });
+            e.clearSelection();
+        });
+    }; // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<section class="page-header alternative-header"><!--Miga de Pan-->
+    <ol class="breadcrumb">
+        <li>Administrador</li>
+        <li>BioData</li>
+        <li>Detaller Beneficiario</li>
+    </ol>
+    <div class="page-header_title">
+        <h1>
+            Datos Basicos Terceros
+            <span class="page-header_subtitle"></span>
+        </h1>
+    </div>
 </section>
-<br>
-<section class="page-content"> 
-	
-	<table id="table1" class="table table-striped">
-		<span>¿Activo? <input class="switch switch-info" type="checkbox"  checked /></span>
-		<BR>
-			<BR>
-				<tr> <LABEL for="success1">Datos Basicos Beneficio</LABEL>
-					<td><div class="form-group">
-						<br>
-						<input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="4021">
-						<label for="help1">Codigo Beneficio</label>
-					</div></td>
-					<td><div class="form-group">
-						<br>
-						<input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="AUXILIO EDUCATIVO HIJOS - BACHILLERATO">
-						<label for="help1">Nombre</label>
-					</div></td>
-					<td><div class="form-group">
-						<br>
-						<select id="select1" name="select1" class="form-control">
-							<option value="23">SELECCIONAR</option>
-							<option selected="selected">AUXILIO</option>
-							<option value="72">SERVICIO MEDICO</option>
-						</select>
-						<label for="select1">Tipo de Beneficio</label>
-					</div></td>
-				</tr>
-			</table>
-			<table id="table1" class="table table-striped">
-				<tr> 
-					<thead>
-						<tr>
-							<th>Tipo de Contrato</th>
-							<TH>Parametros Adicionales</TH>
-						</tr>
-					</thead>
-					<tbody>
-						<td>
-							<div class="form-group">
-								<input class="checkbox checkbox-info" type="checkbox" checked/> Indefinido<br>
-								<input class="checkbox checkbox-info" type="checkbox" checked//> Fijo<br>
-								<input class="checkbox checkbox-info" type="checkbox" /> Sena<br>
-								<input class="checkbox checkbox-info" type="checkbox" /> Pensionado<br>
-							</div>
-						</td>
-						<td>
-							<div class="form-group">
-								<input class="switch switch-info" type="checkbox"  > ¿Afectan las Prescripciones?<br>
-							</div>
-						</td>
-					</tbody>
-				</tr>
-			</table>
-			<table id="table1" class="table" data-row-select="true">
-				<thead>
-					<tr>
-						<th></th>
-						<th class="text-right">Favorecido</th>
-						<th class="text-right">% Empresa</th>
-						<th class="text-right">% Trabajador</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="text-right">
-						<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
-						<td>EMPLEADO</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr class="text-right">
-						<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
-						<td>ESPOSO(A)</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr class="text-right">
-						<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
-						<td>PADRES</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr class="text-right">
-						<td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
-						<td>HIJOS</td>
-						<td>50</td>
-						<td>0</td>
-					</tr>
-					<tr class="text-right">
-						<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
-						<td>SUEGOS</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr class="text-right">
-						<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
-						<td>ABUELOS</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr class="text-right">
-						<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
-						<td>NIETOS</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr class="text-right">
-						<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
-						<td>HERMANOS</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-				</tbody>
-			</table>
-		</section><!-- /#page-content -->
+<script type="text/javascript">//Script Boton 
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+        "Checkbox",
+        "SpeedDial"
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        $(".radio-up-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "up");
+        });
+        $(".radio-down-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "down");
+        });
+        $(".radio-left-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "left");
+        });
+        $(".radio-right-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "right");
+        });
+        $(".radio-open-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("open");
+        });
+        $(".radio-close-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("close");
+        });
+        $(".radio-fling-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("mode", "fling");
+        });
+        $(".radio-scale-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("mode", "scale");
+        });
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!"
+            });
+            e.clearSelection();
+        });
+    };
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<script> //ValidacionFormulario
+    $("#detBeneficio").validationEngine();
+</script>
+<section>
+    <form class="col-md-12 right-alert" name="detBeneficio" id="detBeneficio">
+        <section class=" col-md-12 page-content"> 
+            <div class="row col-md-6" style="margin-left:10px;">
+                <div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+                    <div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+                        <button type="button" class="btn btn-floating-action btn-info"><i class="material-icons">menu</i></button>
+                    </div>
+                    <ul class="md-fab-actions" aria-hidden="true">
+                        <li><button type="button" class="btn btn-default-bright btn-floating-action btn-sm alert" data-toggle= "modal" data-target="#adjuntar" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></button></li>
+                        <li><button id="guardar" name="guardar" type="submit" class="btn btn-default-bright btn-floating-action btn-sm" data-placement="left" title="Guardar"><i class="material-icons">save</i></Button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class=" col-md-6 form-group">
+                    <input class="switch switch-info" type="checkbox"  > ¿Afectan las Prescripciones?<br>
+                </div>
+                <div class="col-md-6"> 
+                    <span>¿Activo? <input class="switch switch-info" type="checkbox"  checked /></span>
+                    <LABEL for="success1">Datos Basicos Beneficio</LABEL>
+                    <BR>
+                </div>
+            </div>
+        </section>
+        <section class="col-md-12"><!--MOdal adjuntar Documentos-->
+            <div id="adjuntar" class="modal fade col-md-6" style="display: none;">
+                <div class="modal-dialog" style="transform: scale(1) translate(-50%, -50%); opacity: 1; top: 50%; left: 50%;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title"><font><font>Adjuntar Documento</font></font></h4>
+                        </div>
+                        <div class="modal-body">
+                            <p><font>Por favor selecione Documentos.</font></p>
+                            <div class="form-group">
+                                <button class="btn btn-raised btn-warning"><input type="file" class="btn btn-raised btn-warning" id="adjuntarDocumento"><label for="adjuntarDocumento">Acto Administrativo</label></button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary btn-flat btn-ripple">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="col-md-12"><!-- Datos Beneficio-->
+                <div class=" col-md-6 form-group">
+                    <br>
+                    <input type="text" name="codBene" class="form-control  validate[required]" id="codBene" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="4021">
+                    <label for="codBene">Codigo Beneficio</label>
+                </div>   
+                <div class="col-md-6 form-group">
+                    <br>
+                    <input type="text" class="form-control validate[required]" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" value="AUXILIO EDUCATIVO HIJOS - BACHILLERATO">
+                    <label for="help1">Nombre</label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <br>
+                    <select id="select1" name="select1" class="form-control  validate[required]">
+                        <option></option>
+                        <option value="A" selected="selected">AUXILIO</option>
+                        <option value="M">SERVICIO MEDICO</option>
+                    </select>
+                    <label for="select1">Tipo de Beneficio</label>
+                </div>
+
+            <div class="form-group col-md-6">
+                <label for="select1">Tipo de Contrato</label>
+                <br>
+                <input class="checkbox checkbox-info" type="checkbox" checked/> Indefinido<br>
+                <input class="checkbox checkbox-info" type="checkbox" checked/> Fijo<br>
+                <input class="checkbox checkbox-info" type="checkbox" /> Sena<br>
+                <input class="checkbox checkbox-info" type="checkbox" /> Pensionado<br>
+            </div>
+        </section>
+        <table id="table1" class="table" data-row-select="true">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-right">Favorecido</th>
+                    <th class="text-right">% Empresa</th>
+                    <th class="text-right">% Trabajador</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-right">
+                    <td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+                    <td>EMPLEADO</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr class="text-right">
+                    <td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+                    <td>ESPOSO(A)</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr class="text-right">
+                    <td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+                    <td>PADRES</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr class="text-right">
+                    <td><input class="checkbox checkbox-primary" type="checkbox" checked/></td>
+                    <td>HIJOS</td>
+                    <td>50</td>
+                    <td>0</td>
+                </tr>
+                <tr class="text-right">
+                    <td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+                    <td>SUEGOS</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr class="text-right">
+                    <td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+                    <td>ABUELOS</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr class="text-right">
+                    <td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+                    <td>NIETOS</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr class="text-right">
+                    <td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+                    <td>HERMANOS</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</section>
+
