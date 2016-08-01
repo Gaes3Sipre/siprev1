@@ -142,7 +142,7 @@
             </div>
         </div>
     </section>
-      <section class="col-md-6" Name="sIdentidad"  method="post"><!-- datos Basicos-->
+    <section class="col-md-6" Name="sIdentidad"  method="post"><!-- datos Basicos-->
         <div class="col-md-12"> 
             <div class="col-md-offset-4 col-md-8">
                 <label>Datos Basicos Empleado</label>
@@ -210,7 +210,7 @@
         </div>
 
     </section>
-      
+
     <section id="sDatResi"><!--Datos Residencia-->
         <div class="col-md-offset-4 col-md-8">
             <LABEL>Datos de Nacimiento</LABEL>
@@ -290,12 +290,24 @@
         <div class="col-md-offset-4 col-md-8">
             <LABEL>Datos de covertura</LABEL>
         </div>
-        <div class=" col-md-6 form-group"><!--Direccion Residencia-->
+        <div class=" col-md-4 form-group"><!--Direccion Residencia-->
+            <br>
+            <select id="tipBene" name="tipBene" class="form-control  validate[required]" >
+                <option selected="selected"></option>
+                <option  value="1">PADRE</option>
+                <option  value="1">HIJO</option>
+                <option  value="1">CONYUGE</option>
+                <option  value="1">SUEGRO</option>
+                <option  value="1">HERMANOS</option>
+            </select>
+            <label for="tipBene">Tipo Beneficiario</label>
+        </div>
+        <div class=" col-md-4 form-group"><!--Direccion Residencia-->
             <br>
             <input type="date" class="form-control  validate[required,date]" id="fecInic" >
             <label for="fecInic">Fecha Inicio</label>
         </div>
-        <div class="col-md-6 form-group"><!--Direccion Residencia-->
+        <div class="col-md-4 form-group"><!--Direccion Residencia-->
             <br>
             <input type="date" class="form-control  validate[required,date]" id="fecFina" >
             <label for="fecFina">Fecha Final</label>
