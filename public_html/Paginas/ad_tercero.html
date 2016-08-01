@@ -1,38 +1,6 @@
 <script type="text/javascript">
     var pageLoadScripts = []
     var pageLoadCSS = []
-    var pageRequiredComponents = [
-        "Checkbox",
-        "Select",
-        "Dropdown",
-        "Tooltip"
-    ]
-    var pageRequiredFeatures = [
-        "prettyPrint"
-    ]
-    var clipboard;
-    var doneScriptsLoad = function () {
-        clipboard = new Clipboard('[data-copycode="true"]', {
-            target: function (trigger) {
-                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
-            }
-        });
-
-        clipboard.on('success', function (e) {
-            $.toasts("add", {
-                msg: "Copied!",
-            });
-            e.clearSelection();
-        });
-    }
-    var pageDestroy = function () {
-        clipboard.destroy();
-        clipboard = void 0;
-    }
-</script>
-<script type="text/javascript">
-    var pageLoadScripts = []
-    var pageLoadCSS = []
     var pageRequiredComponents = ["Modals"]
     var pageRequiredFeatures = ["prettyPrint"]
     var clipboard;
@@ -54,11 +22,35 @@
         clipboard = void 0;
     }
 </script>
-<script>
-    $("#btnExport").click(function (e) {
-        window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').html()));
-        e.preventDefault();
-    });
+
+<script type="text/javascript">//scrips tabla dinamica
+    var pageLoadScripts = []
+    var pageLoadCSS = []
+    var pageRequiredComponents = []
+    var pageRequiredFeatures = ["prettyPrint"]
+    var clipboard;
+    var doneScriptsLoad = function () {
+        $("#tableDataTables1").dataTable();
+        $("select").selectpicker({
+            dropupAuto: false,
+            size: 5
+        });
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    }
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    }
 </script>
 <section class="page-header alternative-header">
     <ol class="breadcrumb">
@@ -73,25 +65,29 @@
         </h1>
     </div>
 </section>
+<script type="text/javascript">//Script Boton 
+    $("#btnExport").click(function (e) {
+        window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').html()));
+        e.preventDefault();
+    });
+
+</script>
 <section class="page-content">
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="panel-table-inner-offset" id="dvData">
-                        <table align="center">
-                            <td>
-                                <p><button type="button" class="btn btn-raised btn-info" id="btnExport" value=" Export Table data into Excel ">generar excel</button></p>
-
-                            </td>
-                            <td> </td>	
-                        </table>
+                        <section class="container"><!--Boton-->
+                            <button type="button" class="btn btn-default-bright btn-floating-action btn-sm alert" id="btnExport" title="Exportar a Excel" ><i class="material-icons">get_app</i></button>
+                            <a href="index_administrador.html#Paginas/ad_nuevotercero.html"><button class="btn btn-default-bright btn-floating-action btn-sm alert" title="nuevo"><i class="material-icons">insert_drive_file</i></button></a>
+                        </section>
                         <table id="tableDataTables1" class="table">
                             <thead>
                                 <tr>
                                     <th class="text-right">Tipo de Tercero</th>
                                     <th class="text-right">Identificacion</th>
-                                    <th class="text-right">Nombres o Razón Social</th>
+                                    <th class="text-right">Nombres</th>
                                     <th class="text-right">Apellidos</th>
                                     <th class="text-right">Indicador de Actividad</th>
                                     <th class="text-right">Detalle</th>
@@ -106,6 +102,8 @@
                                     <td>ACTIVO</td>
                                     <td><a href="index_administrador.html#Paginas/ad_detalleTercero.html">
                                             <i class="material-icons">contacts</i></a>
+                                        <a href="index_administrador.html#Paginas/ad_detalleTercero.html">
+                                            <i class="material-icons">contacts</i></a>
                                     </td>
                                 </tr>
                                 <tr class="text-right">
@@ -116,6 +114,8 @@
                                     <td>ACTIVO</td>
 
                                     <td><a href="index_administrador.html#Paginas/ad_detalleTercero.html">
+                                            <i class="material-icons">contacts</i></a>
+                                        <a href="index_administrador.html#Paginas/ad_detalleTercero.html">
                                             <i class="material-icons">contacts</i></a>
                                     </td>
                                 </tr>
@@ -341,7 +341,6 @@
                 </div>
 
             </div>
-            <!--<input type="button" id="btnExport" value=" Export Table data into Excel " />-->
         </div>
     </div>
 </section><!-- /#page-content -->
