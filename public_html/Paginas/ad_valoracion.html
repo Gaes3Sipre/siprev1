@@ -1,0 +1,227 @@
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+        "Checkbox",
+        "Select",
+        "Dropdown",
+        "Tooltip"
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!"
+            });
+            e.clearSelection();
+        });
+    }; // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<section class="page-header alternative-header"><!--Miga de Pan-->
+    <ol class="breadcrumb">
+        <li>Administrador</li>
+        <li>BioData</li>
+        <li>Detaller Tercero</li>
+    </ol>
+    <div class="page-header_title">
+        <h1>
+            Datos Basicos Empleados
+            <span class="page-header_subtitle"></span>
+        </h1>
+    </div>
+</section>
+<script type="text/javascript">//Script Boton 
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+        "Checkbox",
+        "SpeedDial"
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        $(".radio-up-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "up");
+        });
+        $(".radio-down-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "down");
+        });
+        $(".radio-left-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "left");
+        });
+        $(".radio-right-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "right");
+        });
+        $(".radio-open-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("open");
+        });
+        $(".radio-close-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("close");
+        });
+        $(".radio-fling-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("mode", "fling");
+        });
+        $(".radio-scale-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("mode", "scale");
+        });
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!"
+            });
+            e.clearSelection();
+        });
+    };
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<script> //ValidacionFormulario
+    $("#DatosTercero").validationEngine();
+</script>
+<script type="text/javascript">
+  
+</script>
+<form  id="DatosTercero" name="DatosTercero">
+    <section><!--Boton-->
+        <div class="row" style="margin-left:10px;">
+            <form class="col-md-12 right-alert" name="datosEmpleados" id="datosEmpleados">
+                <div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+                    <div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+                        <button type="button" class="btn btn-floating-action btn-info"><i class="material-icons">menu</i></button>
+                    </div>
+                    <ul class="md-fab-actions" aria-hidden="true">
+                        <li><button type="button" class="btn btn-default-bright btn-floating-action btn-sm alert" data-toggle= "modal" data-target="#adjuntar" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></button></li>
+                        <li><button id="guardar" name="guardar" type="submit" class="btn btn-default-bright btn-floating-action btn-sm" data-placement="left" title="Guardar"><i class="material-icons">save</i></Button>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </section>
+    <section><!--MOdal adjuntar Documentos-->
+        <div id="adjuntar" class="modal fade" style="display: none;">
+            <div class="modal-dialog" style="transform: scale(1) translate(-50%, -50%); opacity: 1; top: 50%; left: 50%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font><font>Adjuntar Documento</font></font></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p><font>Por favor selecione Documentos.</font></p>
+                        <div class="form-group">
+                            <button class="btn btn-raised btn-warning"><input type="file" class="btn btn-raised btn-warning" id="adjuntarDocumento"><label for="adjuntarDocumento">Documento de Identidad</label></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary btn-flat btn-ripple">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section Name="sIdentidad"  method="post"><!-- datos Basicos-->
+        <div class="col-md-offset-4 col-md-8">
+            <label>Datos Basicos</label>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-12  form-group"><!-- Identificacion-->
+                <br>
+                <input type="text" class="form-control validate[required]" id="identificacion" name="identificacion" >
+                <label for="identificacion">Identificación</label>
+            </div>
+            <section id="sRazonSocial" name="sRazonSocial" ><!--style="display:none;"--><!-- Razon Social-->
+                <div  name="dRazSocial" id="dPNombre" class="col-md-12 form-group"><!-- Razon Social-->
+                    <br>
+                    <input type="text" class="form-control validate[required]" id="rSocial" name="rSocial" >
+                    <label for="rSocial">Razón Social</label>
+                </div>
+            </section>
+        </div>
+    </section>
+    <div class="col-md-12"> 
+        <section id="seNombres" name="seNombre" ><!-- Nombres y Apellidos--><!--style="display:none;"-->
+            <div class="col-md-3 form-group"><!-- Primer Nombre-->
+                <br>
+                <input type="text" class="form-control validate[required]" id="pnombre" name="pnombre" >
+                <label for="pnombre">Primer Nombre</label>
+            </div>
+            <div class="col-md-3 form-group"><!-- Segundo Apellido-->
+                <br>
+                <input type="text" class="form-control  validate[required]" id="snombre" name="snombre"  >
+                <label for="snombre">Segundo Nombre</label>
+            </div>
+            <div class="col-md-3 form-group"><!-- Primer Apellido-->
+                <br>
+                <input type="text" class="form-control  validate[required]" id="papellido"  >
+                <label for="papellido">Primer Apellido</label>
+            </div>
+            <div class="col-md-3 form-group"><!-- Segundo Apellido-->
+                <br>
+                <input type="text" class="form-control  validate[required]" id="sapellido"  >
+                <label for="sapellido">Segundo Apellido</label>
+            </div>
+        </section>
+    </div>
+                <section>
+                <div class="form-group col-md-12">
+                    <span>Tiene Prescripciones Medicas <input class="switch switch-danger" type="checkbox" /></span>
+                </div>
+                <div class="col-md-6 form-group">
+                    <br>
+                    <select id="select1" name="select3" class="form-control">
+                        <option value="Seleccione..">Seleccione..</option>
+                        <option value="92">DEABETES </option>
+                        <option value="20">INPERTENCION</option>
+                        <option value="30">CANCER</option>
+                        <option value="40">VIH</option>
+                    </select>
+                    <label for="select3">Tipo de Prescripción</label>
+                </div>
+                <div class="form-group floating-label col-md-6">
+                    <br>
+                    <br>
+                    <textarea name="textarea3" id="textarea2" class="form-control" rows="3" placeholder=""></textarea>
+                    <label for="textarea2">Observaciones</label>
+                </div>
+            </section>
+</form>
+<section>
+    <div id="actualizacion" class="modal fade" style="display: none;">
+        <div class="modal-dialog" style="transform: scale(1) translate(-50%, -50%); opacity: 1; top: 50%; left: 50%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><font><font>Datos actualizados con exito</font></font></h4>
+                </div>
+                <div class="modal-body">
+                    <p><font><font>Su informacion fue actualizada con exito, Gracias.</font></font></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
