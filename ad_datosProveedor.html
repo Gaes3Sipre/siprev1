@@ -1,0 +1,321 @@
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+        "Checkbox",
+        "Select",
+        "Dropdown",
+        "Tooltip"
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    }; // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+        "Modals"
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    }; // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint",
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        $("#tableDataTables1").dataTable();
+        $("select").selectpicker({
+            dropupAuto: false,
+            size: 5
+        });
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    }; // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+        "Modals"
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    }; // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+        "Checkbox",
+        "SpeedDial"
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint"
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        $(".radio-up-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "up");
+        });
+        $(".radio-down-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "down");
+        });
+        $(".radio-left-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "left");
+        });
+        $(".radio-right-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("direction", "right");
+        });
+        $(".radio-open-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("open");
+        });
+        $(".radio-close-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("close");
+        });
+        $(".radio-fling-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("mode", "fling");
+        });
+        $(".radio-scale-fabspeeddial").on('ifChecked', function (event) {
+            $("#demo-speed-dial").speedDial("mode", "scale");
+        });
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    }; // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
+<section class="page-header alternative-header">
+    <ol class="breadcrumb">
+        <li>Administrador</li>
+        <li>Proveedor</li>
+    </ol>
+    <div class="page-header_title">
+        <h1>
+            Proveedores
+            <span class="page-header_subtitle"></span>
+        </h1>
+    </div>
+</section>
+
+<section class="page-header alternative-header">
+    <ol class="breadcrumb">
+        <li>Administrador</li>
+        <li>Gestión de Proveedores</li>
+    </ol>
+    <div class="page-header_title">
+        <h1>
+            Datos Basicos Proveedores
+            <span class="page-header_subtitle"></span>
+        </h1>
+    </div>
+</section>
+<section class="page-content">
+    <header> <!--BOTON CON AGREGAR-->
+        <div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+            <div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+                <button type="button" class="btn btn-floating-action btn-info primary-bg"><i class="material-icons">menu</i></button>
+            </div>
+            <ul class="md-fab-actions" aria-hidden="true">
+                <li><a href="index.html?#Paginas/em_nuevo.html" class="btn btn-default-bright btn-floating-action btn-sm" data-toggle="tooltip" data-placement="left" title="Agregar nuevo registro"><i class="material-icons">add</i></a></li>
+            </ul>
+        </div>
+    </header>
+    <form class="form">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="regular1" placeholder="Nit">
+                    <label for="regular1">Nit</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="tTercero" >Tipo de proveedor</label>
+                        <br>
+                        <fieldset id="tTercero" name="tTercero" class="form-group">
+                            <input id="tIdentidad" value="M" class="radio radio-primary checkbox-inline" type="radio" name="tTercero">
+                            <span>Medico adscrito</span>
+                            <br>
+                            <input   value="I" id="tTercero" class="radio radio-primary checkbox-inline" type="radio" name="tTercero" >
+                            <span>IPS</span>
+                            <br>
+                            <input  value="F" id="tTercero" class="radio radio-primary checkbox-inline" type="radio" name="tTercero">
+                            <span>Farmacia</span>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="tTercero" >Indicador de actividad</label>
+                        <br>
+                        <fieldset id="tTercero" name="tTercero" class="form-group">
+                            <input id="tIdentidad" value="A" class="radio radio-primary checkbox-inline" type="radio" name="tTercero">
+                            <span>Activo</span>
+                            <br>
+                            <input   value="I" id="tTercero" class="radio radio-primary checkbox-inline" type="radio" name="tTercero" >
+                            <span>Inactivo</span>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="placeholder1" placeholder="Placeholder">
+                    <label for="placeholder1">Placeholder</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="help1">
+                    <label for="help1">Input with help text</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="tooltip1" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" data-original-title="Example input tooltip text here">
+                    <label for="help1">Input with tooltip</label>
+                </div>
+                <div class="form-group has-success">
+                    <input type="text" class="form-control" id="success1">
+                    <label for="success1">Success</label>
+                </div>
+                <div class="form-group has-error">
+                    <input type="text" class="form-control" id="error1">
+                    <label for="error1">Error</label>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</section><!-- /#page-content -->
+
+
+<script>
+
+
+    $("#btnExport").click(function (e) {
+        window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').html()));
+        e.preventDefault();
+    });
+</script>
+<script type="text/javascript">
+    var pageLoadScripts = [
+    ];
+    var pageLoadCSS = [
+    ];
+    var pageRequiredComponents = [
+    ];
+    var pageRequiredFeatures = [
+        "prettyPrint",
+    ];
+    var clipboard;
+    var doneScriptsLoad = function () {
+        $("#tableDataTables1").dataTable();
+        $("select").selectpicker({
+            dropupAuto: false,
+            size: 5
+        });
+        clipboard = new Clipboard('[data-copycode="true"]', {
+            target: function (trigger) {
+                return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+            }
+        });
+        clipboard.on('success', function (e) {
+            $.toasts("add", {
+                msg: "Copied!",
+            });
+            e.clearSelection();
+        });
+    }; // END: doneScriptsLoad();
+    var pageDestroy = function () {
+        clipboard.destroy();
+        clipboard = void 0;
+    };
+</script>
