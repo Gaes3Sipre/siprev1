@@ -1,82 +1,17 @@
-
 <script type="text/javascript">
-    /**
-     * PUT BELOW HERE
-     * ALL PAGE LEVEL RELATED SCRIPTS
-     */
-
-
-
-    /**
-     * 1. pageLoadScripts
-     *
-     * Scripts array to load on pageload event
-     *
-     * Example:
-     *	var pageLoadScripts = [
-     *		"js/bemat-demo-script1.min.js",
-     *		"js/bemat-demo-script2.min.js"
-     *  ]
-     *
-     */
     var pageLoadScripts = [
     ]
-
     var pageLoadCSS = [
     ]
-
-
-    /**
-     * 2. pageRequiredComponents
-     *
-     * Components that require this page. By default all components are loaded,
-     * but with this array, you can force the reinitialization of any component.
-     * 
-     * Example:
-     *	var pageRequiredComponents = [
-     *		"Panel",
-     *		"Checkbox",
-     *		"Select",
-     *		"Dropdown",
-     *		"Tooltip",
-     *		"Modals",
-     *		"FloatingLabels",
-     *		"Scrollbar",
-     *		"MaterialRipple",
-     *		"Snackbar",
-     *		"Toast",
-     *		"Subheader",
-     *		"SimplePieCharts",
-     *		"LinearProgress",
-     *		"CircularProgress",
-     *		"SpeedDial"
-     *	]
-     */
     var pageRequiredComponents = [
         "Checkbox",
         "Select",
         "Dropdown",
         "Tooltip"
     ]
-
-
-    /**
-     * 3. pageRequiredFeatures
-     */
     var pageRequiredFeatures = [
         "prettyPrint"
     ]
-
-
-
-    /**
-     * 4. doneScriptsLoad() 
-     *
-     * This function gets called when the "pageLoadScripts" 
-     * and "pageRequiredComponents" arrays above are fully loaded
-     */
-
-    // Set page variables globally
     var clipboard;
 
     var doneScriptsLoad = function () {
@@ -93,93 +28,23 @@
             e.clearSelection();
         });
     } // END: doneScriptsLoad();
-
-
-    /**
-     * 4. pageDestroy()
-     *
-     * Destroy all generated instances
-     */
     var pageDestroy = function () {
         clipboard.destroy();
         clipboard = void 0;
     }
 </script>
 <script type="text/javascript">
-    /**
-     * PUT BELOW HERE
-     * ALL PAGE LEVEL RELATED SCRIPTS
-     */
-
-
-
-    /**
-     * 1. pageLoadScripts
-     *
-     * Scripts array to load on pageload event
-     *
-     * Example:
-     *	var pageLoadScripts = [
-     *		"js/bemat-demo-script1.min.js",
-     *		"js/bemat-demo-script2.min.js"
-     *  ]
-     *
-     */
     var pageLoadScripts = [
     ]
 
     var pageLoadCSS = [
     ]
-
-
-    /**
-     * 2. pageRequiredComponents
-     *
-     * Components that require this page. By default all components are loaded,
-     * but with this array, you can force the reinitialization of any component.
-     * 
-     * Example:
-     *	var pageRequiredComponents = [
-     *		"Panel",
-     *		"Checkbox",
-     *		"Select",
-     *		"Dropdown",
-     *		"Tooltip",
-     *		"Modals",
-     *		"FloatingLabels",
-     *		"Scrollbar",
-     *		"MaterialRipple",
-     *		"Snackbar",
-     *		"Toast",
-     *		"Subheader",
-     *		"SimplePieCharts",
-     *		"LinearProgress",
-     *		"CircularProgress",
-     *		"SpeedDial"
-     *	]
-     */
     var pageRequiredComponents = [
         "Modals"
     ]
-
-
-    /**
-     * 3. pageRequiredFeatures
-     */
     var pageRequiredFeatures = [
         "prettyPrint"
     ]
-
-
-
-    /**
-     * 4. doneScriptsLoad() 
-     *
-     * This function gets called when the "pageLoadScripts" 
-     * and "pageRequiredComponents" arrays above are fully loaded
-     */
-
-    // Set page variables globally
     var clipboard;
 
     var doneScriptsLoad = function () {
@@ -196,90 +61,95 @@
             e.clearSelection();
         });
     } // END: doneScriptsLoad();
-
-
-    /**
-     * 4. pageDestroy()
-     *
-     * Destroy all generated instances
-     */
     var pageDestroy = function () {
         clipboard.destroy();
         clipboard = void 0;
     }
 </script>
+<script> //ValidacionFormulario
+    $("#DatosPresupuestoAnual").validationEngine();
+</script>
 <section class="page-header alternative-header">
     <ol class="breadcrumb">
         <li>Administrador</li>
-        <li>Biodata</li>
+        <li>Gestion de presupuesto</li>
+        <li>Asignacion de presupuesto anual</li>
     </ol>
     <div class="page-header_title">
         <h1>
-            Datos Basicos Empleado
+            Asignacion de presupuesto anual
             <span class="page-header_subtitle"></span>
         </h1>
     </div>
 </section>
-
-<section class="page-content">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="panel-table-inner-offset" id="dvData">
-                        <table id="tableDataTables1" class="table">
-                           <thead>
-                                <tr>
-                                    <th class="text-right">Año</th>
-                                    <th class="text-right">Rubro</th>
-                                    <th class="text-right">Valor Presupuestado</th>
-                                    <th class="text-right">Valor ejecutado</th>
-                                    <th class="text-right">Saldo</th>
-                                    <th class="text-right">Inicio Vigencia</th>
-                                    <th class="text-right">Fin Vigencia</th>
-                                    <th class="text-right">Detalle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-right">
-                                    <td>2016</td>
-                                    <td>BENEFICIOS EMPLEADOS</td>
-                                    <td>$1.270.000.000</td>
-                                    <td>$268.000.000</td>
-                                    <td>$1.002.000.000</td>
-                                    <td>01/01/2016</td>
-                                    <td>31/12/2016</td>
-                                    <td><a href="index_administrador.html#Paginas/ad_detallePresupuestoAnual.html">
-                                            <i class="material-icons">visibility</i></a>
-                                    </td>
-                                </tr>
-                                <tr class="text-right">
-                                    <td>2015</td>
-                                    <td>BENEFICIOS EMPLEADOS</td>
-                                    <td>$1.140.000.000</td>
-                                    <td>$1.268.000.000</td>
-                                    <td>01/01/2015</td>
-                                    <td>31/12/2015</td>
-                                    <td >$<font color="red">-128.000.000</font></td>
-                                    <td><a href="index_administrador.html#Paginas/ad_detallePresupuestoAnual.html">
-                                            <i class="material-icons">visibility</i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+<form  id="DatosPresupuestoAnual" name="DatosPresupuestoAnual">
+    <section><!--Boton-->
+        <div class="row" style="margin-left:10px;">
+            <form class="col-md-12 right-alert" name="DatosPresupuestoAnual" id="DatosPresupuestoAnual">
+                <div id="demo-speed-dial" class="md-fab-speed-dial cc-md-fab-speed-dial md-right md-fling" data-toggle="speed-dial" data-mode="fling">
+                    <div class="md-fab-trigger " aria-expanded="false" aria-haspopup="true">
+                        <button type="button" class="btn btn-floating-action btn-info"><i class="material-icons">menu</i></button>
                     </div>
+                    <ul class="md-fab-actions" aria-hidden="true">
+                        <li><button type="button" class="btn btn-default-bright btn-floating-action btn-sm alert" data-toggle= "modal" data-target="#adjuntar" title="Adjuntar Archivo"><i class="material-icons">attach_file</i></button></li>
+                        <li><button id="guardar" name="guardar" type="submit" class="btn btn-default-bright btn-floating-action btn-sm" data-placement="left" title="Guardar"><i class="material-icons">save</i></Button>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </section>
 
+    <section class="page-content">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="panel-table-inner-offset" id="dvData">
+                            <section name="sIdentidad"  method="post">
+                                <div class="col-md-12"> 
+                                    <div class="col-md-offset-4 col-md-8">
+                                        <label>Asignacion Presupuesto</label>
+                                    </div>
+                                    <section>
+                                        <div class="row">
+                                            <div class="col-md-6  form-group">
+                                                <br>
+                                                <input type="text" class="form-control validate[required]" id="identificacion" name="identificacion" >
+                                                <label for="identificacion">Codigo presupuesto</label>
+                                            </div>
+                                            <div class="col-md-6  form-group">
+                                                <br>
+                                                <input type="text" class="form-control validate[required]" id="papresupuestado" name="papresupuestado" >
+                                                <label for="papresupuestado">Año presupuestado</label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6  form-group">
+                                                    <br>
+                                                    <input type="year" class="form-control  validate[required,date]" id="year" >
+                                                    <label for="pnombre">Año presupuestado</label>
+                                                </div>
+                                                <div class="col-md-6  form-group"><!-- Identificacion-->
+                                                    <br>
+                                                    <input type="text" class="form-control  validate[required]" id="snombre" name="snombre"  >
+                                                    <label for="snombre">Segundo Nombre</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <table align="center">
+                <td>
+                    <!--<p><button type="button" class="btn btn-raised btn-danger">Cancelar</button></p>-->
+                </td>	
+            </table>		
         </div>
-        <table align="center">
-            <td>
-                <!--<p><button type="button" class="btn btn-raised btn-danger">Cancelar</button></p>-->
-            </td>	
-        </table>		
-    </div>
-</section><!-- /#page-content -->
-
+    </section><!-- /#page-content -->
+</form>
 <script>
 
 
@@ -291,98 +161,29 @@
 
 
 <script type="text/javascript">
-    /**
-     * PUT BELOW HERE
-     * ALL PAGE LEVEL RELATED SCRIPTS
-     */
-
-
-
-    /**
-     * 1. pageLoadScripts
-     *
-     * Scripts array to load on pageload event
-     *
-     * Example:
-     *	var pageLoadScripts = [
-     *		"js/bemat-demo-script1.min.js",
-     *		"js/bemat-demo-script2.min.js"
-     *  ]
-     *
-     */
     var pageLoadScripts = [
     ]
 
     var pageLoadCSS = [
     ]
-
-
-    /**
-     * 2. pageRequiredComponents
-     *
-     * Components that require this page. By default all components are loaded,
-     * but with this array, you can force the reinitialization of any component.
-     * 
-     * Example:
-     *	var pageRequiredComponents = [
-     *		"Panel",
-     *		"Checkbox",
-     *		"Select",
-     *		"Dropdown",
-     *		"Tooltip",
-     *		"Modals",
-     *		"FloatingLabels",
-     *		"Scrollbar",
-     *		"MaterialRipple",
-     *		"Snackbar",
-     *		"Toast",
-     *		"Subheader",
-     *		"SimplePieCharts",
-     *		"LinearProgress",
-     *		"CircularProgress",
-     *		"SpeedDial"
-     *	]
-     */
     var pageRequiredComponents = [
     ]
-
-
-    /**
-     * 3. pageRequiredFeatures
-     */
     var pageRequiredFeatures = [
         "prettyPrint",
     ]
-
-
-
-    /**
-     * 4. doneScriptsLoad() 
-     *
-     * This function gets called when the "pageLoadScripts" 
-     * and "pageRequiredComponents" arrays above are fully loaded
-     */
-
-    // Set page variables globally
     var clipboard;
 
     var doneScriptsLoad = function () {
-        /**
-         * DataTables
-         */
         $("#tableDataTables1").dataTable();
         $("select").selectpicker({
             dropupAuto: false,
             size: 5
         });
-
-
         clipboard = new Clipboard('[data-copycode="true"]', {
             target: function (trigger) {
                 return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
             }
         });
-
         clipboard.on('success', function (e) {
             $.toasts("add", {
                 msg: "Copied!",
@@ -390,13 +191,6 @@
             e.clearSelection();
         });
     } // END: doneScriptsLoad();
-
-
-    /**
-     * 4. pageDestroy()
-     *
-     * Destroy all generated instances
-     */
     var pageDestroy = function () {
         clipboard.destroy();
         clipboard = void 0;
