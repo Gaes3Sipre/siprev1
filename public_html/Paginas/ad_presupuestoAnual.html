@@ -1,83 +1,18 @@
-
-
 <script type="text/javascript">
-    /**
-     * PUT BELOW HERE
-     * ALL PAGE LEVEL RELATED SCRIPTS
-     */
-
-
-
-    /**
-     * 1. pageLoadScripts
-     *
-     * Scripts array to load on pageload event
-     *
-     * Example:
-     *	var pageLoadScripts = [
-     *		"js/bemat-demo-script1.min.js",
-     *		"js/bemat-demo-script2.min.js"
-     *  ]
-     *
-     */
     var pageLoadScripts = [
     ]
 
     var pageLoadCSS = [
     ]
-
-
-    /**
-     * 2. pageRequiredComponents
-     *
-     * Components that require this page. By default all components are loaded,
-     * but with this array, you can force the reinitialization of any component.
-     * 
-     * Example:
-     *	var pageRequiredComponents = [
-     *		"Panel",
-     *		"Checkbox",
-     *		"Select",
-     *		"Dropdown",
-     *		"Tooltip",
-     *		"Modals",
-     *		"FloatingLabels",
-     *		"Scrollbar",
-     *		"MaterialRipple",
-     *		"Snackbar",
-     *		"Toast",
-     *		"Subheader",
-     *		"SimplePieCharts",
-     *		"LinearProgress",
-     *		"CircularProgress",
-     *		"SpeedDial"
-     *	]
-     */
     var pageRequiredComponents = [
         "Checkbox",
         "Select",
         "Dropdown",
         "Tooltip"
     ]
-
-
-    /**
-     * 3. pageRequiredFeatures
-     */
     var pageRequiredFeatures = [
         "prettyPrint"
     ]
-
-
-
-    /**
-     * 4. doneScriptsLoad() 
-     *
-     * This function gets called when the "pageLoadScripts" 
-     * and "pageRequiredComponents" arrays above are fully loaded
-     */
-
-    // Set page variables globally
     var clipboard;
 
     var doneScriptsLoad = function () {
@@ -94,93 +29,23 @@
             e.clearSelection();
         });
     } // END: doneScriptsLoad();
-
-
-    /**
-     * 4. pageDestroy()
-     *
-     * Destroy all generated instances
-     */
     var pageDestroy = function () {
         clipboard.destroy();
         clipboard = void 0;
     }
 </script>
 <script type="text/javascript">
-    /**
-     * PUT BELOW HERE
-     * ALL PAGE LEVEL RELATED SCRIPTS
-     */
-
-
-
-    /**
-     * 1. pageLoadScripts
-     *
-     * Scripts array to load on pageload event
-     *
-     * Example:
-     *	var pageLoadScripts = [
-     *		"js/bemat-demo-script1.min.js",
-     *		"js/bemat-demo-script2.min.js"
-     *  ]
-     *
-     */
     var pageLoadScripts = [
     ]
 
     var pageLoadCSS = [
     ]
-
-
-    /**
-     * 2. pageRequiredComponents
-     *
-     * Components that require this page. By default all components are loaded,
-     * but with this array, you can force the reinitialization of any component.
-     * 
-     * Example:
-     *	var pageRequiredComponents = [
-     *		"Panel",
-     *		"Checkbox",
-     *		"Select",
-     *		"Dropdown",
-     *		"Tooltip",
-     *		"Modals",
-     *		"FloatingLabels",
-     *		"Scrollbar",
-     *		"MaterialRipple",
-     *		"Snackbar",
-     *		"Toast",
-     *		"Subheader",
-     *		"SimplePieCharts",
-     *		"LinearProgress",
-     *		"CircularProgress",
-     *		"SpeedDial"
-     *	]
-     */
     var pageRequiredComponents = [
         "Modals"
     ]
-
-
-    /**
-     * 3. pageRequiredFeatures
-     */
     var pageRequiredFeatures = [
         "prettyPrint"
     ]
-
-
-
-    /**
-     * 4. doneScriptsLoad() 
-     *
-     * This function gets called when the "pageLoadScripts" 
-     * and "pageRequiredComponents" arrays above are fully loaded
-     */
-
-    // Set page variables globally
     var clipboard;
 
     var doneScriptsLoad = function () {
@@ -197,13 +62,6 @@
             e.clearSelection();
         });
     } // END: doneScriptsLoad();
-
-
-    /**
-     * 4. pageDestroy()
-     *
-     * Destroy all generated instances
-     */
     var pageDestroy = function () {
         clipboard.destroy();
         clipboard = void 0;
@@ -212,11 +70,12 @@
 <section class="page-header alternative-header">
     <ol class="breadcrumb">
         <li>Administrador</li>
-        <li>Biodata</li>
+        <li>Gestion de presupuesto</li>
+        <li>Asignacion de presupuesto anual</li>
     </ol>
     <div class="page-header_title">
         <h1>
-            Datos Basicos Empleado
+            Asignacion de presupuesto anual
             <span class="page-header_subtitle"></span>
         </h1>
     </div>
@@ -229,6 +88,9 @@
                 <div class="panel-body">
                     <div class="panel-table-inner-offset" id="dvData">
                         <table id="tableDataTables1" class="table">
+                            <button type="button" class="btn btn-default-bright btn-floating-action btn-sm alert" id="btnExport" title="Exportar a Excel" ><i class="material-icons">get_app</i></button>
+                            <a href="index_administrador.html#Paginas/ad_nuevoPresupuestoAnual.html"><button class="btn btn-default-bright btn-floating-action btn-sm alert" title="nuevo"><i class="material-icons">insert_drive_file</i></button></a>
+
                             <thead>
                                 <tr>
                                     <th class="text-right">Año</th>
@@ -274,10 +136,6 @@
             </div>
         </div>
         <table align="center">
-            <td>
-                <p><button type="button" class="btn btn-raised btn-info" id="btnExport" value=" Export Table data into Excel ">generar excel</button></p>
-
-            </td>
             <td>
                 <!--<p><button type="button" class="btn btn-raised btn-danger">Cancelar</button></p>-->
             </td>	
