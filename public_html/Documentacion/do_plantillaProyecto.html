@@ -1,0 +1,128 @@
+<section>
+    <script type="text/javascript">
+        /**
+         * PUT BELOW HERE
+         * ALL PAGE LEVEL RELATED SCRIPTS
+         */
+
+
+
+        /**
+         * 1. pageLoadScripts
+         *
+         * Scripts array to load on pageload event
+         *
+         * Example:
+         *	var pageLoadScripts = [
+         *		"js/bemat-demo-script1.min.js",
+         *		"js/bemat-demo-script2.min.js"
+         *  ]
+         *
+         */
+        var pageLoadScripts = [
+        ]
+
+        var pageLoadCSS = [
+        ]
+
+
+        /**
+         * 2. pageRequiredComponents
+         *
+         * Components that require this page. By default all components are loaded,
+         * but with this array, you can force the reinitialization of any component.
+         * 
+         * Example:
+         *	var pageRequiredComponents = [
+         *		"Panel",
+         *		"Checkbox",
+         *		"Select",
+         *		"Dropdown",
+         *		"Tooltip",
+         *		"Modals",
+         *		"FloatingLabels",
+         *		"Scrollbar",
+         *		"MaterialRipple",
+         *		"Snackbar",
+         *		"Toast",
+         *		"Subheader",
+         *		"SimplePieCharts",
+         *		"LinearProgress",
+         *		"CircularProgress",
+         *		"SpeedDial"
+         *	]
+         */
+        var pageRequiredComponents = [
+            "Checkbox",
+            "Select",
+            "Dropdown",
+            "Tooltip"
+        ]
+
+
+        /**
+         * 3. pageRequiredFeatures
+         */
+        var pageRequiredFeatures = [
+            "prettyPrint"
+        ]
+
+
+
+        /**
+         * 4. doneScriptsLoad() 
+         *
+         * This function gets called when the "pageLoadScripts" 
+         * and "pageRequiredComponents" arrays above are fully loaded
+         */
+
+        // Set page variables globally
+        var clipboard;
+
+        var doneScriptsLoad = function () {
+            clipboard = new Clipboard('[data-copycode="true"]', {
+                target: function (trigger) {
+                    return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+                }
+            });
+
+            clipboard.on('success', function (e) {
+                $.toasts("add", {
+                    msg: "Copied!",
+                });
+                e.clearSelection();
+            });
+        } // END: doneScriptsLoad();
+
+
+        /**
+         * 4. pageDestroy()
+         *
+         * Destroy all generated instances
+         */
+        var pageDestroy = function () {
+            clipboard.destroy();
+            clipboard = void 0;
+        }
+    </script>
+    <section class="page-header alternative-header">
+        <ol class="breadcrumb">
+            <li>Documentacion</li>
+        </ol>
+        <div class="page-header_title">
+            <h1>
+                Plantilla Proyecto
+                <span class="page-header_subtitle"></span>
+            </h1>
+        </div>
+    </section>
+    <scrip>
+        function openPDF(){
+        window.open("/Documentacion/doc/Plantilla Proyecto Fase 1 v 3.2.pdf","_blank");
+        }
+    </scrip>
+    <section>
+        <a href="#" onclick="openPDF()";>a
+       
+    </section>
+</section>
