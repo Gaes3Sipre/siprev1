@@ -1,0 +1,2722 @@
+<section class="page-header alternative-header">
+    <ol class="breadcrumb">
+        <li>Documentcion</li>
+    </ol>
+    <div class="page-header_title">
+        <h1>
+            Diccionario de Datos
+            <span class="page-header_subtitle"></span>
+        </h1>
+    </div>
+</section>
+<section>
+    <ul>
+        <li><a href='#besoli'>besoli</a></li>
+        <li><a href='#besolic'>besolic</a></li>
+        <li><a href='#betipbe'>betipbe</a></li>
+        <li><a href='#betiserv'>betiserv</a></li>
+        <li><a href='#bibenef'>bibenef</a></li>
+        <li><a href='#biemple'>biemple</a></li>
+        <li><a href='#biprove'>biprove</a></li>
+        <li><a href='#biterce'>biterce</a></li>
+        <li><a href='#gndepar'>gndepar</a></li>
+        <li><a href='#gndmenu'>gndmenu</a></li>
+        <li><a href='#gndocum'>gndocum</a></li>
+        <li><a href='#gndrolu'>gndrolu</a></li>
+        <li><a href='#gngmenu'>gngmenu</a></li>
+        <li><a href='#gnmunic'>gnmunic</a></li>
+        <li><a href='#gnpaise'>gnpaise</a></li>
+        <li><a href='#gnprogr'>gnprogr</a></li>
+        <li><a href='#gnrolus'>gnrolus</a></li>
+        <li><a href='#gntdocu'>gntdocu</a></li>
+        <li><a href='#gnusuar'>gnusuar</a></li>
+        <li><a href='#pedpres'>pedpres</a></li>
+        <li><a href='#pepresu'>pepresu</a></li>
+        <li><a href='#prfactu'>prfactu</a></li>
+        <li><a href='#prvalor'>prvalor</a></li>
+    </ul>
+    <table id='besoli'>
+        <caption>besoli</caption>
+        <tr><td colspan='11'></td></tr>
+        <tr>
+            <th>Column name</th>
+            <th>DataType</th>
+            <th><abbr title='Primary Key'>PK</abbr></th>
+            <th><abbr title='Not Null'>NN</abbr></th>
+            <th><abbr title='Unique'>UQ</abbr></th>
+            <th><abbr title='Binary'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Increment'>AI</abbr></th>
+            <th>Default</th>
+            <th>Comment</th>
+        </tr>
+        <tr>
+            <td>codSoli</td>
+            <td>INT(11)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>codToma</td>
+            <td>INT(11)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table id='besolic'>
+        <caption>besolic</caption>
+        <tr><td colspan='11'>solicitud de beneficios</td></tr>
+        <tr>
+            <th>Column name</th>
+            <th>DataType</th>
+            <th><abbr title='Primary Key'>PK</abbr></th>
+            <th><abbr title='Not Null'>NN</abbr></th>
+            <th><abbr title='Unique'>UQ</abbr></th>
+            <th><abbr title='Binary'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Increment'>AI</abbr></th>
+            <th>Default</th>
+            <th>Comment</th>
+        </tr>
+        <tr>
+            <td>codSoli</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td></td>
+            <td>codigo solicitud</td>
+        </tr>
+        <tr>
+            <td>codProv</td>
+            <td>INT(11)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>'0'</td>
+            <td>codigo proveedor</td>
+        </tr>
+        <tr>
+            <td>codToma</td>
+            <td>INT(11)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>'0'</td>
+            <td>codigo tomador</td>
+        </tr>
+        <tr>
+            <td>estSoli</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>'0'</td>
+            <td>estado solicitud</td>
+        </tr>
+        <tr>
+            <td>fecSoli</td>
+            <td>DATE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>fecha solicitud</td>
+        </tr>
+        <tr>
+            <td>codserv</td>
+            <td>INT(11)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>'0'</td>
+            <td>codigo servicios</td>
+        </tr>
+        <tr>
+            <td>obsErv</td>
+            <td>VARCHAR(255)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>'0'</td>
+            <td>observaciones</td>
+        </tr>
+        <tr>
+            <td>actUsua</td>
+            <td>INT(15)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>usuario actividad</td>
+        </tr>
+        <tr>
+            <td>actEsta</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>tipo actividad</td>
+        </tr>
+        <tr>
+            <td>actHora</td>
+            <td>TIMESTAMP</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>CURRENT_TIMESTAMP</td>
+            <td>hora de la actividad</td>
+        </tr>
+    </table>
+    <table id='betipbe'>
+        <caption>betipbe</caption>
+        <tr><td colspan='11'>Tipo de Beneficio</td></tr>
+        <tr>
+            <th>Column name</th>
+            <th>DataType</th>
+            <th><abbr title='Primary Key'>PK</abbr></th>
+            <th><abbr title='Not Null'>NN</abbr></th>
+            <th><abbr title='Unique'>UQ</abbr></th>
+            <th><abbr title='Binary'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Increment'>AI</abbr></th>
+            <th>Default</th>
+            <th>Comment</th>
+        </tr>
+        <tr>
+            <td>codServ</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Codigo Servicio</td>
+        </tr>
+        <tr>
+            <td>codProv</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Codigo Proveedor</td>
+        </tr>
+        <tr>
+            <td>codTser</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Codigo Tipo de Servicio</td>
+        </tr>
+        <tr>
+            <td>tipContr</td>
+            <td>CHAR(1)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Tipo de Contrato</td>
+        </tr>
+        <tr>
+            <td>indActi</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>NULL</td>
+            <td>Indicador de Actividad</td>
+        </tr>
+        <tr>
+            <td>afePresc</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>NULL</td>
+            <td>Afecta Prescipciones</td>
+        </tr>
+        <tr>
+            <td>porEmpl</td>
+            <td>DOUBLE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Porcentaje Empleado</td>
+        </tr>
+        <tr>
+            <td>porEmpr</td>
+            <td>DOUBLE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Porcentaje Empresa</td>
+        </tr>
+        <tr>
+            <td>actUsua</td>
+            <td>VARCHAR(15)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Actividad Usuario</td>
+        </tr>
+        <tr>
+            <td>actEsta</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Actividad Estado</td>
+        </tr>
+        <tr>
+            <td>actHora</td>
+            <td>TIMESTAMP</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</td>
+            <td>actividad Hora</td>
+        </tr>
+    </table>
+    <table id='betiserv'>
+        <caption>betiserv</caption>
+        <tr><td colspan='11'>Tipo de Servicio</td></tr>
+        <tr>
+            <th>Column name</th>
+            <th>DataType</th>
+            <th><abbr title='Primary Key'>PK</abbr></th>
+            <th><abbr title='Not Null'>NN</abbr></th>
+            <th><abbr title='Unique'>UQ</abbr></th>
+            <th><abbr title='Binary'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Increment'>AI</abbr></th>
+            <th>Default</th>
+            <th>Comment</th>
+        </tr>
+        <tr>
+            <td>codTser</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Codigo Tipo de Servicio</td>
+        </tr>
+        <tr>
+            <td>nomServ</td>
+            <td>VARCHAR(20)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Nombre de Servicio</td>
+        </tr>
+        <tr>
+            <td>indActi</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Indicador de Actividad</td>
+        </tr>
+        <tr>
+            <td>natTser</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Naturaleza Servicio (P-pago, D-descuento)</td>
+        </tr>
+        <tr>
+            <td>factura</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Factura si o no</td>
+        </tr>
+        <tr>
+            <td>actUsua</td>
+            <td>INT(15)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>usuario actividad</td>
+        </tr>
+        <tr>
+            <td>actEsta</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>tipo actividad</td>
+        </tr>
+        <tr>
+            <td>actHora</td>
+            <td>TIMESTAMP</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>CURRENT_TIMESTAMP</td>
+            <td>hora de la actividad</td>
+        </tr>
+    </table>
+    <table id='bibenef'>
+        <caption>bibenef</caption>
+        <tr><td colspan='11'>Beneficiarios Empleados</td></tr>
+        <tr>
+            <th>Column name</th>
+            <th>DataType</th>
+            <th><abbr title='Primary Key'>PK</abbr></th>
+            <th><abbr title='Not Null'>NN</abbr></th>
+            <th><abbr title='Unique'>UQ</abbr></th>
+            <th><abbr title='Binary'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Increment'>AI</abbr></th>
+            <th>Default</th>
+            <th>Comment</th>
+        </tr>
+        <tr>
+            <td>codEmpl</td>
+            <td>INT(11)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Codigo Empleado</td>
+        </tr>
+        <tr>
+            <td>codBene</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Codigo Beneficiario</td>
+        </tr>
+        <tr>
+            <td>tipBenef</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Tipo de Beneficio</td>
+        </tr>
+        <tr>
+            <td>munNaci</td>
+            <td>INT(3)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Municipio Nacimiento</td>
+        </tr>
+        <tr>
+            <td>fechNaci</td>
+            <td>DATE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Fecha de Nacimiento</td>
+        </tr>
+        <tr>
+            <td>fechInic</td>
+            <td>DATE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Fecha de Inicicio de contrato</td>
+        </tr>
+        <tr>
+            <td>fecFina</td>
+            <td>DATE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Fecha Final de Contrato</td>
+        </tr>
+        <tr>
+            <td>actUsua</td>
+            <td>INT(15)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Actividad Usuario</td>
+        </tr>
+        <tr>
+            <td>actEsta</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Estado Actividad</td>
+        </tr>
+        <tr>
+            <td>actHora</td>
+            <td>TIMESTAMP</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>CURRENT_TIMESTAMP</td>
+            <td>Actividad Hora</td>
+        </tr>
+    </table>
+    <table id='biemple'>
+        <caption>biemple</caption>
+        <tr><td colspan='11'>datos Empleado</td></tr>
+        <tr>
+            <th>Column name</th>
+            <th>DataType</th>
+            <th><abbr title='Primary Key'>PK</abbr></th>
+            <th><abbr title='Not Null'>NN</abbr></th>
+            <th><abbr title='Unique'>UQ</abbr></th>
+            <th><abbr title='Binary'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Increment'>AI</abbr></th>
+            <th>Default</th>
+            <th>Comment</th>
+        </tr>
+        <tr>
+            <td>codEmpl</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Codigo Empleado</td>
+        </tr>
+        <tr>
+            <td>nroContr</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Numero de Contrato</td>
+        </tr>
+        <tr>
+            <td>munNaci</td>
+            <td>INT(11)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Municipio Nacimiento</td>
+        </tr>
+        <tr>
+            <td>fechNaci</td>
+            <td>DATE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Fecha de Nacimiento</td>
+        </tr>
+        <tr>
+            <td>tipCont</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Tipo Contrato</td>
+        </tr>
+        <tr>
+            <td>indActi</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Indicador de Actividad</td>
+        </tr>
+        <tr>
+            <td>fechInic</td>
+            <td>DATE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Fecha de Inicicio de contrato</td>
+        </tr>
+        <tr>
+            <td>fecFina</td>
+            <td>DATE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Fecha Final de Contrato</td>
+        </tr>
+        <tr>
+            <td>sueBasi</td>
+            <td>INT(11)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Sueldo Basico</td>
+        </tr>
+        <tr>
+            <td>actUsua</td>
+            <td>INT(15)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Actividad Usuario</td>
+        </tr>
+        <tr>
+            <td>actEsta</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Actividad Estado</td>
+        </tr>
+        <tr>
+            <td>actHora</td>
+            <td>TIMESTAMP</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>CURRENT_TIMESTAMP</td>
+            <td>Actividad Hora</td>
+        </tr>
+    </table>
+    <table id='biprove'>
+        <caption>biprove</caption>
+        <tr><td colspan='11'>Datos Proveedor</td></tr>
+        <tr>
+            <th>Column name</th>
+            <th>DataType</th>
+            <th><abbr title='Primary Key'>PK</abbr></th>
+            <th><abbr title='Not Null'>NN</abbr></th>
+            <th><abbr title='Unique'>UQ</abbr></th>
+            <th><abbr title='Binary'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Increment'>AI</abbr></th>
+            <th>Default</th>
+            <th>Comment</th>
+        </tr>
+        <tr>
+            <td>codProv</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Codigo Proveedor</td>
+        </tr>
+        <tr>
+            <td>tipProv</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Tipo de Proveedor</td>
+        </tr>
+        <tr>
+            <td>indActi</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Indicador de Actividad</td>
+        </tr>
+        <tr>
+            <td>fecInic</td>
+            <td>DATE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Fecha de Incio</td>
+        </tr>
+        <tr>
+            <td>fecFina</td>
+            <td>DATE</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Fecha Fin</td>
+        </tr>
+        <tr>
+            <td>actUsua</td>
+            <td>INT(15)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Actividad Usuario</td>
+        </tr>
+        <tr>
+            <td>actEsta</td>
+            <td>CHAR(1)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Actividad Estado</td>
+        </tr>
+        <tr>
+            <td>actHora</td>
+            <td>TIMESTAMP</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>CURRENT_TIMESTAMP</td>
+            <td>Actividad Hora</td>
+        </tr>
+        <table id='biterce'>
+            <caption>biterce</caption>
+            <tr><td colspan='11'>Datos Terceros</td></tr>
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>codTerc</td>
+                <td>INT(11)</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Codigo Tercero</td>
+            </tr>
+            <tr>
+                <td>tipTerc</td>
+                <td>CHAR(1)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Tipo de Tercero 
+                    -P Proveedor 
+                    -E Empleado 
+                    -B Beneficiario </td>
+            </tr>
+            <tr>
+                <td>tipIdent</td>
+                <td>CHAR(2)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Tipo de Identificacion:
+                    1. C cedula de ciudadania
+                    2. E Cedula de Extranjeria
+                    3. T Tarjeta de Identidad
+                    5. N Nit 
+                    6. R Rut
+                    7. RC Registro civil</td>
+            </tr>
+            <tr>
+                <td>priNomb</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Primer Nombre</td>
+            </tr>
+            <tr>
+                <td>segNom</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td>NULL</td>
+                <td>Segundo Nombre</td>
+            </tr>
+            <tr>
+                <td>priApel</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Primer Apellido</td>
+            </tr>
+            <tr>
+                <td>segApel</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td>NULL</td>
+                <td>Segundo Apellido</td>
+            </tr>
+            <tr>
+                <td>codMuni</td>
+                <td>INT(11)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Codigo Municipio</td>
+            </tr>
+            <tr>
+                <td>dirReci</td>
+                <td>VARCHAR(15)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Direccion recidencia</td>
+            </tr>
+            <tr>
+                <td>telResi</td>
+                <td>INT(11)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Telefono Residencia</td>
+            </tr>
+            <tr>
+                <td>corElect</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Correo Electronico</td>
+            </tr>
+            <tr>
+                <td>actUsua</td>
+                <td>INT(15)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Actividad Usuario</td>
+            </tr>
+            <tr>
+                <td>actEsta</td>
+                <td>CHAR(1)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Actividad Estado</td>
+            </tr>
+            <tr>
+                <td>actHora</td>
+                <td>TIMESTAMP</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td>CURRENT_TIMESTAMP</td>
+                <td>Actividad Hora</td>
+            </tr>
+        </table>
+        <table id='gndepar'>
+            <caption>gndepar</caption>
+            <tr><td colspan='11'>Departamento</td></tr>
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>codDepa</td>
+                <td>INT(11)</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Codigo Departemento</td>
+            </tr>
+            <tr>
+                <td>codPais</td>
+                <td>INT(11)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Codigo Pais</td>
+            </tr>
+            <tr>
+                <td>nomDepa</td>
+                <td>VARCHAR(30)</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td>NULL</td>
+                <td>Nombre Departamento</td>
+            </tr>
+            <tr>
+                <td>actUsua</td>
+                <td>CHAR(15)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>usuario actividad</td>
+            </tr>
+            <tr>
+                <td>actEsta</td>
+                <td>CHAR(1)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>tipo actividad</td>
+            </tr>
+            <tr>
+                <td>actHora</td>
+                <td>TIMESTAMP</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td>CURRENT_TIMESTAMP</td>
+                <td>hora de la actividad</td>
+            </tr>
+        </table>
+        <table id='gndmenu'>
+            <caption>gndmenu</caption>
+            <tr><td colspan='11'>Detalle Menu</td></tr>
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>codMenu</td>
+                <td>INT(11)</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Codigo Menú</td>
+            </tr>
+            <tr>
+                <td>codProg</td>
+                <td>INT(11)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Codigo Programa</td>
+            </tr>
+            <tr>
+                <td>codRolu</td>
+                <td>INT(11)</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Codigo Rol</td>
+            </tr>
+            <tr>
+                <td>actUsua</td>
+                <td>INT(15)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>usuario actividad</td>
+            </tr>
+            <tr>
+                <td>actEsta</td>
+                <td>CHAR(1)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>tipo actividad</td>
+            </tr>
+            <tr>
+                <td>actHora</td>
+                <td>TIMESTAMP</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td>CURRENT_TIMESTAMP</td>
+                <td>hora de la actividad</td>
+            </tr>
+        </table>
+        <table id='gndocum'>
+            <caption>gndocum</caption>
+            <tr><td colspan='11'>Documentos adjuntos por Tercero</td></tr>
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>codTerc</td>
+                <td>INT(11)</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Codigo Tercero</td>
+            </tr>
+            <tr>
+                <td>codDocu</td>
+                <td>INT(11)</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Condigo Documento</td>
+            </tr>
+            <tr>
+                <td>rutArch</td>
+                <td>INT(11)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Ruta Archivo</td>
+            </tr>
+            <tr>
+                <td>tipArch</td>
+                <td>INT(11)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Tipo Documento</td>
+            </tr>
+            <tr>
+                <td>actUsua</td>
+                <td>INT(15)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>usuario actividad</td>
+            </tr>
+            <tr>
+                <td>actEsta</td>
+                <td>CHAR(1)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>tipo actividad</td>
+            </tr>
+            <tr>
+                <td>actHora</td>
+                <td>TIMESTAMP</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td>CURRENT_TIMESTAMP</td>
+                <td>hora de la actividad</td>
+            </tr>
+            <table id='gndrolu'>
+                <caption>gndrolu</caption>
+                <tr><td colspan='11'>Detalle Rol</td></tr>
+                <tr>
+                    <th>Column name</th>
+                    <th>DataType</th>
+                    <th><abbr title='Primary Key'>PK</abbr></th>
+                    <th><abbr title='Not Null'>NN</abbr></th>
+                    <th><abbr title='Unique'>UQ</abbr></th>
+                    <th><abbr title='Binary'>BIN</abbr></th>
+                    <th><abbr title='Unsigned'>UN</abbr></th>
+                    <th><abbr title='Zero Fill'>ZF</abbr></th>
+                    <th><abbr title='Auto Increment'>AI</abbr></th>
+                    <th>Default</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td>codRolu</td>
+                    <td>INT(11)</td>
+                    <td>&#10004;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>Codigo Rol</td>
+                </tr>
+                <tr>
+                    <td>codUsua</td>
+                    <td>CHAR(15)</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>Codigo Usuario</td>
+                </tr>
+                <tr>
+                    <td>actUsua</td>
+                    <td>INT(15)</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>usuario actividad</td>
+                </tr>
+                <tr>
+                    <td>actEsta</td>
+                    <td>CHAR(1)</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>tipo actividad</td>
+                </tr>
+                <tr>
+                    <td>actHora</td>
+                    <td>TIMESTAMP</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td>CURRENT_TIMESTAMP</td>
+                    <td>hora de la actividad</td>
+                </tr>
+            </table>
+            <table id='gngmenu'>
+                <caption>gngmenu</caption>
+                <tr><td colspan='11'>Menu</td></tr>
+                <tr>
+                    <th>Column name</th>
+                    <th>DataType</th>
+                    <th><abbr title='Primary Key'>PK</abbr></th>
+                    <th><abbr title='Not Null'>NN</abbr></th>
+                    <th><abbr title='Unique'>UQ</abbr></th>
+                    <th><abbr title='Binary'>BIN</abbr></th>
+                    <th><abbr title='Unsigned'>UN</abbr></th>
+                    <th><abbr title='Zero Fill'>ZF</abbr></th>
+                    <th><abbr title='Auto Increment'>AI</abbr></th>
+                    <th>Default</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td>codMenu</td>
+                    <td>INT(11)</td>
+                    <td>&#10004;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>Codigo Menu</td>
+                </tr>
+                <tr>
+                    <td>nomMenu</td>
+                    <td>VARCHAR(40)</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>NOmbre Menu</td>
+                </tr>
+                <tr>
+                    <td>actUsua</td>
+                    <td>INT(15)</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>usuario actividad</td>
+                </tr>
+                <tr>
+                    <td>actEsta</td>
+                    <td>CHAR(1)</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>tipo actividad</td>
+                </tr>
+                <tr>
+                    <td>actHora</td>
+                    <td>TIMESTAMP</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td>CURRENT_TIMESTAMP</td>
+                    <td>hora de la actividad</td>
+                </tr>
+                <table id='gnmunic'>
+                    <caption>gnmunic</caption>
+                    <tr><td colspan='11'>Departamento</td></tr>
+                    <tr>
+                        <th>Column name</th>
+                        <th>DataType</th>
+                        <th><abbr title='Primary Key'>PK</abbr></th>
+                        <th><abbr title='Not Null'>NN</abbr></th>
+                        <th><abbr title='Unique'>UQ</abbr></th>
+                        <th><abbr title='Binary'>BIN</abbr></th>
+                        <th><abbr title='Unsigned'>UN</abbr></th>
+                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                        <th>Default</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>codMuni</td>
+                        <td>INT(11)</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td></td>
+                        <td>Codigo Municipio</td>
+                    </tr>
+                    <tr>
+                        <td>codDepa</td>
+                        <td>INT(11)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Codigo Departamento</td>
+                    </tr>
+                    <tr>
+                        <td>codSuip</td>
+                        <td>INT(11)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Codigo Siup</td>
+                    </tr>
+                    <tr>
+                        <td>nomMuni</td>
+                        <td>VARCHAR(30)</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td>NULL</td>
+                        <td>Nombre MUnicipio</td>
+                    </tr>
+                    <tr>
+                        <td>actUsua</td>
+                        <td>CHAR(15)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>usuario actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actEsta</td>
+                        <td>CHAR(1)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>tipo actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actHora</td>
+                        <td>TIMESTAMP</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td>CURRENT_TIMESTAMP</td>
+                        <td>hora de la actividad</td>
+                    </tr>
+                </table>
+                <table id='gnpaise'>
+                    <caption>gnpaise</caption>
+                    <tr><td colspan='11'>Pais</td></tr>
+                    <tr>
+                        <th>Column name</th>
+                        <th>DataType</th>
+                        <th><abbr title='Primary Key'>PK</abbr></th>
+                        <th><abbr title='Not Null'>NN</abbr></th>
+                        <th><abbr title='Unique'>UQ</abbr></th>
+                        <th><abbr title='Binary'>BIN</abbr></th>
+                        <th><abbr title='Unsigned'>UN</abbr></th>
+                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                        <th>Default</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>codPais</td>
+                        <td>INT(11)</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Codigo País</td>
+                    </tr>
+                    <tr>
+                        <td>nomPais</td>
+                        <td>VARCHAR(30)</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td>NULL</td>
+                        <td>Nombre Pais</td>
+                    </tr>
+                    <tr>
+                        <td>actUsua</td>
+                        <td>CHAR(15)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>usuario actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actEsta</td>
+                        <td>CHAR(1)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>tipo actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actHora</td>
+                        <td>TIMESTAMP</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td>CURRENT_TIMESTAMP</td>
+                        <td>hora de la actividad</td>
+                    </tr>
+                </table>
+                <table id='gnprogr'>
+                    <caption>gnprogr</caption>
+                    <tr><td colspan='11'>Programas del sistema</td></tr>
+                    <tr>
+                        <th>Column name</th>
+                        <th>DataType</th>
+                        <th><abbr title='Primary Key'>PK</abbr></th>
+                        <th><abbr title='Not Null'>NN</abbr></th>
+                        <th><abbr title='Unique'>UQ</abbr></th>
+                        <th><abbr title='Binary'>BIN</abbr></th>
+                        <th><abbr title='Unsigned'>UN</abbr></th>
+                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                        <th>Default</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>codProg</td>
+                        <td>INT(11)</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Codigo Programa</td>
+                    </tr>
+                    <tr>
+                        <td>nomProg</td>
+                        <td>VARCHAR(40)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Nombre Programa</td>
+                    </tr>
+                    <tr>
+                        <td>dirProg</td>
+                        <td>VARCHAR(40)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Direccion Programa</td>
+                    </tr>
+                    <tr>
+                        <td>actUsua</td>
+                        <td>INT(15)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>usuario actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actEsta</td>
+                        <td>CHAR(1)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>tipo actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actHora</td>
+                        <td>TIMESTAMP</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td>CURRENT_TIMESTAMP</td>
+                        <td>hora de la actividad</td>
+                    </tr>
+                </table>
+                <table id='gnrolus'>
+                    <caption>gnrolus</caption>
+                    <tr><td colspan='11'>Roles</td></tr>
+                    <tr>
+                        <th>Column name</th>
+                        <th>DataType</th>
+                        <th><abbr title='Primary Key'>PK</abbr></th>
+                        <th><abbr title='Not Null'>NN</abbr></th>
+                        <th><abbr title='Unique'>UQ</abbr></th>
+                        <th><abbr title='Binary'>BIN</abbr></th>
+                        <th><abbr title='Unsigned'>UN</abbr></th>
+                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                        <th>Default</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>codRolu</td>
+                        <td>INT(11)</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Codigo Rol</td>
+                    </tr>
+                    <tr>
+                        <td>nomRolu</td>
+                        <td>VARCHAR(20)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Nombre Rol</td>
+                    </tr>
+                    <tr>
+                        <td>TipRolu</td>
+                        <td>CHAR(1)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Tipo Rol</td>
+                    </tr>
+                    <tr>
+                        <td>actUsua</td>
+                        <td>INT(15)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>usuario actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actEsta</td>
+                        <td>CHAR(1)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>tipo actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actHora</td>
+                        <td>TIMESTAMP</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td>CURRENT_TIMESTAMP</td>
+                        <td>hora de la actividad</td>
+                    </tr>
+                </table>
+                <table id='gntdocu'>
+                    <caption>gntdocu</caption>
+                    <tr><td colspan='11'>Tipo de Documentos adjuntos</td></tr>
+                    <tr>
+                        <th>Column name</th>
+                        <th>DataType</th>
+                        <th><abbr title='Primary Key'>PK</abbr></th>
+                        <th><abbr title='Not Null'>NN</abbr></th>
+                        <th><abbr title='Unique'>UQ</abbr></th>
+                        <th><abbr title='Binary'>BIN</abbr></th>
+                        <th><abbr title='Unsigned'>UN</abbr></th>
+                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                        <th>Default</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>codTDoc</td>
+                        <td>INT(11)</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Codigo Tipo de Documento</td>
+                    </tr>
+                    <tr>
+                        <td>codProg</td>
+                        <td>INT(11)</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>codigo Programa donde se puede abjuntar este tipo de documento</td>
+                    </tr>
+                    <tr>
+                        <td>nomDocu</td>
+                        <td>INT(11)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Nombre de Documento</td>
+                    </tr>
+                    <tr>
+                        <td>actUsua</td>
+                        <td>INT(15)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>usuario actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actEsta</td>
+                        <td>CHAR(1)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>tipo actividad</td>
+                    </tr>
+                    <tr>
+                        <td>actHora</td>
+                        <td>TIMESTAMP</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td>CURRENT_TIMESTAMP</td>
+                        <td>hora actividad</td>
+                    </tr>
+                    <table id='gnusuar'>
+                        <caption>gnusuar</caption>
+                        <tr><td colspan='11'>Usuarios</td></tr>
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th>Default</th>
+                            <th>Comment</th>
+                        </tr>
+                        <tr>
+                            <td>codUsua</td>
+                            <td>CHAR(15)</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>desclav</td>
+                            <td>CHAR(15)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>codTerc</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>actUsua</td>
+                            <td>INT(15)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>usuario actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actEsta</td>
+                            <td>CHAR(1)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>tipo actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actHora</td>
+                            <td>TIMESTAMP</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td>CURRENT_TIMESTAMP</td>
+                            <td>hora de la actividad</td>
+                        </tr>
+                    </table>
+                    <table id='pedpres'>
+                        <caption>pedpres</caption>
+                        <tr><td colspan='11'>Detalle Presupuesto</td></tr>
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th>Default</th>
+                            <th>Comment</th>
+                        </tr>
+                        <tr>
+                            <td>codDpre</td>
+                            <td>INT(11)</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Detalle Presupuesto</td>
+                        </tr>
+                        <tr>
+                            <td>codPres</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Presupuesto</td>
+                        </tr>
+                        <tr>
+                            <td>codFact</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Factura</td>
+                        </tr>
+                        <tr>
+                            <td>codToma</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Tomador</td>
+                        </tr>
+                        <tr>
+                            <td>actUsua</td>
+                            <td>INT(15)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>usuario actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actEsta</td>
+                            <td>CHAR(1)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>tipo actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actHora</td>
+                            <td>TIMESTAMP</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td>CURRENT_TIMESTAMP</td>
+                            <td>hora de la actividad</td>
+                        </tr>
+                        <tr>
+                            <td>valEmpr</td>
+                            <td>DOUBLE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Valor Empresa</td>
+                        </tr>
+                        <tr>
+                            <td>codProv</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Proveedor</td>
+                        </tr>
+                    </table>
+                    <table id='pepresu'>
+                        <caption>pepresu</caption>
+                        <tr><td colspan='11'>Asignacion de Presupuesto</td></tr>
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th>Default</th>
+                            <th>Comment</th>
+                        </tr>
+                        <tr>
+                            <td>codPres</td>
+                            <td>INT(11)</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Presupuesto</td>
+                        </tr>
+                        <tr>
+                            <td>anoPres</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Año Presupuesto</td>
+                        </tr>
+                        <tr>
+                            <td>valInicia</td>
+                            <td>DOUBLE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Valor Inicial</td>
+                        </tr>
+                        <tr>
+                            <td>valEjecu</td>
+                            <td>DOUBLE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Valor Ejecutado</td>
+                        </tr>
+                        <tr>
+                            <td>valDife</td>
+                            <td>DOUBLE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Valor Pendiente</td>
+                        </tr>
+                        <tr>
+                            <td>actUsua</td>
+                            <td>INT(15)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>usuario actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actEsta</td>
+                            <td>CHAR(1)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>tipo actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actHora</td>
+                            <td>TIMESTAMP</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td>CURRENT_TIMESTAMP</td>
+                            <td>hora de la actividad</td>
+                        </tr>
+                    </table>
+                    <table id='prfactu'>
+                        <caption>prfactu</caption>
+                        <tr><td colspan='11'>Facturacion Proveedor</td></tr>
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th>Default</th>
+                            <th>Comment</th>
+                        </tr>
+                        <tr>
+                            <td>codFact</td>
+                            <td>INT(11)</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo de Factura</td>
+                        </tr>
+                        <tr>
+                            <td>codServ</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo de Servicio</td>
+                        </tr>
+                        <tr>
+                            <td>codProv</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Proveedor</td>
+                        </tr>
+                        <tr>
+                            <td>codToma</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Tomador</td>
+                        </tr>
+                        <tr>
+                            <td>codSoli</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>valEmpl</td>
+                            <td>DOUBLE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>valor empleado</td>
+                        </tr>
+                        <tr>
+                            <td>valEmpr</td>
+                            <td>DOUBLE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>valor empresa</td>
+                        </tr>
+                        <tr>
+                            <td>actUsua</td>
+                            <td>INT(15)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>usuario actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actEsta</td>
+                            <td>CHAR(1)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>tipo actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actHora</td>
+                            <td>TIMESTAMP</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td>CURRENT_TIMESTAMP</td>
+                            <td>hora de la actividad</td>
+                        </tr>
+                    </table>
+                    <table id='prvalor'>
+                        <caption>prvalor</caption>
+                        <tr><td colspan='11'>Valores Servicio Proveedor</td></tr>
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th>Default</th>
+                            <th>Comment</th>
+                        </tr>
+                        <tr>
+                            <td>codValo</td>
+                            <td>INT(11)</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Valor</td>
+                        </tr>
+                        <tr>
+                            <td>codProv</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Codigo Proveedor</td>
+                        </tr>
+                        <tr>
+                            <td>codTser</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Tipo de Servicio</td>
+                        </tr>
+                        <tr>
+                            <td>obsErva</td>
+                            <td>TEXT</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td>NULL</td>
+                            <td>Observacion</td>
+                        </tr>
+                        <tr>
+                            <td>fecFvig</td>
+                            <td>DATE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Fecha Fin Vigencia</td>
+                        </tr>
+                        <tr>
+                            <td>valServ</td>
+                            <td>DOUBLE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>valor Servicio</td>
+                        </tr>
+                        <tr>
+                            <td>actUsua</td>
+                            <td>CHAR(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>usuario actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actEsta</td>
+                            <td>CHAR(1)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>tipo actividad</td>
+                        </tr>
+                        <tr>
+                            <td>actHora</td>
+                            <td>TIMESTAMP</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td>CURRENT_TIMESTAMP</td>
+                            <td>hora actividad</td>
+                        </tr>
+                    </table>
+                    </section>
